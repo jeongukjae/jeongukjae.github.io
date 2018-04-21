@@ -3,9 +3,7 @@ layout: post
 title: Flask로 CI 구성해보기
 ---
 
-간단한 예제를 보기 이전에, 이 예제는 python3를 기준으로 작성되고, Flask를 이용하여 작성되며, Virtualenv를 활용하기 때문에 해당 라이브러리를 미리 알고 읽는 것이 좋다고 생각합니다.
-
-각각에 대한 공식 문서 혹은 사이트의 링크는 다음과 같습니다.
+간단한 예제를 보기 이전에, 이 예제는 python3를 기준으로 작성되고, Flask를 이용하여 작성되며, Virtualenv를 활용하기 때문에 혹시 읽다가 잘 모르시겠다면 아래의 링크를 참고하시면 될 것 같습니다.
 
 * [Python3 공식 사이트](https://www.python.org/)
 * [Flask 공식 문서](http://flask.pocoo.org/docs/0.12/)
@@ -24,7 +22,7 @@ $ source env/bin/activate
 (env) $ pip install Flask-WTF
 ```
 
-맨 밑의 Flask-WTF 패키지 같은 경우는 사용하지 않아도 상관없습니다. 폼을 조금 더 잘 관리하도록 도와주는 패키지입니다.
+맨 밑의 Flask-WTF 패키지[^Flask-WTF] 같은 경우는 사용하지 않아도 상관없습니다. 폼을 조금 더 잘 관리하도록 도와주는 패키지입니다.
 
 ## 예제 작성
 
@@ -56,9 +54,9 @@ $ source env/bin/activate
 
 기본적인 파일 구조는 다음과 같이 이루어질 예정입니다.
 
-```static```은 폴더이지만, 내부에 아무런 파일이 없어서 마치 파일처럼 보이는군요.
+`static`은 폴더이지만, 내부에 아무런 파일이 없어서 마치 파일처럼 보입니다.
 
-파일 구조에 대해 설명을 드리자면, ```app``` 폴더는 웹 페이지의 소스코드입니다. 3페이지로 이루어져 있으며, 밑의 3 페이지입니다.
+파일 구조에 대해 설명을 드리자면, `app` 폴더는 웹 페이지의 소스코드입니다. 3페이지로 이루어져 있으며, 밑의 3 페이지입니다.
 
 ![index.html 화면]({{ site.url }}/images/ci-example-with-flask/index.png)
 index.html 화면
@@ -99,8 +97,7 @@ def create_app():
     return app
 ```
 
-테스트 할 때 flask app 오브젝트에 접근하기 쉽도록 함수를 만들어 반환값으로 app을 반환하도록 했습니다.
-
+테스트 할 때 flask app 오브젝트에 접근하기 쉽도록 `create_app`이라는 함수를 만들어 반환값으로 app을 반환하도록 했습니다.
 
 * app/config.py
 
@@ -121,7 +118,7 @@ class TestingConfig(DevelopmentConfig):
     TESTING = True
 ```
 
-config.py에서 ```ProductionConfig```는 작성하지 않았는데, 그 이유는 큰 이유가 있는 것이 아니고 단순히 귀찮아서... 입니다.
+config.py에서 `ProductionConfig`는 작성하지 않았는데, 그 이유는 큰 이유가 있는 것이 아니고 단순히 귀찮아서... 입니다.
 
 * app/auth/\_\_init__.py
 
@@ -129,7 +126,7 @@ config.py에서 ```ProductionConfig```는 작성하지 않았는데, 그 이유�
 from .controller import auth_page
 ```
 
-이 파일은 큰 의미없이, ```from .auth import auth_page``` 처럼 쓸 수 있도록 하려고 만든 파일입니다.
+이 파일은 큰 의미없이, `from .auth import auth_page` 처럼 쓸 수 있도록 하려고 만든 파일입니다.
 
 * app/auth/controller.py
 
@@ -163,9 +160,9 @@ def success():
         return "bad request"
 ```
 
-auth_page라는 Blueprint를 만들어서, signin과 success에 라우트를 추가했습니다. ```def signin()```에서 나오는 ```form.validate_on_submit()```는 email 형식과 이름 형식을 체크합니다. 만약 올바르지 않으면, 다시 signin.html 페이지가 나오고, 올바른 형식이라면 success.html로 넘어가는 형식입니다. ```def success()```는 email과 name을 받아서 존재한다면 success.html을 보여주고 아니라면 'bad request'라는 응답을 반환하는 뷰 함수입니다.
+`auth_page`라는 Blueprint를 만들어서, `signin`과 `success`에 라우트를 추가했습니다. `def signin()`에서 나오는 `form.validate_on_submit()`는 email 형식과 이름 형식을 체크합니다. 만약 올바르지 않으면, 다시 signin.html 페이지가 나오고, 올바른 형식이라면 success.html로 넘어가는 형식입니다. `def success()`는 email과 name을 받아서 존재한다면 success.html을 보여주고 아니라면 'bad request'라는 응답을 반환하는 뷰 함수입니다.
 
-```from .forms import SignInForm```에서 import하는 forms는 다음에 나오는 파일입니다. 
+`from .forms import SignInForm`에서 import하는 forms는 다음에 나오는 파일입니다. 
 
 * app/auth/forms.py
 
@@ -179,7 +176,7 @@ class SignInForm(FlaskForm):
     name = StringField('Name Field', [DataRequired(message='Must provide a name')])
 ```
 
-여기서 Sign In 필드의 형식을 정의하는데, 이메일과 이름을 받을 것이라 Email Field, Name Field 두 개를 만들었습니다. 그 다음에는 입력값을 검증하기 위해 이메일 필드에는 Email()이라는 Validator와 DataRequired라는 Validator를 넣었습니다. 이름 필드에는 DataRequired라는 Validator만을 넣었습니다.
+여기서 Sign In 필드의 형식을 정의하는데, 이메일과 이름을 받을 것이라 Email Field, Name Field 두 개를 만들었습니다. 그 다음에는 입력값을 검증하기 위해 이메일 필드에는 `Email()`이라는 Validator와 `DataRequired`라는 Validator를 넣었습니다. 이름 필드에는 `DataRequired`라는 Validator만을 넣었습니다.
 
 나머지는 html 템플릿을 작성하는 부분이라 그 부분을 제외하였습니다.
 
@@ -207,7 +204,6 @@ if __name__ == '__main__':
 ```
 
 위와 같은 출력값을 보실 수 있으실 겁니다.
-
 
 ## 테스트 코드 작성
 
@@ -243,7 +239,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-setUp과 tearDown은 테스트를 시작하고 종료할 때 실행되는 함수이므로, 크게 신경쓰실 필요는 없습니다. 단지 밑의 test_로 시작하는 두 개의 함수에 주목하시면 됩니다. 이 두개의 함수가 테스트를 진행하는 함수로, 각각 '/'를 잘 받아오는지, signin의 post가 잘 작동하는 지 체크하는 테스트입니다.
+`setUp`과 `tearDown`은 테스트를 시작하고 종료할 때 실행되는 함수이므로, 지금은 크게 신경쓰실 필요는 없습니다. 밑의 test_로 시작하는 두 개의 함수에 주목하시면 됩니다. 이 두개의 함수가 테스트를 진행하는 함수로, 각각 '/'를 잘 받아오는지, signin의 post method가 잘 작동하는 지 체크하는 테스트입니다.
 
 ## setup.py 설정
 
@@ -274,8 +270,7 @@ setup(
 )
 ```
 
-이 setup.py를 통해 travis ci에서의 테스트와 coveralls의 code coverage 측정을 진행합니다. 이 setup.py에서 주목해야 할 부분은 ```test_suite```, ```install_requires```, ```tests_require``` 이 세부분입니다. ```test_suite```는 어떤 것으로 테스트를 진행할 지 알려주는 것입니다. ```install_requires```는 디펜던시를 지정하는 것이고, 저는 pip freeze 명령어를 이용하여 작성하였습니다. ```test_require```는 테스트를 진행하는 데 필요한 패키지들을 작성하는 것입니다.
-
+이 setup.py를 통해 travis ci에서의 테스트와 coveralls의 code coverage 측정을 진행합니다. 이 setup.py에서 주목해야 할 부분은 `test_suite`, `install_requires`, `tests_require` 이 세부분입니다. `test_suite`는 어떤 것으로 테스트를 진행할 지 알려주는 것입니다. `install_requires`는 디펜던시를 지정하는 것이고, 저는 `pip freeze` 명령어를 이용하여 작성하였습니다. `test_require`는 테스트를 진행하는 데 필요한 패키지들을 작성하는 것입니다.
 
 * MANIFEST.in
 
@@ -284,13 +279,13 @@ recursive-include app/templates *
 recursive-include app/static *
 ```
 
-이 부분은 app/templates 폴더와 app/static 폴더를 setup.py를 실행하여도 포함하도록 하는 설정파일입니다.
+이 부분은 `app/templates` 폴더와 `app/static` 폴더를 `setup.py`를 실행하여도 포함하도록 하는 설정파일입니다.
 
 ## Travis-CI 설정하기
 
 ### travis-ci.org
 
-[travis-ci.org](http://travis-ci.org)에서 GitHub 계정을 이용하여 가입하신 후, repository를 이름 왼쪽의 스위치 버튼을 켜시면 해당 레포지토리에 대해 travis-ci 설정이 됩니다.
+[travis-ci.org](http://travis-ci.org)[^TrvisCI]에서 GitHub 계정을 이용하여 가입하신 후, repository를 이름 왼쪽의 스위치 버튼을 켜시면 해당 레포지토리에 대해 travis-ci 설정이 됩니다.
 
 ![Travis CI]({{ site.url }}/images/ci-example-with-flask/travis-ci.png)
 
@@ -316,32 +311,23 @@ after_success:
   - coveralls
 ```
 
-저는 python 3.6 버전으로 테스트를 진행하였습니다. (버전은 하나를 선택할 수도 있고, 여러가지를 선택할 수도 있습니다) 테스트를 진행하기 전 coveralls를 설치합니다. coveralls는 code coverage를 측정하는 도구의 파이썬 패키지인데, python-coveralls와 coveralls-python이 있습니다. coveralls 패키지를 설치하면 coverage 명령어를 실행할 수 있습니다.
+저는 python 3.6 버전으로 테스트를 진행하였습니다. (버전은 하나를 선택할 수도 있고, 여러가지를 선택할 수도 있습니다) 테스트를 진행하기 전 `coveralls`를 설치합니다. `coveralls`는 code coverage를 측정하는 도구의 파이썬 패키지인데, python-coveralls와 coveralls-python이 있습니다. coveralls 패키지를 설치하면 coverage 명령어를 실행할 수 있습니다.
 
-script 부분이 잘 이해가 안 가실 수도 있는데, 이 부분은 밑의 링크 두 개를 참고하신다면 이해가 수월하실 겁니다.
+script 부분에 대해서는 [coveralls-clients/coveralls-python](https://github.com/coveralls-clients/coveralls-python) 레포지토리에 설명되어 있습니다. `coveralls` 명령어를 실행하면 coveralls.io에 데이터가 전달됩니다.
 
-* [Python com Unittest, Travis CI, Coveralls e Landscape (Parte 3 de 4)](http://pythonclub.com.br/python-com-unittest-travis-ci-coveralls-e-landscape-parte-3-de-4.html)
-* [coveralls-clients/coveralls-python](https://github.com/coveralls-clients/coveralls-python)
-
-둘 중 위의 링크는 포르투칼 어로 쓰여있는 것 같은데, 구글 번역을 이용해본다면 다음과 같이 설명해주더군요.
-
-> 이 명령은 이전과 동일한 테스트를 실행하지만 코드에 대한 테스트 커버리지 보고서를 제공합니다.
-
-사실 coveralls-python 패키지의 문서가 그렇게 자세하지 않아서 정확한 이해는 제대로 하지 못했습니다.
-
-어쩄든 이렇게 해두고 푸쉬하시면 travis ci가 열심히 돌아갑니다. 근데, 뭔가 coveralls에 관련된 부분이 설정되지 않았기 때문에 테스트가 통과되어도 code coverage를 보실 수는 없으실 겁니다.
+어쩄든 이렇게 해두고 푸쉬하시면 travis ci가 열심히 돌아갑니다. 근데, coveralls에 관련된 부분이 설정되지 않았기 때문에 테스트가 통과되어도 code coverage를 보실 수는 없으실 겁니다.
 
 ## Coveralls
 
 ### Coveralls 웹 페이지
 
-[coveralls 웹 페이지](https://coveralls.io/)로 가서 GitHub 계정으로 가입한다면 다음과 같은 화면을 볼 수 있습니다.
+[coveralls 웹 페이지](https://coveralls.io/)[^coveralls]로 가서 GitHub 계정으로 가입한다면 다음과 같은 화면을 볼 수 있습니다.
 
 ![coveralls 화면]({{ site.url }}/images/ci-example-with-flask/coveralls.png)
 
 coveralls도 똑같이 repo들을 스위치 방식으로 키고 끄는데, 이 중 원하는 repo를 키고 난 후 Token을 받습니다. 그리고 해당 Token을 Travis CI에 설정해주어야 합니다.
 
- 이 토큰을 설정하는 방법은 따로 설정 파일을 만들어서 설정하는 방법, 환경변수로 설정하는 방법이 있는데, 지금 이 예제는 public repo로 만들었으니, 환경변수로 넣어줘야 받은 token을 나만 알수 있도록 관리할 수 있습니다. 만약 파일로 만들어 저장한다면, 해당 파일이 repo안에서 보일테니 더 이상 비밀 토큰이 아니게 되겠죠? 공식문서에는 이 토큰을 비밀로 유지하라고 써져 있습니다.
+ 이 토큰을 설정하는 방법은 따로 설정 파일을 만들어서 설정하는 방법, 환경변수로 설정하는 방법이 있는데, 지금 이 예제는 public repo로 만들었으니, 환경변수로 넣어줘야 받은 token을 나만 알수 있도록 관리할 수 있습니다. 만약 파일로 만들어 저장한다면, 해당 repo가 public이므로, 누구든지 파일을 볼 수 있으니 더 이상 비밀 토큰이 아니게 됩니다. 공식문서에는 이 토큰을 비밀로 유지하라고 써져 있습니다.
 
 ### Travis CI에 설정
 
@@ -351,12 +337,30 @@ coveralls도 똑같이 repo들을 스위치 방식으로 키고 끄는데, 이 �
 
 환경변수 이름은 ```COVERALLS_REPO_TOKEN```로 하고, 값은 coveralls에서 받은 값으로 합니다.
 
+## 마무리
+
+### 뱃지 달기
+
+[![Coverage Status](https://coveralls.io/repos/github/JeongUkJae/Continuous-Integration-Example-with-Flask/badge.svg?branch=master)](https://coveralls.io/github/JeongUkJae/Continuous-Integration-Example-with-Flask?branch=master) [![Build Status](https://travis-ci.org/JeongUkJae/Flask-JWT-Login.svg?branch=master)](https://travis-ci.org/JeongUkJae/Flask-JWT-Login)
+
+위처럼 다른 오픈소스 프로젝트에 상단에 있는 것과 같이 뱃지를 달아봅시다.
+
+![Coveralls Badge]({{ site.url }}/images/ci-example-with-flask/coveralls.badge.png)
+
+Coveralls에서는 레포지토리 세팅에서 Badge 옆에 Embed라는 버튼이 존재합니다. 해당 버튼을 누르면 마크다운 문법으로 바로 뱃지를 보여줍니다.
+
+![TravisCI Badge]({{ site.url }}/images/ci-example-with-flask/travis-ci.badge.png)
+
+Travis CI에서는 바로 보이는 Badge를 클릭하면 Markdown으로 표기 가능하도록 변환해줍니다.
+
+위의 두 가지 뱃지를 자신의 레포지토리 `README.md` 상단에 넣어주면 됩니다.
+
 ## 끝
 
-이제 적당히 코드를 수정해서 푸쉬해봅시다. 이제 테스트가 잘 돌아갈 것이고, PR에 대해서도 미리 테스트가 돌아갈 것이다. 물론 Code Coverage는 덤이고요.
+이제 적당히 코드를 수정해서 푸쉬해봅시다. 이제 테스트가 잘 돌아갈 것이고, PR에 대해서도 미리 테스트가 돌아갈 것입니다. 물론 Code Coverage는 덤이고요.
 
-### + 추가
+### 참고자료
 
-이 readme의 상단에 있는 것처럼 Badge를 달아보자!
-
-Coveralls에서는 repo 세팅으로 가면, Badge 옆에 Embed가 있고, Travis CI에서는 바로 보이는 Badge를 클릭하면 Markdown으로 표기 가능하도록 변환해준다.
+[^Flask-WTF]: https://flask-wtf.readthedocs.io Flask와 WTForms를 결합해놓은 패키지이다.
+[^TrvisCI]: https://travis-ci.org 오픈소스를 위해 CI 서비스를 제공한다.
+[^coveralls]: https://coveralls.io 오픈소스에게는 무료인 커버리지 관련 툴이다. 파일별로 커버리지를 보여준다.
