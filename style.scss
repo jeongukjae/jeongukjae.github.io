@@ -301,6 +301,7 @@ a.footnote {
 
 // tag
 .all_tags {
+  line-height: 1.5em;
   a {
     border: 1px solid #9E9E9E;
     font-weight: 100;
@@ -308,6 +309,7 @@ a.footnote {
     color: #616161;
     padding: 5px 12px;
     border-radius: 1000px;
+    white-space: nowrap;
   }
 }
 
