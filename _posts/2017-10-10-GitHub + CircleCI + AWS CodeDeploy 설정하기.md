@@ -120,6 +120,7 @@ circleci 설정파일의 경로는 레포지토리의 `.circleci/config.yml` 파
 
 참고로 저는 아래와 같은 형식으로 설정 파일을 사용하고 있습니다.
 
+{% raw %}
 ```yaml
 version: 2
 jobs:
@@ -163,6 +164,7 @@ jobs:
               ./env/bin/aws deploy create-deployment --application-name application-name --deployment-group-name deployment-group-name --region aws-region --github-location repository=username/reponame,commitId=$CIRCLE_SHA1
             fi
 ```
+{% endraw %}
 
 짤막한 설명을 적어보자면, 도커 컨테이너는 Python 3.6.1 버전을 사용하고, 빌드 과정은 checkout(프로젝트의 소스코드를 받아옴) 후, 저장되어 있는 cache를 받아옵니다. 그 후 dependencies를 설치하고, 해당 dependencies를 저장합니다. 그리고 미리 작성한 unittest를 실행하고 aws deploy를 실행합니다.
 
