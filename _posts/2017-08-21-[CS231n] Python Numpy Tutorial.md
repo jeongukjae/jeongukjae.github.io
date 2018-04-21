@@ -8,7 +8,7 @@ tags:
   - machine learning
 ---
 
-마크다운으로 작성하였고, [Justin Johnson](http://cs.stanford.edu/people/jcjohns/)에 의해 작성된 튜토리얼을 공부용으로 번역 + 정리하였어요.
+[Justin Johnson](http://cs.stanford.edu/people/jcjohns/)에 의해 작성된 튜토리얼을 공부용으로 번역 + 정리하였어요.
 
 원문은 [링크](http://cs231n.github.io/python-numpy-tutorial/#python)로 들어가면 볼 수 있습니다.
 
