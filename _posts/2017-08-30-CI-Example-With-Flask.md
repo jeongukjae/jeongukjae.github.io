@@ -5,6 +5,7 @@ tags:
   - ci
   - flask
   - python
+  - devops
 ---
 
 간단한 예제를 보기 이전에, 이 예제는 python3를 기준으로 작성되고, Flask를 이용하여 작성되며, Virtualenv를 활용하기 때문에 혹시 읽다가 잘 모르시겠다면 아래의 링크를 참고하시면 될 것 같습니다.
