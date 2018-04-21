@@ -346,6 +346,40 @@ a.footnote {
   text-transform: uppercase;
 }
 
+// table
+table {
+  padding: 0;
+  tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    &:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+    th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    th :first-child, td :first-child {
+      margin-top: 0;
+    }
+    th :last-child, td :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
