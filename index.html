@@ -9,6 +9,10 @@ layout: default
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
+      <div>
+        <em>{{ post.date | date: "%B %e, %Y" }}</em> 에 작성
+      </div>
+
       <div class="entry">
         {{ post.excerpt | truncatewords: 30 }}
       </div>
