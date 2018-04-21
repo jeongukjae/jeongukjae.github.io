@@ -13,5 +13,11 @@ layout: default
     {{ page.date | date: "%B %e, %Y" }} 에 작성
   </div>
 
+  <div class='tag_post'>
+    Tags: 
+    {% for tag in page.tags %}
+      <a class='tag_link uppercase' href='/tags/#{{tag}}'>{{ tag }}</a>
+    {% endfor %}
+  </div>
   {% include disqus.html %}
 </article>

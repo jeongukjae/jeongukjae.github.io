@@ -299,6 +299,46 @@ a.footnote {
   padding: 0px 3px;
 }
 
+// tag
+.all_tags {
+  a {
+    border: 1px solid #9E9E9E;
+    font-weight: 100;
+    font-size: 0.8em;
+    color: #616161;
+    padding: 2px 10px;
+    border-radius: 1000px;
+  }
+}
+
+.tag_post {
+  color: $gray;
+  font-style: italic;
+  font-size: 0.9em;
+  margin-bottom: 30px;
+  margin-top: 10px;
+
+  .tag_link {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:after {
+      content: ",";
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
