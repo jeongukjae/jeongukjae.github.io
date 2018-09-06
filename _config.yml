@@ -41,7 +41,7 @@ url: https://jeongukjae.github.io
 baseurl: ""
 
 # pagingation
-paginate: 5
+paginate: 10
 
 #
 # !! You don't need to change any of the configuration flags below !!
