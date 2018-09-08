@@ -16,7 +16,7 @@ Jupyter notebook으로 작성을 했고, GitHub Repository 링크는 [여기](ht
 
 소스코드는 아래에 있다.
 
-```Python
+```
 #!/usr/bin/env python
 # # KNN Image Classifier
 # 
