@@ -13,6 +13,10 @@ tags:
 
 대충대충 다시 볼 내용들만 정리합니다. 일단 궁금했던 부분까지만 읽어요.
 
+## 수정
+
+18.09.20 수정 4.3 ~
+
 ## 1
 
 우선 BackProp(BackPropagation을 줄여씀)은 쉽고, 연산의 효율성이 좋고, 잘 동작하는 경우가 많아서 매우 흔한 Neural Network 학습 알고리즘이다.
@@ -58,18 +62,38 @@ Stochastic 과 Batch를 비교하는데, Batch는 전체 데이터셋을 순회�
 1. Training set을 섞고, 이어진 example들이 거의 같은 class에 속하지 않도록 해라.
 2. large error를 만들어내는 example들을 자주 넣어라.
 
-### 4.3
+### 4.3 Normalizing the Inputs
 
-입력값이 전부 양수라 학습을 느리게 할 수 있으니, 데이터 분포를 생각해 데이터의 평균이 0이 되도록 만들어 준다.
+보통 Convergence는 각각의 input variable들의 평균이 0에 가까울 때 빠르다. 극단적인 경우에 입력값이 전부 양수면 학습을 느리게 할 수 있으니, 데이터 분포를 생각해 데이터의 평균이 0이 되도록 만들어 준다. Convergence는 근데 평균이 0으로 될때만 빠른게 아니라 같은 공분산(Covariance[^Covariance])을 가지도록 해줘도 빨라진다.
+
+그 우리가 보통 생각하는 Covariance Matrix가 아니고 그냥 아래처럼 간단하게 썼다.
+
+$$ C_i = \frac 1 P \sum ^P_{p=1} (z^p_i)^2 $$
+
+$$C_i$$는 covariance of $$i^{th}$$ input variable이고, $$z^p_i$$는 p번째 training example의 i번째 컴포넌트이다.
 
 1. 평균이 0이 되도록 옮겨준다.
 2. covariance가 같아지도록 입력을 rescale해준다.
 3. 입력 변수들은 가능하면 uncorrelated 되어야 한다.
 
+이를 위해 KL Expansion[^KL]으로 알려진 PCA를 할수도 있다고 한다. (to remove *linear* correlations in inputs)
+
+## 4.4 The Sigmoid
+
+가장 유명한 Activation function 중 하나. 단조 증가 함수(monotonically increasing function)이다. 그리고 특정한 유한한 값으로 수렴한다. $$f(x) = \frac 1 {1 + e^{-x}} $$ 또는 $$f(x) = tanh(x)$$가 많이 쓰이는데, Sigmoid도 4.3과 같은 이유때문에 output을 0에 가깝게 내어서 원점 대칭이 선호된다. (그 값은 다음 layer의 input이다) 
+
+1. 따라서 hyperbolic tangent 함수가 보통 convergence가 빠르다. 
+2. 추천되는 sigmoid는 $$f(x) = 1.7159 tanh(\frac 2 3 x)$$이다. tanh 함수는 때때로 계산하기 힘들어서 ratio of polynomials로 근사한 함수가 쓰일 때도 있다.
+3. 작은 linear term을 추가하는 것이 도움이 되기도 한다. flat spots들을 피할 수 있기 때문. $$+ ax$$ 처럼
+
+하지만 잠재적인 위험이 있을 수 있는데, 그건 symmetric sigmoid를 쓰면 origin 근처에서 *very flat* 할 수 있다는 것이다. 따라서 very small weights로 초기화를 해준다. origin에서 먼 error surface는 매우 flat하기 떄문이다. 3번을 사용하는 것도 도움이 된다.
+
+## 4.5
+
+나중에 더 읽기로
+
 ---
 
 [^Paper]: http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf 이 링크말고도 여러가지가 있는 듯 한데, 그냥 구글링해서 찾았다.
-
----
-
-나중에 더 읽기로
+[^Covariance]: https://en.wikipedia.org/wiki/Covariance 공분산에 대해서는 이 링크 참고
+[^KL]: https://en.wikipedia.org/wiki/Karhunen–Loève_theorem 나중에 읽어봐야지...
