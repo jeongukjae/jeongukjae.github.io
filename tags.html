@@ -25,15 +25,18 @@ permalink: /tags/
 <div class="posts">
     <h1>POSTS</h1>
     {% for tag in all_tags %}
+    {% assign count = 0 %}
         <h2 id="{{tag}}" class='uppercase'>{{tag}}</h2> 
         <ul>
             {% for post in site.posts %}
                 {% if post.tags contains tag %}
+                    {% assign count = count | plus: 1 %}
                     <li>
                         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> at <em>{{ post.date | date: '%B %d, %Y' }}</em>
                     </li>
                 {% endif %}
             {% endfor %}
         </ul>
+        <p style='text-align:right'><em>{{ count }} posts</em></p>
     {% endfor %}
 </div>
