@@ -135,7 +135,9 @@ export default {
 </style>
 ```
 
-우리는 `loadScript`라는 공통적인 스크립트 로드 함수를 만들어놓고 쓰기 때문에 그를 사용하였고, 두번째 인자로 넘어가는 `'ChannelIO'`는 스크립트를 중복되게 로드하지 않기 위해 `window` 오브젝트에 추가해서 사용하는 오브젝트의 키이다.
+우리는 `loadScript`라는 공통적인 스크립트 로드 함수를 만들어놓고 쓰기 때문에 그를 사용하였고, 두번째 인자로 넘어가는 `'ChannelIO'`는 스크립트를 중복되게 로드하지 않기 위해 `window` 오브젝트에 추가해서 사용하는 오브젝트의 키이다. 
+
+promise의 `resolve`의 인자로 넘어오는 `value`는 스크립트가 정상적으로 로드되었을 경우 해당 스크립트에 대한 정보가 넘어온다. 그래서 로드가 되었을 경우에만 처리해주기 위해서 저렇게 처리했다. 
 
 ```javascript
 window.ChannelIO('boot', window.channelPluginSettings)
