@@ -294,7 +294,7 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
       <td class='nowrap'>마이크로소프트 봇 프레임워크 프로그래밍<br>베타리딩 참가</td>
       <td>
         - <a href='http://jpub.tistory.com/832?category=208491'>책 링크</a><br>
-        - C#/마이크로소프트 봇 프레임워크를 이용한 챗봇 제작 튜토리얼 책
+        - C#/마이크로소프트 봇 프레임워크를 이용한 챗봇 제작 튜토리얼 번역서
       </td>
     </tr>
     <tr>
@@ -302,7 +302,15 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
       <td class='nowrap'>아마존 웹 서비스 부하 테스트 입문<br>베타리딩 참가</td>
       <td>
         - <a href='http://jpub.tistory.com/841?category=208491'>책 링크</a><br>
-        - AWS에 배포된 웹 서버들의 부하 테스트를 설명하는 책
+        - AWS에 배포된 웹 서버들의 부하 테스트를 설명하는 번역서
+      </td>
+    </tr>
+    <tr>
+      <td class='nowrap'>2018.10</td>
+      <td class='nowrap'>백설공주 거울과 인공지능 이야기<br>베타리딩 참가</td>
+      <td>
+        - <a href='http://jpub.tistory.com/853'>책 링크</a><br>
+        - 인공지능을 쉽게 설명하는 번역서
       </td>
     </tr>
     <tr>
