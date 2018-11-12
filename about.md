@@ -51,6 +51,12 @@ permalink: /about/
   blockquote p {
     margin: 0px;
   }
+
+  @media print {
+    .wrapper-masthead, .wrapper-footer, h2#끝, h2#끝 + p {
+      display: none !important;
+    }
+  }
 </style>
 
 <span style='display: block;text-align:right'>**정욱재**<br>
