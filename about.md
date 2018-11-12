@@ -74,9 +74,7 @@ github - **[https://github.com/JeongUkJae](https://github.com/JeongUkJae)**</spa
 주로 서버 인프라 관리(Docker, AWS) 등에 관심이 많고 서버 개발을 주로 하며, 최근에는 SPA 프레임워크/라이브러리도 관심이 많아
 Vue.js를 이용한 프로젝트 또한 진행중입니다. 주로 사용하는 언어는 Python, Javascript 입니다.
 
-오픈소스에 관심이 많습니다. [PyCon 2018](https://www.pycon.kr/2018/) 스프린트로 나온 프로젝트 중 하나인 [nirum-lang/nirum](https://github.com/nirum-lang/nirum)의
-이슈들 중 문서 생성 기능 관련된 작은 이슈들을 처리하고, [CS231n_KOR_SUB](https://github.com/insurgent92/CS231N_17_KOR_SUB)라는 CS231n 강의의 한글 자막 번역 프로젝트의
-자막 오타를 수정하는 등 GitHub 상의 여러가지 저장소에 기여를 하는 중입니다. 또한 Python으로 작성한 Tistory 서비스의 API 클라이언트인 [pytistory](https://github.com/JeongUkJae/pytistory)와 같은 오픈소스
+오픈소스에 관심이 많습니다. [PyCon 2018](https://www.pycon.kr/2018/) 스프린트로 나온 프로젝트 중 하나인 [nirum-lang/nirum](https://github.com/nirum-lang/nirum)의 이슈들 중 문서 생성 기능 관련된 작은 이슈들을 처리하고, [CS231n_KOR_SUB](https://github.com/insurgent92/CS231N_17_KOR_SUB)라는 CS231n 강의의 한글 자막 번역 프로젝트의 자막 오타를 수정하는 등 GitHub 상의 여러가지 저장소에 기여를 하는 중입니다. 또한 Python으로 작성한 Tistory 서비스의 API 클라이언트인 [pytistory](https://github.com/JeongUkJae/pytistory)와 같은 오픈소스
 프로젝트들도 작성/배포하고 있습니다.
 
 현재 학부생 2학년입니다.
@@ -290,6 +288,13 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
       </td>
     </tr>
     <tr>
+      <td class='nowrap'>2018.06 ~</td>
+      <td class='nowrap'>제이펍 베타리더스 7기</td>
+      <td>
+        - 번역서 코드 테스트/오탈자 확인/내용 검증
+      </td>
+    </tr>
+    <tr>
       <td class='nowrap'>2018.08</td>
       <td class='nowrap'>마이크로소프트 봇 프레임워크 프로그래밍<br>베타리딩 참가</td>
       <td>
@@ -318,6 +323,14 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
       <td class='nowrap'>대학 동아리 교육 봉사</td>
       <td>
         - <a href='https://github.com/JeongUkJae/web-development-class-in-quipu'>레포지토리 링크</a>
+      </td>
+    </tr>
+    <tr>
+      <td class='nowrap'>2018.11.10</td>
+      <td class='nowrap'>GDG DevFest Seoul 2018 스태프</td>
+      <td>
+        - <a href='https://www.facebook.com/devfest.seoul.2018/'>페이스북 링크</a><br>
+        - <a href='https://devfest-seoul18.gdg.kr'>홈페이지 링크</a>
       </td>
     </tr>
   </tbody>
