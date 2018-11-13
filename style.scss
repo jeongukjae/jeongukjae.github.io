@@ -304,6 +304,21 @@ a.footnote {
   padding: 0px 3px;
 }
 
+// figure
+figure {
+  text-align: center;
+
+  figcaption {
+    font-size: 0.9em;
+    color: $gray;
+
+    &:before {
+      content: "▲";
+      margin-right: 10px;
+    }
+  }
+}
+
 // tag
 .all_tags {
   line-height: 1.5em;
