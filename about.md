@@ -5,15 +5,16 @@ permalink: /about/
 ---
 
 <style>
+  .page {
+    overflow: hidden;
+  }
+
   p {
     font-size: 95%;
     line-height: 1.7em;
     letter-spacing: .1px;
   }
-  table {
-    width: 100%;
-  }
-
+  
   table tr {
     border-top: none;
     border-bottom: 1px solid #eee;
@@ -52,6 +53,15 @@ permalink: /about/
     margin: 0px;
   }
 
+  .responsive {
+    overflow-x: scroll;
+  }
+
+  table {
+    display: block;
+    min-width: 720px;
+  }
+
   @media print {
     .wrapper-masthead, .wrapper-footer, h2#끝, h2#끝 + p {
       display: none !important;
@@ -87,8 +97,17 @@ Vue.js를 이용한 프로젝트 또한 진행중입니다. 주로 사용하는 
 
 ## 경력
 
-| ------------- | -------------| ----- |
-| 2018.01.03 - 현재 | 아이디얼아이디어 (IdealIdea) | **AWS 인프라 관리, 백엔드 개발**<br>프론트엔드 개발(Vue.js, React.js) |
+<div class='responsive'>
+<table>
+  <tbody>
+    <tr>
+      <td>2018.01.03 - 현재</td>
+      <td>아이디얼아이디어 (IdealIdea)</td>
+      <td><strong>AWS 인프라 관리, 백엔드 개발</strong><br>프론트엔드 개발(Vue.js, React.js)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ## 상세 경력
 
@@ -122,6 +141,7 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
 
 #### 프로젝트
 
+<div class='responsive'>
 <table>
   <tbody>
     <tr>
@@ -216,9 +236,11 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
     </tr>
   </tbody>
 </table>
+</div>
 
 ## 개인 프로젝트
 
+<div class='responsive'>
 <table>
   <tbody>
     <tr>
@@ -278,9 +300,11 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
     </tr>
   </tbody>
 </table>
+</div>
 
 ## 개인 활동
 
+<div class='responsive'>
 <table>
   <tbody>
     <tr>
@@ -341,14 +365,36 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
     </tr>
   </tbody>
 </table>
+</div>
 
 ## 학력
 
-| ------------- | -------------| ----- |
-| 2018.03 - 현재 | 서울시립대학교 | 컴퓨터과학과 학사 복수전공 |
-| 2018.03 - 현재 | 서울시립대학교 | 전자전기컴퓨터공학부 학사 재학 중 |
-| 2017.03 - 2018.02 | 서울시립대학교 | 생명과학과, 전자전기컴퓨터공학부로 전과 |
-| 2014.03 - 2017.02 | 한국디지털미디어고등학교 | 웹프로그래밍과 졸업 |
+<div class='responsive'>
+<table>
+  <tbody>
+    <tr>
+      <td>2018.03 - 현재</td>
+      <td>서울시립대학교</td>
+      <td>컴퓨터과학과 학사 복수전공</td>
+    </tr>
+    <tr>
+      <td>2018.03 - 현재</td>
+      <td>서울시립대학교</td>
+      <td>전자전기컴퓨터공학부 학사 재학 중</td>
+    </tr>
+    <tr>
+      <td>2017.03 - 2018.02</td>
+      <td>서울시립대학교</td>
+      <td>생명과학과, 전자전기컴퓨터공학부로 전과</td>
+    </tr>
+    <tr>
+      <td>2014.03 - 2017.02</td>
+      <td>한국디지털미디어고등학교</td>
+      <td>웹프로그래밍과 졸업</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ## 끝
 
