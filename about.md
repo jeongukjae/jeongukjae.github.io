@@ -58,10 +58,9 @@ permalink: /about/
   }
 
   table {
-    display: block;
-    min-width: 720px;
+    width: 720px;
   }
-
+  
   @media print {
     .wrapper-masthead, .wrapper-footer, h2#끝, h2#끝 + p {
       display: none !important;
