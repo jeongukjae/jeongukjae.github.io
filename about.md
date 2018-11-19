@@ -362,6 +362,14 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
         - <a href='https://devfest-seoul18.gdg.kr'>홈페이지 링크</a>
       </td>
     </tr>
+    <tr>
+      <td class='nowrap'>2018.11.15-17</td>
+      <td class='nowrap'>X20 Social Hackathon 운영 스태프</td>
+      <td>
+        - <a href='https://www.facebook.com/X20Hackathon/'>페이스북 링크</a><br>
+        - 설리번 교육 연구소에 소속되어 진행한 해커톤
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>
