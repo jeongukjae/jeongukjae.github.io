@@ -5,42 +5,42 @@ permalink: /about/
 ---
 
 <style>
-  .page {
+  #main .page {
     overflow: hidden;
   }
 
-  p {
+  #main p {
     font-size: 95%;
     line-height: 1.7em;
     letter-spacing: .1px;
   }
   
-  table tr {
+  #main table tr {
     border-top: none;
     border-bottom: 1px solid #eee;
   }
 
-  table tr:nth-child(2n) {
+  #main table tr:nth-child(2n) {
     background-color: white;
   }
 
-  table tr td {
+  #main table tr td {
     border: none;
     font-size: 80%;
     padding-bottom: 20px;
     padding-top: 5px;
   }
   
-  td.nowrap {
+  #main td.nowrap {
     white-space: nowrap;
   }
 
-  small {
+  #main small {
     font-size: 80%;
     color: #666;
   }
 
-  blockquote {
+  #main blockquote {
     margin: 1em .8em;
     border-left: 2px solid #666;;
     padding: 0.1em 1em;
@@ -49,15 +49,15 @@ permalink: /about/
     font-style: italic;
   }
 
-  blockquote p {
+  #main blockquote p {
     margin: 0px;
   }
 
-  .responsive {
+  #main .responsive {
     overflow-x: scroll;
   }
 
-  table {
+  #main table {
     width: 720px;
   }
   
