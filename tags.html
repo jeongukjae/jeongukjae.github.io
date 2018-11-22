@@ -24,6 +24,8 @@ permalink: /tags/
 
 <div class="posts">
     <h1>POSTS</h1>
+    <p>total posts: <em>{{ site.posts | size }} posts</em></p>
+
     {% for tag in all_tags %}
     {% assign count = 0 %}
         <h2 id="{{tag}}" class='uppercase'>{{tag}}</h2> 
