@@ -3,7 +3,7 @@ layout: post
 title: "VSCode에서 Aliasing된 경로들 intellisense 지원하기"
 tags:
   - editor
-  - node js
+  - javascript
   - vue
 ---
 
