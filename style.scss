@@ -315,7 +315,9 @@ figure {
 
     &:before {
       content: "▲";
-      margin-right: 10px;
+      margin-right: 5px;
+      font-size: 0.4em;
+      vertical-align: 3px;
     }
   }
 }
