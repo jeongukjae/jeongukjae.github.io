@@ -309,6 +309,12 @@ a.footnote {
 figure {
   text-align: center;
 
+  img {
+    -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  }
+
   figcaption {
     font-size: 0.9em;
     color: $gray;
