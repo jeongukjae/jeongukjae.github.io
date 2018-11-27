@@ -9,6 +9,9 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
+// 스포카 한 산스
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -19,7 +22,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 14px/1.4 'Spoqa Han Sans';
   color: $darkGray;
 }
 
@@ -31,7 +34,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  // font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
 
@@ -45,22 +48,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 1.67em;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.33em;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.1em;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1em;
   color: $gray;
 }
 
@@ -194,16 +197,15 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 1px;
 }
 
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
-  font-size: 16px;
+  font-size: 14px;
 
   @include mobile {
     margin: 3px 0;
@@ -213,14 +215,13 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 16px;
 
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   a {
@@ -267,7 +268,7 @@ nav {
 
   .read-more {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 0.83em;
   }
 
   p {
@@ -321,13 +322,13 @@ figure {
 
 // tag
 .all_tags {
-  line-height: 1.5em;
+  line-height: 2em;
   a {
     border: 1px solid #9E9E9E;
     font-weight: 100;
-    font-size: 0.65em;
+    font-size: 0.8em;
     color: #616161;
-    padding: 5px 12px;
+    padding: 3px 8px;
     border-radius: 1000px;
     white-space: nowrap;
   }
