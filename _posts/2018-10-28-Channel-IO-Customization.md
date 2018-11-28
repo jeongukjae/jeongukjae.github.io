@@ -7,8 +7,6 @@ tags:
   - web
 ---
 
-## Channel IO
-
 최근 Vue js를 사용하는 외주를 하면서, 고객들에게 웹 페이지에 [channel io](https://channel.io/ko)를 달아달라는 요청을 받았다. channel io는 고객과 상담을 위해 웹/앱에 메신저 기능을 넣어주는 플러그인이다.
 
 ![channel io]({{ site.url }}/images/2018-10-28-channel-io/channel-io-home.png)
