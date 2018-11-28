@@ -11,7 +11,7 @@ tags:
 
 최근 Vue js를 사용하는 외주를 하면서, 고객들에게 웹 페이지에 [channel io](https://channel.io/ko)를 달아달라는 요청을 받았다. channel io는 고객과 상담을 위해 웹/앱에 메신저 기능을 넣어주는 플러그인이다.
 
-![channel io]({{ site.url }}/images/channel-io/channel-io-home.png)
+![channel io]({{ site.url }}/images/2018-10-28-channel-io/channel-io-home.png)
 
 하지만 우리는 Vue js를 사용하기 때문에 컴포넌트화를 시켜서 사용을 하는 것이 좋겠다는 생각을 했다. 그 이유는 "필요한 페이지에서 끄고 킬 수 있어야 한다"는 것이었고, *vue-router*를 사용중이기 때문에 적용되어야 하는 뷰 별로 템플릿 맨 아래 컴포넌트를 붙여서 사용을 하기로 헀다.
 
@@ -21,7 +21,7 @@ tags:
 
 우선 어떤 방식으로 사용을 할 수 있는지 살펴야 하므로 [channel io 개발자 문서](https://developers.channel.io/docs)를 참고한다. [^1]
 
-![general case]({{ site.url }}/images/channel-io/general-case.png)
+![general case]({{ site.url }}/images/2018-10-28-channel-io/general-case.png)
 
 일단은 단순하게 로딩만 하는 범용적인 상황에 대한 예시 코드가 있길래 적용을 해봤다. 하지만 이 경우 문제점이 생겼다.
 
@@ -32,7 +32,7 @@ tags:
 
 그래서 문서를 뒤져보다가 찾은 것이 커스터마이제이션.
 
-![custom]({{ site.url }}/images/channel-io/customization.png)
+![custom]({{ site.url }}/images/2018-10-28-channel-io/customization.png)
 
 커스터마이제이션 탭을 참고하는데, 이것은 작성중인 사이트에 그대로 적용이 불가능하다..
 
@@ -45,7 +45,7 @@ tags:
 
 SDK 레퍼런스 뒤져보기
 
-![sdk]({{ site.url }}/images/channel-io/sdk.png)
+![sdk]({{ site.url }}/images/2018-10-28-channel-io/sdk.png)
 
 SDK 레퍼런스를 뒤져보니까 스크립트 로딩 후, 로딩된 이벤트, 메신저를 여는 트리거 등등이 다 존재했다.
 
@@ -153,7 +153,7 @@ window.ChannelIO('onChangeBadge', unreadCount => {
 
 onChangeBadge 이벤트 리스너는 사용자가 메신저 창을 닫고, 사용을 할 때 상담사로부터 메시지가 오면 channel io의 아이콘에 알림 표시로 안 읽은 메시지 숫자가 떠서 그 ui 처리를 위한 것이다.
 
-![result]({{ site.url }}/images/channel-io/result.png)
+![result]({{ site.url }}/images/2018-10-28-channel-io/result.png)
 
 최종 결과 화면. 잘 뜬다..
 
