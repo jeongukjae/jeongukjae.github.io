@@ -85,3 +85,9 @@ Done in 18.63s.
 {% include image.html url="/images/2018-11-30-yarn/github.png" alt="issue 댓글" description="그냥 다들 자기 상황을 알리고 있길래..." %}
 
 yarn을 쓰기 시작하고나서 yarn오류를 꽤나 자주 겪는데, 그 오류는 십중팔구 `yarn.lock`을 regernating하면 해결이 되었다. 왜 그런지는 잘 모르겠지만..
+
+## 그래서 성공했어?
+
+{% include image.html url="/images/2018-11-30-yarn/s.png" alt="성공" description="결국 성공했다" %}
+
+그냥 `.circleci/config.yml`에 사용한 커맨드 다 추가했고, 레포지토리에도 `yarn.lock` 파일 재생성해서 넣어줬다.
