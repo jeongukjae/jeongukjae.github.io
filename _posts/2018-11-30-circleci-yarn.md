@@ -8,7 +8,7 @@ tags:
   - 에러해결기
 ---
 
-지금 개발중인 프로젝트가 node `10.11.0` 버전을 사용해서 CircleCI의 `circleci/node:10.11.0` 이미지로 빌드는 하는데, 이번주부터 갑자기 `checkout` job이 실패했다고 뜨더라.
+지금 개발중인 프로젝트가 node `10.11.0` 버전을 사용해서 CircleCI의 `circleci/node:10.11.0` 이미지로 빌드는 하는데, 이번주부터 갑자기 `checkout` job이 실패했다고 떴다.
 
 {% include image.html url="/images/2018-11-30-yarn/error.png" alt="yarn 오류" description="슬랙으로 자꾸 넘어오는 동일한 오류" %}
 
