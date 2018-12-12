@@ -287,16 +287,6 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
         - pip 모듈로 배포
       </td>
     </tr>
-    <tr>
-      <td class='nowrap'>2018.08 ~ 현재</td>
-      <td class='nowrap'>simple pip</td>
-      <td>
-        - <a href='https://github.com/JeongUkJae/simple-pip'>GitHub Repo</a><br>
-        - 파이썬 패키지 관리 툴<br>
-        - pip 모듈로 배포<br>
-        - 개발중
-      </td>
-    </tr>
   </tbody>
 </table>
 </div>
