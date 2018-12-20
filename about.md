@@ -82,7 +82,6 @@ github - **[https://github.com/JeongUkJae](https://github.com/JeongUkJae)**</spa
 4. [개인 프로젝트](#개인-프로젝트)
 5. [개인 활동](#개인-활동)
 6. [학력](#학력)
-7. [끝](#끝)
 
 ## 자기소개
 
@@ -92,7 +91,7 @@ Vue.js를 이용한 프로젝트 또한 진행중입니다. 주로 사용하는 
 오픈소스에 관심이 많습니다. [PyCon 2018](https://www.pycon.kr/2018/) 스프린트로 나온 프로젝트 중 하나인 [nirum-lang/nirum](https://github.com/nirum-lang/nirum)의 이슈들 중 문서 생성 기능 관련된 작은 이슈들을 처리하고, [CS231n_KOR_SUB](https://github.com/insurgent92/CS231N_17_KOR_SUB)라는 CS231n 강의의 한글 자막 번역 프로젝트의 자막 오타를 수정하는 등 GitHub 상의 여러가지 저장소에 기여를 하는 중입니다. 또한 Python으로 작성한 Tistory 서비스의 API 클라이언트인 [pytistory](https://github.com/JeongUkJae/pytistory)와 같은 오픈소스
 프로젝트들도 작성/배포하고 있습니다.
 
-현재 학부생 2학년입니다.
+현재 서울시립대학교 전자전기컴퓨터공학부/컴퓨터과학부 재학중인 학부생 2학년입니다.
 
 ## 경력
 
@@ -252,15 +251,6 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
       </td>
     </tr>
     <tr>
-      <td class='nowrap'>2015.12</td>
-      <td class='nowrap'>Christmas-Tree-os</td>
-      <td>
-        - <a href='https://github.com/JeongUkJae/Christmas-Tree-os'>GitHub Repo</a><br>
-        - 어셈블리로 작성한 플로피 디스크용 이미지<br>
-        - just for fun
-      </td>
-    </tr>
-    <tr>
       <td class='nowrap'>2017.05 ~ 2018.10</td>
       <td class='nowrap'>flask jwt login</td>
       <td>
@@ -285,16 +275,6 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
         - <a href='https://github.com/JeongUkJae/pytistory'>GitHub Repo</a><br>
         - Python 3.x 버전을 지원하는 티스토리 API 클라이언트<br>
         - pip 모듈로 배포
-      </td>
-    </tr>
-    <tr>
-      <td class='nowrap'>2018.08 ~ 현재</td>
-      <td class='nowrap'>simple pip</td>
-      <td>
-        - <a href='https://github.com/JeongUkJae/simple-pip'>GitHub Repo</a><br>
-        - 파이썬 패키지 관리 툴<br>
-        - pip 모듈로 배포<br>
-        - 개발중
       </td>
     </tr>
   </tbody>
@@ -390,7 +370,7 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
     <tr>
       <td>2018.03 - 현재</td>
       <td>서울시립대학교</td>
-      <td>컴퓨터과학과 학사 복수전공</td>
+      <td>컴퓨터과학부 학사 복수전공</td>
     </tr>
     <tr>
       <td>2018.03 - 현재</td>
