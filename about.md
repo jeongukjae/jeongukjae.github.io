@@ -370,6 +370,14 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
         - 설리번 교육 연구소에 소속되어 진행한 해커톤
       </td>
     </tr>
+    <tr>
+      <td class='nowrap'>2018.12</td>
+      <td class='nowrap'>인스파이어드; 개정보증판<br>베타리딩 참가</td>
+      <td>
+        - <a href='http://jpub.tistory.com/879'>책 링크</a><br>
+        - 제품 관리자들을 위한 책
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>
