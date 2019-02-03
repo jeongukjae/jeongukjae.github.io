@@ -358,6 +358,14 @@ iOS: [https://itunes.apple.com/us/app/lebit/id1395991833](https://itunes.apple.c
         - 제품 관리자들을 위한 책
       </td>
     </tr>
+    <tr>
+      <td class='nowrap'>2018.12</td>
+      <td class='nowrap'>리액트 인 액션 베타리딩 참가</td>
+      <td>
+        - <a href='http://jpub.tistory.com/893'>책 링크</a><br>
+        - 원서 : <a href='https://www.manning.com/books/react-in-action'>Manning - React in Action</a>
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>
