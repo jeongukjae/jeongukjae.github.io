@@ -252,16 +252,16 @@ nav {
   border-bottom: none;
 }
 
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0 1em;
-    color: $gray;
-    font-size: 1em;
-    font-style: italic;
-  }
+blockquote {
+  margin: 1.8em .8em;
+  border-left: 2px solid $gray;
+  padding: 0 1em;
+  color: $gray;
+  font-size: 1em;
+  font-style: italic;
+}
 
+.post {
   .comments {
     margin-top: 10px;
   }
