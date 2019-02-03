@@ -14,7 +14,7 @@ permalink: /about/
     line-height: 1.7em;
     letter-spacing: .1px;
   }
-  
+
   #main table tr {
     border-top: none;
     border-bottom: 1px solid #eee;
@@ -30,7 +30,7 @@ permalink: /about/
     padding-bottom: 20px;
     padding-top: 5px;
   }
-  
+
   #main td.nowrap {
     white-space: nowrap;
   }
@@ -42,7 +42,7 @@ permalink: /about/
   #main table {
     width: 720px;
   }
-  
+
   @media print {
     .wrapper-masthead, .wrapper-footer, h2#끝, h2#끝 + p {
       display: none !important;
@@ -280,6 +280,14 @@ Vue.js를 이용한 프로젝트 또한 진행중입니다. 주로 사용하는 
       <td>
         - <a href='http://jpub.tistory.com/893'>책 링크</a><br>
         - 원서 : <a href='https://www.manning.com/books/react-in-action'>Manning - React in Action</a>
+      </td>
+    </tr>
+    <tr>
+      <td class='nowrap'>2018.12</td>
+      <td class='nowrap'>Kubernetes in the Google Cloud<br>수료 (Qwiklab)</td>
+      <td>
+        - <a href='https://www.qwiklabs.com/public_profiles/36a3fd56-95ed-4ef9-a530-df33b68b4b91'>Qwiklab Public Profile</a><br>
+        - 구글 클라우드 스터디잼으로 진행함
       </td>
     </tr>
   </tbody>
