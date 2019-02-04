@@ -74,7 +74,7 @@ Deployment도 [k8s 문서](https://kubernetes.io/docs/concepts/workloads/control
 근데 이게 만들어줬다고 끝나는게 아니고, 기본적으로 pod이 내부 네트워킹만 가능해서, external traffic을 하나 뚫어줘야 하는데, k8s의 service로 expose하는게 가능하다고 한다.
 
 ```bash
-kubectl expose deployment [NAME_OF_POT] --type="LoadBalancer"
+kubectl expose deployment [NAME_OF_POD] --type="LoadBalancer"
 ```
 
 저거 `type` 플래그는 외부 IP 만들려고 필요하단다. 이건 나중에 설명해야지.
