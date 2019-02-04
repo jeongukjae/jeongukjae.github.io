@@ -248,3 +248,7 @@ k8s 문서는 [여기](https://kubernetes.io/docs/concepts/services-networking/s
 > Deleting the Pods in a StatefulSet will not delete the associated volumes. This is to ensure that you have the chance to copy data off the volume before deleting it.
 
 그래서 StatefulSet과 Persisten Storage는 따로 따로 지워야 한다.
+
+## 7 ~ 10
+
+이게 7 ~ 10은 사실 쓸게 Helm 밖에 안보인다... 나중에 따로 Helm 쓰자.
