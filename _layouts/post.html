@@ -14,12 +14,14 @@ layout: default
   </div>
 
   <div class='tag_post'>
-    Tags: 
+    Tags:
     {% for tag in page.tags %}
       <a class='tag_link uppercase' href='/tags/#{{tag}}'>{{ tag }}</a>
     {% endfor %}
   </div>
-  {% include disqus.html %}
+  {% if site.github %}
+    {% include disqus.html %}
+  {% endif %}
 </article>
 
 <script type="text/javascript" async
