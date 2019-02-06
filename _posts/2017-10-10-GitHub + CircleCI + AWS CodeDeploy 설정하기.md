@@ -5,18 +5,19 @@ tags:
   - ci
   - devops
   - aws
+  - cloud
 ---
 
  저는 GitHub Developer Plan (Unlimited private repos가 가능한 Plan)을 사용하는 만큼, 소스코드 저장을 할 때 GitHub 레포지토리를 많이 사용을 합니다. 그래서 가끔 간단한 일을 할 때에 GitHub와 CircleCI를 연동하여 빌드/테스트를 진행했었고, 필요하다면 AWS의 CodeDeploy를 이용하여 자동으로 배포를 진행하였습니다. 오늘은 그 방법에 대해서 써보도록 하겠습니다.
- 
+
  **한가지 주의**를 당부드리자면, 배워가는 과정에서 쓴 글이기 때문에 부정확한 정보와 비효율적인 방법이 담겨있을 수 있습니다. 그 부분에 대해서는 어느정도 생각을 하시고 읽어주셨으면 합니다.
- 
+
 ## GitHub
- 
+
 ### GitHub 설정
- 
+
  GitHub에서는 `appspec` 파일을 포함한 하나의 새로운 레포지토리를 준비하면 됩니다.
- 
+
 ![]({{ site.url }}/images/2017-10-10-github-aws-codedeploy/github-new-repository.png)
 
 `appspec` 파일이란 무엇일까요?
@@ -30,15 +31,15 @@ tags:
 > * Map the source files in your application revision to their destinations on the instance.
 > * Specify custom permissions for deployed files.
 > * Specify scripts to be run on each instance at various stages of the deployment process.
-> 
+>
 > The AppSpec file is used to manage each deployment as a series of lifecycle events. Lifecycle event hooks, which are defined in the file, allow you to run scripts on an instance after many of the individual deployment lifecycle events. AWS CodeDeploy runs only those scripts specified in the file, but those scripts can call other scripts on the instance. You can run any type of script as long as it is supported by the operating system running on the instances.
- 
+
  AppSpec 파일은 Application Specification File이고, YAML 포맷의 파일이다. 이 파일은 Instance상의 특정 목적 디렉토리로 소스 파일들을 매핑해주고, 배포 파일들의 퍼미션을 설정해주며, Deployment Process 주기 중 실행되어야 할 스크립트들을 정해준다. 즉, 각 배포에 해당하는 생명주기를 관리하기 위한 파일이다.
 
  이 정도로 이해하시면 될 것 같습니다.
- 
- 그 `appspec`을 작성하는 방법은 [AWS CodeDeploy AppSpec File Reference](http://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file.html)에 잘 나와 있습니다. 짤막하게 설명을 해보자면, 
- 
+
+ 그 `appspec`을 작성하는 방법은 [AWS CodeDeploy AppSpec File Reference](http://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file.html)에 잘 나와 있습니다. 짤막하게 설명을 해보자면,
+
 ```yaml
 version: 0.0
 os: operating-system-name
@@ -51,9 +52,9 @@ hooks:
 ```
 
  위와 같은 구조를 가집니다. 파일 구조를 보시면 이해하시겠지만, 맨 처음 설명했던 파일 매핑, 퍼미션, 생명주기 관리는 파일 구조상의 세가지 섹션에 해당하는 부분입니다. ```version```은 고정되는 섹션이고, ```os```는 ```linux```또는 ```windows```의 값을 가집니다.
- 
+
  그 후 자세한 부분은 Reference를 참고하시면 이해가 잘 가실 겁니다.
- 
+
 ```yaml
 version: 0.0
 os: linux
@@ -132,7 +133,7 @@ jobs:
 
     steps:
       - checkout
-      
+
       - restore_cache:
           keys:
           - deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
@@ -149,7 +150,7 @@ jobs:
           paths:
             - ./env
           key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
-        
+
       - run:
           name: run tests
           command: |
@@ -197,7 +198,7 @@ IAM에서 Role 2개, User 하나를 추가하시면 됩니다.
 * EC2 인스턴스에 정해줄 IAM Role
 * CodeDeploy Application에 정해줄 IAM Role
 
-EC2 인스턴스에 정해줄 IAM Role을 편의상 `EC2CodeDeploySample`이라고 부르겠습니다. 그리고 CodeDeploy Application에 정해줄 IAM Role은 편의상 `CodeDeploySample`이라고 부르겠습니다. 
+EC2 인스턴스에 정해줄 IAM Role을 편의상 `EC2CodeDeploySample`이라고 부르겠습니다. 그리고 CodeDeploy Application에 정해줄 IAM Role은 편의상 `CodeDeploySample`이라고 부르겠습니다.
 
 먼저 `CodeDeploySample` Role을 만들어줍니다. 해당 Role에 설정해줄 것은 두 가지입니다.
 
@@ -308,7 +309,7 @@ Policy는 다음과 같이 설정합니다. Inline Policy를 통해 직접 작�
 
 ### EC2 Instance
 
-EC2 Instance는 어떻게 만드셔도 큰 상관은 없지만, 저는 Amazon Linux를 기준으로 작성하겠습니다. 
+EC2 Instance는 어떻게 만드셔도 큰 상관은 없지만, 저는 Amazon Linux를 기준으로 작성하겠습니다.
 
 EC2 Instance를 생성하면서 IAM 역할을 `EC2CodeDeploySample`로 정해서 EC2 Instance를 생성해줍니다. 그 후 ssh로 접속하여 codedeploy-agent를 설치해주는데, 그 방법은 다음과 같습니다.
 
@@ -338,7 +339,7 @@ $ sudo service codedeploy-agent start
 
 이제 드디어 CodeDeploy 설정으로 왔습니다.
 
-CodeDeploy 설정은 나머지 부분은 적당히 원하는 배포방식에 맞추어 하시면 됩니다. EC2 Instance도 태그로 설정하시면 됩니다. 다만, **서비스 역할 ARN** 부분은 앞서 설정했던 `CodeDeploySample`로 설정하셔야 합니다. 
+CodeDeploy 설정은 나머지 부분은 적당히 원하는 배포방식에 맞추어 하시면 됩니다. EC2 Instance도 태그로 설정하시면 됩니다. 다만, **서비스 역할 ARN** 부분은 앞서 설정했던 `CodeDeploySample`로 설정하셔야 합니다.
 
 그리고 "AWS CodeDeploy - 배포"로 접속하신 후 GitHub 계정과 연결하기 위해 초기 배포를 진행해줍니다.
 
