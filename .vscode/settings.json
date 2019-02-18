@@ -1,4 +1,7 @@
 {
   "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "markdownlint.config": {
+    "MD002": false
+  }
 }
