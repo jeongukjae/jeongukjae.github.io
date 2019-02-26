@@ -10,7 +10,7 @@ Qwiklab과 Google Developers의 스터디잼을 통해 Kubernetes를 공부하�
 2. 실제 어플리케이션 서버/프론트엔드 코드는 간단한 수준으로 만들어보자. **(제일 중요)**
    - 어플리케이션 코드 짜느라고 k8s에 집중 못하는 일은 없도록 하자!
 
-이 때, redis나, 데이터베이스를 활용하게 하면서, 큐서버도 쓰게하면 좋겠다는 생각이 들어, 큐서버를 활용하면서도 간단한 앱을 생각해보니, 이미지 변환툴 하나를 만들어보자는 생각을 했다. 그래서 이미지 크기를 1/4로 줄여주는 웹을 하나 만들어보기로 했다. 그리고 나중에 AWS EKS에 올려서 ELB도 달아보기로.
+이 때, redis나, 데이터베이스를 활용하게 하면서, 큐서버도 쓰게하면 좋겠다는 생각이 들어, 큐서버를 활용하면서도 간단한 앱을 생각해보니, 이미지 변환툴 하나를 만들어보자는 생각을 했다. 그래서 이미지 크기를 줄여주는 웹을 하나 만들어보기로 했다. 그리고 나중에 AWS EKS에 올려서 ELB도 달아보기로.
 
 즉, 간단한 수준의 인증 서버를 만들고, redis를 구성하고, 이미지를 업로드하면 큐서버에 넘긴다음, 워커 컨테이너를 몇개 구성해서 워커에서 이미지 리사이징을 한 다음 이메일을 전송해주도록 해보자. ~~(어차피 개강 전의 대학생이라 시간이 많아!)~~
 
@@ -186,4 +186,50 @@ server {
 
 ### 메시지 큐 서버
 
-이제 메시지 큐 서버를 추가해보자. 간단하게 RabbitMQ를 쓰자!
+이제 메시지 큐 서버를 추가해보자. 간단하게 RabbitMQ를 쓰자! RabbitMQ를 간단하게 설명하자면, Message Queue서버로 간편하게 구축 가능한 솔루션 중 하나이다. Python에서는 [pika](https://pika.readthedocs.io/en/stable/)라는 라이브러리로 rabbitmq를 연동할 수 있다. 간단하게 지금은 `docker-compose.yml`에 아래처럼 추가해놓았다.
+
+```yml
+...
+
+  rabbitmq-server:
+    image: rabbitmq:latest
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+
+...
+```
+
+### 이미지 크기 변환 툴 작성
+
+일단 워커와 서버로 분리했다. 서버에서는 요청이 들어오면 저장과, 큐서버로의 publish만 담당하고 워커에서 실제 변환을 수행했다. 자세한 코드는 [server](https://github.com/JeongUkJae/k8s-tutorial/blob/master/resize-server/app/app.py)와 [worker](https://github.com/JeongUkJae/k8s-tutorial/blob/master/resize-worker/app/app.py)를 참고하자. `docker-compose.yml`은 아래처럼 추가하였다. 저장한 디렉토리를 공유하기 위해 설정해주었다.
+
+```yml
+...
+
+  resize-server:
+    build: resize-server/
+    environment:
+      - UPLOADING_PATH=/images
+      - RABBITMQ_CHANNEL=${RABBITMQ_CHANNEL}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - ./resize-server/app:/app
+      - ./images:/images
+    depends_on:
+      - rabbitmq-server
+      - auth-server
+  resize-worker:
+    build: resize-worker/
+    environment:
+      - UPLOADING_PATH=/images
+      - RABBITMQ_CHANNEL=${RABBITMQ_CHANNEL}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - ./images:/images
+    depends_on:
+      - rabbitmq-server
+      - resize-server
+```
