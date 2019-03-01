@@ -15,7 +15,17 @@ layout: default
 
       <div class="entry">
         {{ post.excerpt | truncatewords: 30 }}
+      </a>
       </div>
+
+      {% if post.tags.size > 0 %}
+      <div class='tag_post'>
+        Tags:
+        {% for tag in post.tags %}
+          <a class='tag_link uppercase' href='/tags/#{{tag}}'>{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
