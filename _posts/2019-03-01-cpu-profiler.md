@@ -5,7 +5,7 @@ tags:
   - python
 ---
 
-파이썬을 사용하면서 프로파일링을 해보고 실제로 어느 코드가 병목점인지, 어느 코드를 수정해야할 지 알고 싶을 때가 있는데 그럴 때 사용가능한 모듈들을 [고성능 파이썬](https://book.naver.com/bookdb/book_detail.nhn?bid=10910544)에서 잘 설명해주어서 Python 공식문서에 존재하는 [The Python Profiler](https://docs.python.org/3.7/library/profile.html)와 함께 정리해보았다.
+파이썬을 사용하면서 프로파일링을 통해 실제로 어느 코드가 병목점인지, 어느 코드를 수정해야할 지 알고 싶을 때가 있다. 그럴 때 사용가능한 모듈들을 [고성능 파이썬](https://book.naver.com/bookdb/book_detail.nhn?bid=10910544)에서 잘 설명해주어서 Python 공식문서의 [The Python Profiler](https://docs.python.org/3.7/library/profile.html)의 내용과 함께 정리해보았다.
 
 ## 프로파일링이란
 
