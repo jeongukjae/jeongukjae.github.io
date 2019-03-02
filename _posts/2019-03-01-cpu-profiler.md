@@ -18,7 +18,7 @@ tags:
 > 1. `cProfile` is recommended for most users; it’s a C extension with reasonable overhead that makes it suitable for profiling long-running programs. Based on `lsprof`, contributed by Brett Rosen and Ted Czotter.
 > 2. `profile`, a pure Python module whose interface is imitated by `cProfile`, but which adds significant overhead to profiled programs. If you’re trying to extend the profiler in some way, the task might be easier with this module. Originally designed and written by Jim Roskind.
 
-즉, `cProfile`은 lsprof 기반의 C확장 모듈이라 오버헤드가 심하지 않아 대부분의 사용자에게 추천하며, `profile`은 순수 파이썬 코드라 오브헤드가 좀 있는 편이다. 다만 `cProfile` 인터페이스과 비슷하게 만들어졌고 커스터마이징을 할 경우 이 모듈을 이용하면 좋을 것이라고 한다.
+즉, `cProfile`은 lsprof 기반의 C확장 모듈이라 오버헤드가 심하지 않아 대부분의 사용자에게 추천하며, `profile`은 순수 파이썬 코드라 오브헤드가 좀 있는 편이다. `profile`과 `cProfile`은 거의 동일한 인터페이스를 가진다. 그래서 `profile`을 이용하는 경우는 profiler를 커스터마이징을 할 경우 정도로 생각할 수 있다.
 
 고성능 파이썬이라는 책에서는 한가지 모듈을 더 설명한다. `hotshot`이라는 모듈인데, 이 모듈은 2.7 문서에는 존재하지만,[^hotshot] 3.5 이후로는 존재하지 않는 것으로 보아 사라진 것 같다..
 
