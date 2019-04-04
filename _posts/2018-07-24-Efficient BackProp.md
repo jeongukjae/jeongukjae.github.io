@@ -4,7 +4,6 @@ title: "Efficient BackProp 정리"
 tags:
   - machine learning
   - paper
-  - neural network
 ---
 
 정석으로 배우는 딥러닝 책을 다 읽었는데, 더 자세히 보고 싶어서 참고 문헌에 있던 논문들을 하나씩 찾아보기 시작했습니다.
@@ -80,9 +79,9 @@ $$C_i$$는 covariance of $$i^{th}$$ input variable이고, $$z^p_i$$는 p번째 t
 
 ## 4.4 The Sigmoid
 
-가장 유명한 Activation function 중 하나. 단조 증가 함수(monotonically increasing function)이다. 그리고 특정한 유한한 값으로 수렴한다. $$f(x) = \frac 1 {1 + e^{-x}} $$ 또는 $$f(x) = tanh(x)$$가 많이 쓰이는데, Sigmoid도 4.3과 같은 이유때문에 output을 0에 가깝게 내어서 원점 대칭이 선호된다. (그 값은 다음 layer의 input이다) 
+가장 유명한 Activation function 중 하나. 단조 증가 함수(monotonically increasing function)이다. 그리고 특정한 유한한 값으로 수렴한다. $$f(x) = \frac 1 {1 + e^{-x}} $$ 또는 $$f(x) = tanh(x)$$가 많이 쓰이는데, Sigmoid도 4.3과 같은 이유때문에 output을 0에 가깝게 내어서 원점 대칭이 선호된다. (그 값은 다음 layer의 input이다)
 
-1. 따라서 hyperbolic tangent 함수가 보통 convergence가 빠르다. 
+1. 따라서 hyperbolic tangent 함수가 보통 convergence가 빠르다.
 2. 추천되는 sigmoid는 $$f(x) = 1.7159 tanh(\frac 2 3 x)$$이다. tanh 함수는 때때로 계산하기 힘들어서 ratio of polynomials로 근사한 함수가 쓰일 때도 있다.
 3. 작은 linear term을 추가하는 것이 도움이 되기도 한다. flat spots들을 피할 수 있기 때문. $$+ ax$$ 처럼
 
