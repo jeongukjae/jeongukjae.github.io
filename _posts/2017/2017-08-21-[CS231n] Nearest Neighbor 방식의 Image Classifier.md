@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[CS231n] Nearest Neighbor 방식의 Image Classifier"
+title: "CS231n Nearest Neighbor 방식의 Image Classifier"
 tags:
   - cs231n
   - python
@@ -20,7 +20,7 @@ tags:
 
 이미지를 비교하기 위한 Distance Metric은 저렇다는데, 저것만 해보긴 그래서 Euclidean distance 방법도 구현해보았고, 위의 방법은 Manhattan distance 방법이네요.
 
-마지막 결과는 Boolean 값을 담고 있는 리스트로 결과들을 저장한 후 (맞다면 True로, 아니라면 False로) float32 형태로 변환한 후 바로 평균을 구했어요. 그렇게 한다면 바로 얼마나 정확한지에 대한 확률이 나오고, 거기에 100을 곱하면 퍼센트로 구할 수 있고. 
+마지막 결과는 Boolean 값을 담고 있는 리스트로 결과들을 저장한 후 (맞다면 True로, 아니라면 False로) float32 형태로 변환한 후 바로 평균을 구했어요. 그렇게 한다면 바로 얼마나 정확한지에 대한 확률이 나오고, 거기에 100을 곱하면 퍼센트로 구할 수 있고.
 
 혹시 이해가 되지 않으시거나, 제가 잘못 구현한 부분, 영어가 틀린 부분에 대해 알려주시면 감사하겠습니다.
 
@@ -123,10 +123,10 @@ if __name__ == "__main__":
             print("predict : %d, answer : %d"%(label, test_image_index))
 
             cnt += 1
-            
+
             # check 100 images
             # 10 (0 ~ 9) * 10
-            
+
             # edit this value to adjust the number of test images
             if cnt == 10:
                 break
@@ -134,15 +134,15 @@ if __name__ == "__main__":
     # print result
     result_np = np.array(result, dtype='float32')
     print("Average : %f"%np.mean(result_np))
-    
-# result 
+
+# result
 # the number of test images : 100
-# 
+#
 # using Manhattan distance function
 # ---
 # Average : 0.200000
 # ---
-# 
+#
 # using Euclidean distance function
 # ---
 # Average : 0.270000

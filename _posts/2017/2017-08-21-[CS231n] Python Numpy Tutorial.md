@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[CS231n] Python Numpy Tutorial"
+title: "CS231n Python Numpy Tutorial"
 tags:
   - cs231n
   - python
@@ -42,7 +42,7 @@ tags:
 	* Subplots
 	* Images
 
-	
+
 ## Python
 
 파이썬은 High-level, 동적 타입, multiparadigm 프로그래밍 언어이다. 읽기 매우 쉬운 언어이고 라이브러리들이 많아 자주 쓰인다. 예제로 작성한 파이썬으로 구현한 QuickSort는 다음과 같다.
@@ -65,7 +65,7 @@ print(quicksort([3,6,8,10,1,2,1]))
 
 원문에는 2.7과 3.5를 언급해놓았다.
 
-> There are currently two different supported versions of Python, 2.7 and 3.5. 
+> There are currently two different supported versions of Python, 2.7 and 3.5.
 
 참고로 밑에 나오는 코드들은 전부 3.5 버전을 기준으로 쓰였다고 한다. 버전 확인은 ```python3 --version```으로 가능하다고 한다.
 

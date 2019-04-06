@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[CS231n] KNN 방식의 Image Classifier"
+title: "CS231n KNN 방식의 Image Classifier"
 tags:
   - cs231n
   - python
@@ -128,7 +128,7 @@ def predict(data, test, distance=mdistance):
 
 # Hyperparameters
 K = 5
-D = edistance 
+D = edistance
 
 if __name__ == "__main__":
     # get batches == train
@@ -148,7 +148,7 @@ if __name__ == "__main__":
             print("predict : %d, answer : %d"%(label, test_image_index))
 
             cnt += 1
-            
+
             # check 100 images
             # 10 (0 ~ 9) * 10
 
@@ -160,26 +160,26 @@ if __name__ == "__main__":
     result_np = np.array(result, dtype='float32')
     print("Average : %f"%np.mean(result_np))
 
-# result 
+# result
 # the number of test images : 100
-# 
+#
 # K = 3
 # using Manhattan distance function
 # ---
 # Average : 0.250000
 # ---
-# 
+#
 # using Euclidean distance function
 # ---
 # Average : 0.220000
 # ---
-# 
+#
 # K = 5
 # using Manhattan distance function
 # ---
 # Average : 0.250000
 # ---
-# 
+#
 # using Euclidean distance function
 # ---
 # Average : 0.200000

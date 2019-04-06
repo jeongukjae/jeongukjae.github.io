@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[CS231n] Linear Classification 방식의 Image Classifier"
+title: "CS231n Linear Classification 방식의 Image Classifier"
 tags:
   - cs231n
   - python
@@ -33,7 +33,7 @@ def softmax(values):
 # cross entropy loss? cost? function
 def cross_entropy_loss(target_output, estimated_output):
     estimated_output = np.clip(estimated_output, 0.00001, 0.99999)
-    return -np.mean(target_output * np.log(estimated_output) + 
+    return -np.mean(target_output * np.log(estimated_output) +
         (1 - target_output) * np.log(1 - estimated_output))
 
 # train batches
@@ -48,7 +48,7 @@ def train():
     for i in range(1, 6):
         # get batches
         batches = get_batches(file_prefix.format(i))
-        
+
         for k in range(10000):
             # get batch
             x = batches[b'data'][k]
@@ -71,7 +71,7 @@ def train():
             dc = (-answer / output_dc + (1 - answer) / (1 - output_dc)) / 10
             # do/dz : derivative of softmax function
             do = output_dc * (1 - output_dc)
-            # dz/dw : derivative of z 
+            # dz/dw : derivative of z
             # z1 = w11 * x1 + w12 * x2 + ...
             # z1` = x1
             dz = np.copy(x)
@@ -129,7 +129,7 @@ if __name__ == "__main__":
         plt.imshow((I[0] * (2**16) + I[1] * (2**8) + I[2]).reshape(32, 32))
 
     plt.show()
-    
+
 
 # result
 # Accuracy : 0.237800
