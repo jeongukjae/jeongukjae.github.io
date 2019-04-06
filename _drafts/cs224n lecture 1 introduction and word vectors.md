@@ -85,4 +85,12 @@ softmax 식과 비슷하다. 여담으로 softmax의 soft는 확률이라 soft�
 
 ### Optimization
 
-여튼 이렇게 식들을 정했으니 학습을 위해서는 optimization을 해야한다. $$\theta$$는 $$2dV$$의 차원이 되고, (V개의 단어에 대해 d차원의 벡터들이 2개씩(u, v) 있다) 그냥 $$\theta$$를 바꾸면서 $$J$$를 minimize시키면 된다고 한다. 편미분 하는 건 나중에 다시 봐도 알거라 생각하고.. 결과만 적어보면 아래와 같다.
+여튼 이렇게 식들을 정했으니 학습을 위해서는 optimization을 해야한다. $$\theta$$는 $$2dV$$의 차원이 되고, (V개의 단어에 대해 d차원의 벡터들이 2개씩(u, v) 있다) 그냥 $$\theta$$를 바꾸면서 $$J$$를 minimize시키면 된다고 한다. 편미분 하는 건 나중에 다시 봐도 알거라 생각하고.. 적어보면 아래와 같다.
+
+$$ J(\theta) = - \frac 1 T log L(\theta)$$ 이고, $$L$$이 $$\prod$$를 포함하니까 로그가 $$\prod$$안으로 들어가면서 $$\prod$$가 $$\sum$$으로 바뀐다. 그 때
+
+$$ \frac \partial {\partial v_c} log p(o | c) = u_o - \sum_{x=1}^V p(x|c) u_x $$
+
+이다. $$u_o$$가 실제 context word이고, 그 뒤의 항이 expected context word이다. 즉, 실제 context word와 expected context word의 차이를 줄인다.
+
+여튼 실제로 구현할 때 numpy, matplotlib, jupyter, gensum, sklearn을 참고해서 구현하는데, 그냥 colab으로 하면 될 거 같다.
