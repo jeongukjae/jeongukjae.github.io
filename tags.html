@@ -4,41 +4,37 @@ title: Tags
 permalink: /tags/
 ---
 
-{% assign all_tags = "" | split: "," %}
-
-{% for post in site.posts %}
-    {% for tag in post.tags %}
-        {% unless all_tags contains tag %}
-            {% assign all_tags = all_tags | push: tag %}
-        {% endunless %}
-    {% endfor %}
-{% endfor %}
-{% assign all_tags = all_tags | sort %}
+{% assign all_tags = "" | split: "," %} {% for post in site.posts %} {% for tag
+in post.tags %} {% unless all_tags contains tag %} {% assign all_tags = all_tags
+| push: tag %} {% endunless %} {% endfor %} {% endfor %} {% assign all_tags =
+all_tags | sort %}
 
 <div class="all_tags">
-    <h1>TAGS</h1>
-    {% for tag in all_tags %}
-        <a href='#{{tag}}' class='uppercase'>{{tag}}</a>
-    {% endfor %}
+  <h1>TAGS</h1>
+  {% for tag in all_tags %}
+  <a href="#{{ tag }}" class="uppercase">{{ tag }}</a>
+  {% endfor %}
 </div>
 
 <div class="posts">
-    <h1>POSTS</h1>
-    <p>total posts: <em>{{ site.posts | size }} posts</em></p>
+  <h1>POSTS</h1>
+  <p>
+    total posts: <em>{{ site.posts | size }} posts</em>
+  </p>
 
-    {% for tag in all_tags %}
-    {% assign count = 0 %}
-        <h2 id="{{tag}}" class='uppercase'>{{tag}}</h2> 
-        <ul>
-            {% for post in site.posts %}
-                {% if post.tags contains tag %}
-                    {% assign count = count | plus: 1 %}
-                    <li>
-                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> at <em>{{ post.date | date: '%B %d, %Y' }}</em>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-        <p style='text-align:right'><em>{{ count }} posts</em></p>
-    {% endfor %}
+  {% for tag in all_tags %} {% assign count = 0 %}
+  <h2 id="{{ tag }}" class="uppercase">{{ tag }}</h2>
+  <ul>
+    {% for post in site.posts %} {% if post.tags contains tag %} {% assign count
+    = count | plus: 1 %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> at
+      <em>{{ post.date | date: "%B %d, %Y" }}</em>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+  <p style="text-align:right">
+    <em>{{ count }} posts</em>
+  </p>
+  {% endfor %}
 </div>
