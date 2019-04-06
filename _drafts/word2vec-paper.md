@@ -14,7 +14,9 @@ CS224n을 듣기 시작하고 나서 같이 나오는 suggested readings를 가�
 
 word2vec는 word embedding 방법 중의 하나로, 논문에 제안한 모델에 대한 간략 설명으로 "for computing continous vector representations fof words from very large data"라고 적혀있다.
 
-// TODO
+처음으로 NLP 쪽으로 공부를 하는 거라 어렵기도 하고 재밌기도한 개념이 많이 나왔다. 그래도 CS231n의 강의 몇개를 찾아보고 정리했었는데, 그 이후에 보니까 나름 그럭저럭 이해할만한 논문이었던 것 같다. CS224n 교수님이 설명 잘 하신 것도 있겠지만..?
+
+여튼 다시 볼만한 내용만 작성하고, conclusion같은 것들은 빼고 작성한다.
 
 ## Introduction
 
@@ -46,7 +48,33 @@ word2vec에서는 huffman binary tree를 사용하는데, 이는 $$V$$를 $$log_
 
 ### RNNLM
 
+RNN의 활용이 Feedforward NNLM의 한계(context length를 명시한다던가)를 극복하기 위해 제안되었다. 그 결과 이론적으로 일반 NN보다 복잡한 패턴에 대해 훨씬 효율적인 표현이 가능했다.
 
+## New Log-linear Models
+
+이전 [Model Architecture](#model-architecture)에서 소개했던 것들은 neural net이 매력적임을 알게 해주었지만, 대부분의 복잡성은 non-linear hiddne layer에서 오는 것을 알 수 있었다. ($$ N \times D \times H $$) 그래서 새로운 모델에서는 NNLM을 두 단계로 나누어서 학습을 한다고 한다. 우선 continous word vector를 간단한 모델로 학습시킨 다음에 N-gram NNLM을 그 위에서 학습시킨다.
+
+### Continuous Bag of words model
+
+그래서 이 논문에서 제안한 아키텍쳐 중 하나가 feedforward NNLM과 비슷하지만, non-linear hidden layer를 없애고, projection matrix 뿐만 아닌 layer까지 모든 단어들이 공유하게 한 모델이다. 그래서 모든 단어가 똑같이 project된다. 그리고 이를 설명하면서 아래처럼 설명을 하는데,
+
+> Furthermore, we also use words from the future
+
+이는 아마 Ngram과 다르게 단어의 앞 뿐만 아니라 뒤에 있는 단어들도 참고한다는 말인 것 같다. 그래서 complexity는 아래와 같아진다.
+
+$$ Q = N \times D + D \times log_2 (V) $$
+
+앞 뒤로 4개의 단어를 가져오도록 window size를 결정했을 때 가장 좋은 성능이었다고 한다.
+
+### Continuous skip-gram mdoel
+
+두번째 아키텍쳐는 CBOW와 유사한데, 한 단어로 같은 문장안의 주위의 단어를 classification을 maximize하는 모델이다. training complexity는 아래와 같다. $$ C$$가 maximum distance of the words라고 하는데, window size와 비슷한 의미로 받아들이면 될 것 같다.
+
+$$ Q = C \times ( D + D \times log_2 V ) $$
+
+뭐 이렇게 말하는 것보다 쉽게 말하면 CBOW는 현재 단어를 주위 단어(context)를 기반으로 예측하고, Skip-Gram은 현재 단어로 주위 단어(context)를 예측한다.
+
+{% include image.html url="/images/2019-04-06-word2vec/cbow-skip-gram.png" description="cbow와 skip-gram 모델 그림" %}
 
 ---
 
