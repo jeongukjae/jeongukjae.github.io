@@ -83,3 +83,4 @@ exclude:
   - .git
   - .gitignore
   - .DS_Store
+  - serve.sh
