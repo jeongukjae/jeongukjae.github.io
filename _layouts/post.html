@@ -15,7 +15,8 @@ layout: default
 
   <div class='tag_post'>
     Tags:
-    {% for tag in page.tags %}
+    {% assign tags = page.tags | sort %}
+    {% for tag in tags %}
       <a class='tag_link uppercase' href='/tags/#{{tag}}'>{{ tag }}</a>
     {% endfor %}
   </div>
