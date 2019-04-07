@@ -79,3 +79,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - .vscode
+  - .git
+  - .gitignore
+  - .DS_Store
