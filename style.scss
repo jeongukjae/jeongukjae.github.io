@@ -348,24 +348,20 @@ figure {
 
 .tag_post {
   color: $gray;
-  font-style: italic;
-  font-size: 0.9em;
+  font-size: 0.85em;
   margin-bottom: 30px;
   margin-top: 10px;
 
   .tag_link {
     color: inherit;
+    margin-left: 5px;
 
     &:hover {
       text-decoration: underline;
     }
 
-    &:after {
-      content: ",";
-    }
-
-    &:last-child:after {
-      content: "";
+    &:before {
+      content: "#";
     }
   }
 }
