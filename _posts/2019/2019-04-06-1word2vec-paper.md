@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Word2Vec
+title: 📃 Word2Vec
 tags:
   - machine learning
   - nlp
