@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CS224n Lecture 1 Introduction and Word Vectors
+title: 📕 CS224n Lecture 1 Introduction and Word Vectors
 tags:
   - nlp
   - cs224n
