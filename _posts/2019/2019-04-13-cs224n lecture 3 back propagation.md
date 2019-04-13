@@ -33,11 +33,11 @@ gradient를 가져외서 word vector를 업데이트할 때 주의해야하는 �
 
 ## Computation graphs and backpropagation
 
-이제 graph로 설명하는 backprop 부분인데, 이 부분은 건너뛴다.
+이제 graph로 설명하는 backprop 부분인데, 건너뛴다.
 
 ## Stuff you should know
 
-이 부분에서는 다양한, 좀 알아두면 좋을 것들에 대해서 설명하는데 아래와 같은 리스트를 알려준다.
+다양한, 좀 알아두면 좋을 것들에 대해서 설명하는데 아래와 같은 리스트를 알려준다.
 
 * Regularization: overfitting을 방지하는 기법
 * Vecotrization: pythonic한 방법은 ML에서는 좀 많이.. 느릴 수 있다.
