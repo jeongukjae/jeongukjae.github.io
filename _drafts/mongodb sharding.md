@@ -79,4 +79,116 @@ NETWORK ID          NAME                                DRIVER              SCOP
 0836403418d3        mongo                               bridge              local
 ```
 
+그리고, container를 `mongo1` ~ `mongo7`까지 켜주자.
+
+```zsh
+❯ docker run -it --rm --net=mongo --name=mongo1 mongo bash
+```
+
 ### config server 구성하기
+
+우선, `mongo1`, `mongo2`에서 config server부터 킨다. replica set으로 구성할 예정이니 `replSet` 옵션을 지정해준다. 다른 container에서 접속할 예정이니 `--bind_ip 0.0.0.0`을 설정해준다.
+
+```shell
+root@bd14e1c615b0:/# mongod --configsvr --replSet config-replica-set --bind_ip 0.0.0.0
+```
+
+위에서 설정한 `replSet`의 이름대로 replicaset을 설정해준다.
+
+```shell
+root@8b69f35de3b5:/# mongo mongo1:27019
+...
+...
+> rs.initiate({
+... _id: "config-replica-set",
+... configsvr: true,
+... members: [
+...   {_id: 0, host: "mongo1:27019"},
+...   {_id: 1, host: "mongo2:27019"}
+... ]
+... })
+```
+
+제대로 설정되었는지는 `rs.status()`로 확인할 수 있다.
+
+### shard 구성하기
+
+`mongo3`, `mongo4`에서 shard server를 설정해준다. replica set으로 `shard-replica-set`을 설정해준다.
+
+```shell
+root@8b69f35de3b5:/# mongod --shardsvr --replSet shard-replica-set --bind_ip 0.0.0.0
+```
+
+replicat set도 설정해주자
+
+```shell
+root@7d536b10b886:/# mongo mongo3:27018
+...
+> rs.initiate({
+... _id: "shard-replica-set",
+... members: [
+...   {_id: 0, host: "mongo3:27018"},
+...   {_id: 1, host: "mongo4:27018"}
+... ]
+... })
+```
+
+### mongos 구성하기
+
+mongos에서는 시작하면서 config server를 바로 연결해준다. `mongo5`, `mongo6`에서 `mongos`를 켜주자.
+
+```shell
+root@7d536b10b886:/# mongos --configdb config-replica-set/mongo1:27019,mongo2:27019 --bind_ip 0.0.0.0
+```
+
+config server를 연결했으니 `mongo7`에서 `mongo5`에 접속해서 아래처럼 적어준다.
+
+```shell
+root@a5cadafbc76f:/# mongo mongo5:27017
+mongos> sh.addShard("shard-replica-set/mongo3:27018,mongo4:27018")
+{
+  "shardAdded" : "shard-replica-set",
+  "ok" : 1,
+  "operationTime" : Timestamp(1555859895, 5),
+  "$clusterTime" : {
+    "clusterTime" : Timestamp(1555859895, 5),
+    "signature" : {
+      "hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+      "keyId" : NumberLong(0)
+    }
+  }
+}
+```
+
+shard가 제대로 되었나 확인해보자
+
+```shell
+mongos> db.stats()
+{
+  "raw" : {
+    "shard-replica-set/mongo3:27018,mongo4:27018" : {
+      "db" : "test",
+      "collections" : 0,
+      "views" : 0,
+      "objects" : 0,
+      "avgObjSize" : 0,
+      "dataSize" : 0,
+      "storageSize" : 0,
+      "numExtents" : 0,
+      "indexes" : 0,
+      "indexSize" : 0,
+      "fileSize" : 0,
+      "fsUsedSize" : 0,
+      "fsTotalSize" : 0,
+      "ok" : 1
+    }
+  },
+  "objects" : 0,
+  ...
+```
+
+replica set에 제대로 들어있다!! `mongo6`에서도 접속해서 보니 잘 된다.
+
+## 끝
+
+정말 간단하게 구성해보고 알아본 것이다. 실제로 사용해보고자 한다면 더 구성해야할 부분이 많다. 보안같은 부분에서 좀 더 엄격하게 설정해야 할 듯 싶다.
