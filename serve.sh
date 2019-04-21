@@ -1,3 +1,3 @@
 #!/bin/bash
 
-jekyll serve -lDI --limit-posts 1
+jekyll serve -lDI
