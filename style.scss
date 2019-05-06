@@ -22,7 +22,9 @@ html {
 
 body {
 	background: $white;
-  font: 14px/1.4 'Spoqa Han Sans';
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'Spoqa Han Sans', -apple-system;
   color: $darkGray;
 }
 
