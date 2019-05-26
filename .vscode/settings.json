@@ -3,5 +3,6 @@
   "files.insertFinalNewline": true,
   "markdownlint.config": {
     "MD002": false
-  }
+  },
+  "files.trimFinalNewlines": true
 }
