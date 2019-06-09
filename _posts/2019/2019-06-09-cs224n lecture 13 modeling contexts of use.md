@@ -79,3 +79,7 @@ Attention is all you need 논문을 보자. 그와 같이 보기를 추천하는
 논문은 [여기](https://arxiv.org/abs/1810.04805)를 보면 된다.
 
 BERT의 핵심 아이디어는 언어는 양방향으로 이해해야 하는데, 왜 한쪽만 볼까?라는 것이다. 따라서 Bidrectional context를 구성했다. 학습은 k%의 단어를 가리고 그 단어들에 대한 prediction을 통해 하게 되었다. 항상 15%를 사용했다고 하는데, k가 높으면 context가 충분하지 않고, k가 너무 적으면 학습하기에는 너무 cost가 높다.
+
+추가로 Next Sentence Prediction 같은 것도 진행하는데, sentence 사이의 relationship을 학습하는 태스크이다. sentence A와 B가 주어지면 `IsNextSentence`인지, `NotNextSentence`인지 맞추는 태스크이다.
+
+bert는 transformer encoder를 사용하고 self-attention을 사용하기 때문에 locality bias가 존재하지 않는다. 또한 long distance context도 충분히 고려된다.
