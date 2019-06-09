@@ -1,3 +1,3 @@
 #!/bin/bash
 
-jekyll serve -lDI
+jekyll serve -lD
