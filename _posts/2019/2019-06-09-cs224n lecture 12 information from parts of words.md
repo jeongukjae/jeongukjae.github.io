@@ -49,6 +49,33 @@ Purely Character Level NMT Model에 관심이 있으면 아래 목록을 찾아�
 [^hybrid1]: [Character-based Neural Machine Translation](https://arxiv.org/abs/1603.00810)
 [^hybrid2]: [Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models](https://arxiv.org/abs/1604.00788)
 
+### Byte Pair Encoding
+
+Byte Pair Encoding은 원래 Compression Algorithm이다. most frequent byte pair를 병합하는 알고리즘 정도로 볼 수 있는데, [Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/abs/1508.07909), [GitHub rsennrich/subword-nmt](https://github.com/rsennrich/subword-nmt), [GitHub EdinburghNLP/nematus](https://github.com/EdinburghNLP/nematus)를 참고하라고 한다.
+
+### Wordpiece/SentencePiece model
+
+wordpiece는 word안에서 tokenizing하는 모델. sentencepiece는 raw text에서 동작하는 모델인데, whitespace가 special token을 가지게 하고, grouping하는 등의 처리를 해주는 모델..?인가 싶다.
+
+* [GitHub google/sentencepiece](https://github.com/google/sentencepiece)
+* [Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates](https://arxiv.org/abs/1804.10959)
+
+Bert가 wordpiece 모델의 variant를 사용한다. 다른 단어들을 wordpiece로 만들어낼 수 있기 때문에 이점이 있다고.
+
+---
+
+그 외에도 subword models로 볼 수 있는 모델들 중에 word embedding을 만들어내기 위해 convolution을 character들에 시키는 모델들도 있고, word representation을 위해 character based LSTM을 적용한 모델도 있다고 한다.
+
+Highway Network도 나중에 살펴보자.[^HN]
+
+[^HN]: [Highway Networks](https://arxiv.org/abs/1505.00387)
+
 ## Hybrid character and word level models
 
+Hybrid NMT라고, 거의 word level에서 번역하고, 필요할 경우 char-level을 가는 모델도 있다고 한다.[^hybrid2]
+
 ## FastText
+
+[A Joint Model for Word Embedding and Word Morphology](https://arxiv.org/abs/1606.02601)을 살펴보면 기본적으로 word embedding을 하기 위한 모델이지만 word morphology도 살펴볼 수 있는 모델이라고 한다.
+
+[Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606)은 fastText의 논문인데, 실제 코드나 사용은 [https://fasttext.cc](https://fasttext.cc) 를 살펴보자
