@@ -69,8 +69,39 @@ forward prop일 때, children $$c_1$$, $$c_2$$가 있다고 하자. 거기서 pa
 
 {% include image.html url="/images/cs224n/18-8.png" description="나중을 위해 저장! (CVG = Compositional Vector Grammer인듯..?)" %}
 
-45:11 까지 들음
+---
+
+세번째로 ["Semantic Compositionality through Recursive Matrix-Vector Spaces"](https://ai.stanford.edu/~ang/papers/emnlp12-SemanticCompositionalityRecursiveMatrixVectorSpaces.pdf)라는 제목의 논문을 통해 소개된 모델도 소개한다. 원래는 weight matrix $$W$$를 굉장히 적극적으로 이용했는데, word는 대부분 operator처럼 행동하므로, (`very good`의 `very` 처럼) composition function으로 처리하자는 것이다.
+
+{% include image.html url="/images/cs224n/18-10.png" description="Compositionality Through Recursive Matrix-Vector Recursive Neural Networks (matrix meaning)" %}
+
+matrix meaning과 vector meaning으로 나누어 이해하자는 것인데, $$A$$가 matrix meaning, $$a$$가 vector meaning이다. 이걸 결합될 단어랑 연산을 한번 한 다음에 composition function으로 넘긴다. 왼쪽은 vector meaning of phrase를 계산하는 것이고 오른쪽은 matrix meaning of phrase를 계산하는 것이다.
+
+{% include image.html url="/images/cs224n/18-11.png" description="MV RNN의 semantic relationship 분류 결과" %}
+
+전통적인 방법에 비해 엄청난 향상을 이루었고, 일반적인 RNN에 비해서도 좋은 성능을 보인다. feature를 더 넣게 된다면 더 좋은 성능을 기대할 수 있을 것이라고 말했다.
+
+하지만 여기서 멈추지 않고 문제점을 짚어보자면,
+
+1. matrix와 vector를 같이 이용하게 되면서 엄청난 수의 파라미터가 필요했고
+2. 꽤나 큰 phrase에 대해서 matrix meaining을 잡아낼 좋은 방법이 없었다.
+
+---
+
+그래서 네번째로 그 다음해에 ["Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank"](https://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf)라는 논문으로 MV RNN보다 parameter수를 줄인 모델을 공개했다고 한다. Recursion Neural Tensor Network라 RNTN이라고 부르는 것 같다.
+
+그 전에 sentiment detection에 대해 한번 짚고 넘어가자면, 일반적으로 sentiment analysis는 단어들을 잘 뽑아내는 것으로 잘 동작한다고 한다. 긴 document에 대해서도 detection accuracy는 90% 수준으로 높다. 하지만, `the movie should have been funnier and more entertaining`같은 문장은 negative meaning이지만, `funnier`, `entertaining`과 같은 단어들만 본다면 positive하게 분류할 가능성이 있다.
+
+위와 같은 문제는 MV-RNN에서도 충분히 잘 동작했고, treebank처럼 좋은 데이터셋을 넣어줄 경우 더 높은 성능을 보였지만, hard negation과 같은 문장들은 여전히 부정확했고, 더 좋은 모델이 필요했다.
+
+attention을 뽑을 때 1 x n, n x n, n x 1의 vector 두개 (주로 단어들의 vector)와 matrix 하나를 중간에 끼워서 쓰는데, 이걸 다르게 생각해서 matrix말고 3-dim tensor를 끼워서 쓰자는 것이다. 그래서 많은 정보를 잘 interact해서 잡아내도록 하자는 것이다.
+
+{% include image.html url="/images/cs224n/18-12.png" description="이렇게?? 근데 제대로 이해 못 했다." %}
+
+sentence labels 데이터셋에서는 잘 성능이 안나왔지만, treebank에서 나머지들보다 좋은 성능으로 잘 나왔고, negation이 특히 잘 되었다.
 
 ## Other uses of tree-recursive neural nets
 
-## Institute for Human-Centered Artificial Intelligence
+다른 것에 대한 소개로 [QCD-Aware Recursive Neural Networks for Jet Physics](https://arxiv.org/abs/1702.00748)에 대한 소개도 있는데, 이건 물리쪽 분야로 적용한 것이라 간단하게 스킵
+
+그 다음 굉장히 재밌어보이는 것은 [Tree-to-tree Neural Networks for Program Translation](https://arxiv.org/abs/1802.03691)으로 CoffeeScript를 JavaScript로 변환하는 모델을 작성한 것이다.
