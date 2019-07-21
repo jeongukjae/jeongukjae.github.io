@@ -83,8 +83,6 @@ $$ PE[t, k] = \begin{cases} \sin(t / 10000^{k / 2d}) & k \text{ is even} \\ \cos
 
 그 후 그림에 나와있는 것처럼, self attention을 사용한다. Appendix C를 참고하면 더 자세하게 나와있다고 하지만, 그냥 [Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)을 참고하면 모든 것이 해결되는 것이 아닌가? 싶다. 중간중간 residual network도 엮어주었다.
 
-
-
 ## 4. Experiments and Analysis
 
 ## 5. Related Work
