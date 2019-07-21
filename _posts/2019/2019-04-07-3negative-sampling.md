@@ -4,7 +4,6 @@ title: 📃 Negative Sampling 논문 정리해보기
 tags:
   - machine learning
   - nlp
-  - cs224n
   - paper
 ---
 

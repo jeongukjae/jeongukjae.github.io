@@ -4,4 +4,5 @@ title: fastText
 tags:
   - nlp
   - paper
+  - machine learning
 ---

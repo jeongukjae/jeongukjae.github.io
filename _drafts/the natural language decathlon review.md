@@ -3,8 +3,8 @@ layout: post
 title: "📃 Review of \"The Natural Language Decathlon: Multitask Learning as Question Answering\""
 tags:
   - nlp
-  - cs224n
   - paper
+  - machine learning
 ---
 
 decaNLP[^decanlp]라는 이름의 모델을 cs224n의 17강에서 엄청나게 들었다. saleforce에서 공개했다고도 하고, 기존의 NLP와 다르게 생각을 했다고 말하기도 해서 궁금해서 읽어보았다. 원래는 태스크별로 모델을 만드는데 여러개의 태스크를 하나의 모델로 처리한다고 하니..? 전체를 살펴보진 않고 관심있는 부분정도만..?

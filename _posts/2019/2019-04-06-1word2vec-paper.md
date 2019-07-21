@@ -5,7 +5,6 @@ tags:
   - machine learning
   - nlp
   - paper
-  - cs224n
 ---
 
 CS224n을 듣기 시작하고 나서 같이 나오는 suggested readings를 가끔 읽는데, word2vec의 논문으로 유명한 [Efficient Estimation of Word Representation in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)도 그 중 하나이다. 공부를 하면서 다시 볼만한 내용, 생각났던 내용들을 적어두기 위해 이 포스트를 작성했다.
