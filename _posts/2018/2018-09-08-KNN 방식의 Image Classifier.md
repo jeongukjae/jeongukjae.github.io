@@ -8,7 +8,7 @@ tags:
   - machine learning
 ---
 
-사실 이전 포스트에서 [한번 작성했던 글](/CS231n-KNN-방식의-Image-Classifier/)인데, 일년이 넘어서 다시 정리하기로 생각했다. (GitHub에도 과제들을 레포지토리로 다시 정리하기로 했다.)
+사실 이전 포스트에서 [한번 작성했던 글](/posts/CS231n-KNN-방식의-Image-Classifier/)인데, 일년이 넘어서 다시 정리하기로 생각했다. (GitHub에도 과제들을 레포지토리로 다시 정리하기로 했다.)
 
 [CIFAR - University of Toronto](https://www.cs.toronto.edu/~kriz/cifar.html)에서 데이터셋을 가져왔다.
 
@@ -19,7 +19,7 @@ Jupyter notebook으로 작성을 했고, GitHub Repository 링크는 [여기](ht
 ```
 #!/usr/bin/env python
 # # KNN Image Classifier
-# 
+#
 # * Dataset from [University of Toronto - CS](https://www.cs.toronto.edu/~kriz/cifar.html)
 # * [list of CS231n assignment 1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture2.pdf)
 # * This KNN image classifier is a first assignment of CS231n.
@@ -50,17 +50,17 @@ def train(data, labels):
     # Training process of KNN is just remembering all images and labels.
     batches['data'].extend(data)
     batches['label'].extend(labels)
-    
+
 def predict(item, distance=L1_distance):
     min_values = []
     min_labels = []
-    
+
     data = batches['data']
     labels = batches['label']
-    
+
     for index in range(len(data)):
         d = distance(item, data[index])
-        
+
         if len(min_values) < K:
             min_values.append(d)
             min_labels.append(labels[index])
@@ -70,7 +70,7 @@ def predict(item, distance=L1_distance):
             min_labels[removed_item_index] = labels[index]
 
     majority = max(min_labels, key=min_labels.count)
-    
+
     return majority
 
 data_batch_1 = unpickle('../cifar-10-batches-py/data_batch_1')
@@ -91,18 +91,18 @@ count = 0
 for index in range(len(test_batch[b'data'])):
     data = test_batch[b'data'][index]
     label = test_batch[b'labels'][index]
-    
+
     kNN_output = predict(data)
     kNN_output_l2 = predict(data, distance=L2_distance)
-    
+
     if kNN_output == label:
         correct_l1 += 1
     if kNN_output_l2 == label:
         correct_l2 += 1
     count += 1
-    
+
     print(f"index {index}, label is {label}, and predicted label is {kNN_output} and {kNN_output_l2}")
-    
+
     if count == 100:
         break
 

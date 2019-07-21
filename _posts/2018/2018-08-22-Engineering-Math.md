@@ -39,7 +39,7 @@ if $$ A= \pmatrix {a & b \\ c & d} $$, then $$ det A = \|A\| = ad - be $$
 
 ##### for larger matrix
 
-[프로그래머를-위한-선형대수1-벡터,행렬,행렬식 포스트](/프로그래머를-위한-선형대수1-벡터,행렬,행렬식/) 참고
+[프로그래머를-위한-선형대수1-벡터,행렬,행렬식 포스트](/posts/프로그래머를-위한-선형대수1-벡터,행렬,행렬식/) 참고
 
 #### Inverse
 
@@ -49,7 +49,7 @@ $$\therefore I = \frac {AC^T} {\|A\|} = \frac {C^TA} {\|A\|} $$ (if $$\|A\| \neq
 
 ### Eigen value problem
 
-* $$ A\|x\rangle = \lambda \|x\rangle $$ : `eigen value problem` 
+* $$ A\|x\rangle = \lambda \|x\rangle $$ : `eigen value problem`
 
 * $$ \|x\rangle $$: `eigen vector`
 * $$\lambda$$: `eigen value`
