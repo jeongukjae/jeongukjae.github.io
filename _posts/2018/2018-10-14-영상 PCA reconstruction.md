@@ -5,14 +5,13 @@ tags:
   - python
   - machine learning
   - 대학
-  - paper
 ---
 
 서울시립대학교에서 18학년 2학기에 수강하는 기계학습개론 과목을 들으면서, 과제로 영상 PCA reconstruction을 작성해보았다.
 
 jupyter notebook을 이용해서 작성했고, [GitHub Repo](https://github.com/JeongUkJae/introduction-to-machine-learning-assignments) 의 homework2이다.
 
-구현에 참고한 논문은 [Principal Component Analysis for Hyperspectral Image Classification](https://engineering.purdue.edu/~jshan/publications/2002/SaLIS_2002_HyperImagesPCA.pdf)[^paper1]이다.
+구현에 참고한 자료는 [Principal Component Analysis for Hyperspectral Image Classification](https://engineering.purdue.edu/~jshan/publications/2002/SaLIS_2002_HyperImagesPCA.pdf)[^paper1]이다.
 
 ## 내용
 
