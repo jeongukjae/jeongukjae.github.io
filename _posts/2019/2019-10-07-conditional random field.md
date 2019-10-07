@@ -54,7 +54,7 @@ Objective function은 아래와 같다.
 
 $$\mathcal O (\theta) = \sum^N_{i=1} \log p_{\theta} (y^i | x^i) \propto \sum_{x, y} \tilde p (x, y) \log p_{\theta} (y|x)$$
 
-{% include image.html url="/images/crf/fig2.png" description="HMMs, MEMMs, chain-structed case of CRFs를 순서대로 나타낸 graphical structures. open circle은 모델에서 만들어진 게 아니다." %}
+{% include image.html url="/images/2019-10-07-crf/fig2.png" description="HMMs, MEMMs, chain-structed case of CRFs를 순서대로 나타낸 graphical structures. open circle은 모델에서 만들어진 게 아니다." %}
 
 근데 위 이미지에서 chain-structed case of CRFs라고 적어놓았는데, 이 논문에서 주로 다루는 것은 chain-structed case of CRFs이다.
 
@@ -86,4 +86,4 @@ Iterative scaling algorithm은 weights를 $$\lambda_k \leftarrow \lambda_k + \de
 
 ---
 
-이 이후로는 Viterbi algorithm처럼 inference에 필요한 알고리즘을 먼저 알아야 할 것 같아서 일단 Pending..
+여기까지 하고 일단 넘어갔다가 나중에 필요하면 다시 와야지.
