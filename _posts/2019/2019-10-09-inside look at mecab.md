@@ -3,6 +3,7 @@ layout: post
 title: 🔪 Mecab을 살펴보자
 tags:
   - nlp
+  - paper
 ---
 
 [이 논문(Applying Conditional Random Fields to Japanese Morphological Analysis)](https://www.aclweb.org/anthology/W04-3230.pdf)을 참고해서 적어본다.
@@ -40,9 +41,9 @@ word boundary를 찾는 가장 쉬운 방법은 character를 token으로 취급�
 
 next state classifier를 활용하는 discriminative model은 대부분 length bias나 label bias가 있을 수 있다. label bias는 아래 그림에서 `BOS` - `A` 까지 transition score가 0.6이고, `A`에서는 `C`, `D`로 두개의 transition이 존재하기 때문에 0.6의 확률이 더 줄어들 수 밖에 없다. 결국 $$P(A, D\rvert x) = 0.36$$이 된다. 히지만 `B` - `C`의 경로는 `B`에서 transition이 하나밖에 존재하지 않기 때문에 좋지 않은 경로라고 하여도 $$P(B, E \rvert x) = 0.4$$로 prob은 더 높다.
 
-{% include image.html url="/images/mecab/label bias.png" description="label bias" %}
+{% include image.html url="/images/2019-10-09-mecab/label bias.png" description="label bias" %}
 
-{% include image.html url="/images/mecab/length bias.png" description="length bias" %}
+{% include image.html url="/images/2019-10-09-mecab/length bias.png" description="length bias" %}
 
 length bias는 말 그대로 path의 length에 관련된 문제이다. 위 그림에서 $$P(A, D \rvert x) = 0.36$$으로 좋은 경로여도 prob이 낮은데, $$P(B\rvert x) = 0.4$$로 안좋은 경로가 prob이 더 높다.
 
