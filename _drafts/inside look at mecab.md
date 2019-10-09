@@ -86,4 +86,8 @@ $$\frac {\partial \mathcal L_{\Lambda}} {\partial \lambda_k}  = \sum_j (F_k(y_j,
 
 위의 차이가 0이 된다. Expectation 은 forward-backward algorithm의 variant로 쉽게 계산될 수 있다고 한다. (이건 진짜 적기 너무 귀찮다.. 논문 다시 보자..)
 
-overfitting을 방지하기 위해 두가지 방식의 regularizaiton을 사용하는데, Gaussian prior (L2-norm), Laplacian prioor(L1-norm)을 사용하면 된다.
+overfitting을 방지하기 위해 두가지 방식의 regularizaiton을 사용하는데, Gaussian prior (L2-norm), Laplacian prioor(L1-norm)을 사용하면 된다. L1-norm, L2-norm을 사용하는 CRFs를 L1-CRFs, L2-CRFs라고 부른다.
+
+---
+
+이거도 일단 여기까지 해보고 간단하게 구현해보고 다시 봐야겠다!
