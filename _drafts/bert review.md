@@ -68,3 +68,11 @@ Input/Output Representation을 downstream task를 다양하게 처리할 수 있
 BERT에서는 30,000개의 단어로 WordPiece embedding을 사용했다. (Wu et al., 2016) 항상 첫번째 토큰은 `[CLS]`를 사용했다. 이 토큰에 해당하는 final hidden state는 classification task에서 사용할 수 있다. sentence pair는 여기서 single sequence로 들어갈 수 있는데, special token으로 분리를 한다. (`[SEP]`)
 
 ### 3.1. Pre-training BERT
+
+BERT를 두가지 unsupervised task로 학습을 시키는데 첫번째가 Masked LM이고 두번째가 Next Sentence Prediction이다.
+
+#### Masked LM
+
+LM은 보통 다음 단어를 보는데, 정말 그렇게 해야해서이지만, 그래도 deep bidirectional representaion을 학습하기 위해 일정 확률로 랜덤하게 input token을 masking했다. 그리고 Masked token을 넣었다. 이 때 final hidden vector가 그냥 LM처럼 vocab에 대한 output softmax로 전달된다고 한다. 각 sequence에서 15% 정도의 확률로 WordPiece token을 랜덤하게 마스킹했고, denoising auto-encoders (Vincent et al., 2008)과는 다르게 전체 input을 reconstructing하기보다 그냥 masked words만 predict했다.
+
+근데 이게 downstream task에서는 좀 안맞는게 pretraining동안만 `[MASK]`가 나타나고 fine-tuning할 때는 나타나지 않는데, 이걸 해결하기 위해 다 `[MASK]`로 치환하지 않았다. $$i$$-th token이 선택되면 80%만 `[MASK]`로만 치환하고 10%는 랜덤으로 치환하고 10%는 바꾸지 않고 놔둔다.
