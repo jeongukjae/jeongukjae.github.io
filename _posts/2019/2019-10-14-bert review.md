@@ -51,7 +51,7 @@ supervised learning으로부터 효과적인 transfer를 보여주는 것들이 
 
 여튼 BERT 모델까지 왔다..
 
-{% include image.html url="/images/bert/fig1.png" description="BERT의 전체적인 그림" %}
+{% include image.html url="/images/2019-10-14-bert/fig1.png" description="BERT의 전체적인 그림" %}
 
 2가지 스텝이 있는데, pre-training과 fine-tuning이다. pre training에서 unlabeled data으로 학습하고 fine tuning에서 pre-training에서 학습한 모델 parameter로 초기화한 다음에 labeled data로 다시 학습한다.
 
@@ -76,3 +76,41 @@ BERT를 두가지 unsupervised task로 학습을 시키는데 첫번째가 Maske
 LM은 보통 다음 단어를 보는데, 정말 그렇게 해야해서이지만, 그래도 deep bidirectional representaion을 학습하기 위해 일정 확률로 랜덤하게 input token을 masking했다. 그리고 Masked token을 넣었다. 이 때 final hidden vector가 그냥 LM처럼 vocab에 대한 output softmax로 전달된다고 한다. 각 sequence에서 15% 정도의 확률로 WordPiece token을 랜덤하게 마스킹했고, denoising auto-encoders (Vincent et al., 2008)과는 다르게 전체 input을 reconstructing하기보다 그냥 masked words만 predict했다.
 
 근데 이게 downstream task에서는 좀 안맞는게 pretraining동안만 `[MASK]`가 나타나고 fine-tuning할 때는 나타나지 않는데, 이걸 해결하기 위해 다 `[MASK]`로 치환하지 않았다. $$i$$-th token이 선택되면 80%만 `[MASK]`로만 치환하고 10%는 랜덤으로 치환하고 10%는 바꾸지 않고 놔둔다.
+
+그 후에 cross entropy loss를 이용해서 원래의 토큰을 predict하도록 한다.
+
+#### Next Sentence Prediction (NSP)
+
+QA 태스크나 NLI 태스크 같은 경우는 sentence 자체의 임베딩이나 LM을 잡는 것보다 sentence의 relation을 학습시키는 것이 중요하다. 이런 것을 학습시키기 위해 binarized NSP 태스크를 학습시킨다. A, B 문장이 있을 때 50%의 확률로 B는 실제로 A의 다음 문장이도록 하고 `IsNext`로 레이블링한다. 나머지 50% 확률로 corpus에서 랜덤하게 아무 문장이나 들고 온 후 `NotNext`로 레이블링한다. 간단한 태스크이지만, 최종 모델에서 97%-98%의 정확도를 달성했고, 실제로 QA나 NLI에서 이점이 있다고 한다.
+
+NSP 태스크는 Jenite et al. (2017)이나 Logeswaran and Lee (2018)에서 사용한 representation-learning objectives와 관련이 있다.
+
+#### Pre-training data
+
+BooksCorpus (800M words, Zhu et al., 2015)를 사용했고, English Wikipedia (2,500M words)를 사용헀다. 위키같은 경우는 list, table, header같은 정보는 전부 무시하고 text passage만 사용했다고 한다.
+
+### 3.2. Fine-tuning BERT
+
+적당한 input, output으로 바꿔주기만 하는 것으로도 괜찮게 downstream task로 fine-tuning을 할 수 있다고 한다. 그래서 해당 태스크는 엄청 빨리 끝나는데, single Cloud TPU에서 1시간이면 끝났다고 한다.
+
+## 4. Experiments
+
+이게 의미가 있긴 하지만, 따로 정리할 필요성은.. ㄴㄴ
+
+## 5. Ablation Studies
+
+Bert base에서 NSP 없이 한거랑 Masked LM 말고 Left-to-Right LM한 거랑 거기에다가 BiLSTM 레이어 얻은 거랑 다 비교해봤는데 Bert base가 제일 좋은 점수를 냈다.
+
+그리고 LTR, RTL 모델 두개를 만들어서 연결하는 것보다 (ELMo처럼) 그냥 bidirectional model을 구성하는 것이 더 좋다고. 훨씬 cost가 적고, QA와 같은 경우에는 RTL은 적절하지 않다는 것이 그 이유다. Answer를 보고 Question을 보는 것은 이상하니까..?
+
+그리고 모델사이즈를 증가시켜보기도 헀는데, 보통은 다들 모델 사이즈가 크면 계속해서 향상이 이루어질 것이라고 생각했지만, 이걸 small scale task로도 scaling to extreme model size -> large improvement로 이루어지는 것을 처음으로 보여주었다고 한다.
+
+### 5.3. Feature-based Approach with BERT
+
+fine-tuning말고 featrue based로 사용을 할 수 없을까? 라고 생각했는데, 물론 나왔다. 모든 태스크가 Transformer encoder 레어어로만 나타낼 수는 없을 것이고, task specific model architecture가 필요할 것이다. 또 큰 연산을 BERT로 미리 precompute해놓고 cheaper model에서 다시 간단하게 돌려야 하는 경우도 있을 것이다.
+
+그래서 하나 이상의 레이어의 activation을 뽑아서 그걸 돌려봤는데, 그것도 나름 괜찮은 성능이었다고 한다. -> BERT는 두 가지 방법 다 쓸만한 모델이라고. (근데 이거는 최근의 자료를 보는 게 더 정확하지 않을까?)
+
+## 6. Conclusion
+
+이것도 간단하게 쓰여있어서.. 패스..
