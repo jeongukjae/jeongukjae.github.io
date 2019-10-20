@@ -26,7 +26,7 @@ $$ p(x) = \prod^n_{i=1} p(s_n\rvert s_1, ..., s_{n-1})$$
 
 (근데 이거 $$s_n$$이 아니라 $$s_i$$아닐까...?) 여기서 conditional probability가 나왔으니까 이 것들을 잘 표현할 수 있는 self-attention arhictecture로 잘 계산한다.
 
-근데 general system은 많은 태스크들을 수행할 수 있어야 하는데, 위 형태는 $$p(output \rvert input)$$ 밖에 수행을 못한다. 그래서 $$p(output \rvert input, task)$$와 같은 형태로 모델링을 한다고 한다. task conditioning은 보통 architectrure level에서 많이 구현되는데 task specific encoders and decoders(Kaiser et al., 2017)와 같은 것을 살펴보면 될 것 같다.
+근데 general system은 많은 태스크들을 수행할 수 있어야 하는데, 위 형태는 $$p(output \rvert input)$$ 밖에 수행을 못한다. 그래서 $$p(output \rvert input, task)$$와 같은 형태로 모델링을 한다고 한다. task conditioning은 보통 architectrure level에서 구현하는 것은 task specific encoders and decoders(Kaiser et al., 2017)와 같은 것을 살펴보면 될 것 같다. 그와 반대로 알고리즘 레벨에서 구현하는 것은 the inner and outer loop optimization framework of MAML (Finn et al., 2017)같은 것을 살펴보면 될 것 같다.
 
 ## 더 읽어보고 싶은 리스트
 
