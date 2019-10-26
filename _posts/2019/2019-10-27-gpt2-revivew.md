@@ -28,6 +28,24 @@ $$ p(x) = \prod^n_{i=1} p(s_n\rvert s_1, ..., s_{n-1})$$
 
 근데 general system은 많은 태스크들을 수행할 수 있어야 하는데, 위 형태는 $$p(output \rvert input)$$ 밖에 수행을 못한다. 그래서 $$p(output \rvert input, task)$$와 같은 형태로 모델링을 한다고 한다. task conditioning은 보통 architectrure level에서 구현하는 것은 task specific encoders and decoders(Kaiser et al., 2017)와 같은 것을 살펴보면 될 것 같다. 그와 반대로 알고리즘 레벨에서 구현하는 것은 the inner and outer loop optimization framework of MAML (Finn et al., 2017)같은 것을 살펴보면 될 것 같다.
 
+위의 LM으로 엄청 큰 데이터를 넣고 엄청나게 많이 학습시켜서 GPT-2를 만들어내는데, 이런 학습방식이 기계번역, Reading Comprehension과 같은 것에도 적용될 수 있다. 예를 들어 `(translate to french, english text, french text)`와 같은 순서로 구성되면 번역 태스크가 되는 것이고, `(answer the question, document, question, answer)`와 같은 순서로 구성되면 reading comprehension이 되는 것이다.
+
+방대한 말뭉치로부터 이렇게 학습을 진행한다면 QA 태스크에서만 사용가능한 리워드 없이 바로 QA 태스크를 LM만으로 진행할 수 있다.
+
+### 2.1. Training Dataset
+
+기본적으로 웹 크롤링을 통해 데이터를 모았다고 한다. 하지만, 문서의 퀄리티를 위해 어느정도 제한시킬 필요성이 있었는데, 사람이 일일히 제어하는 것은 너무 힘들고, 시간이 많이 들어 우선 Reddit에서 3karma이상을 받은 아웃 바운드 링크를 전부 다 긁었다고 한다. 이런게 실제로 흥미로운 링크거나, 교육적인 링크거나, 아니면 단순한 재미있는 링크를 찾는 휴리스틱이 된다고 본 것이다. HTML로부터 text를 뽑아내기 위해 Dragnet과 [Newpapaer content extractor](https://github.com/codelucas/newspaper)를 사용했다고 한다.
+
+위키피디아는 전부 제외했다고 하는데, 그 이유가 위키피디아는 많이 쓰이는 데이터 소스이기 때문에 test evaluation tasks들에서 분석이 복잡해질 수 있기 때문이라고 한다.
+
+### 2.3. Model
+
+Transformer 기반이고 GPT 모델과 같은 기반이지만, Layer Normalization이 각 sub block의 input으로 다 옮겨졌다고 한다. 아마 sub block은 transformer block인 듯 하다. 그리고 추가적으로 layer norm이 final self attention block에 추가되었다고 한다.
+
+---
+
+"데이터양과 컴퓨팅 파워를 엄청 늘리면 LM만으로도 다양한 태스크와 데이터셋에 대해서도 잘 동작할 수 있다."가 핵심인 것 같다.
+
 ## 더 읽어보고 싶은 리스트
 
 * Bengio, Y., Ducharme, R., Vincent, P., and Jauvin, C. A neural probabilistic language model. Journal of machine learning research, 3(Feb):1137–1155, 2003.
