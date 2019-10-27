@@ -340,14 +340,17 @@ figure {
 // tag
 .all_tags {
   line-height: 2em;
+
   a {
+    display: inline-block;
     border: 1px solid #9E9E9E;
     font-weight: 100;
     font-size: 0.8em;
     color: #616161;
-    padding: 3px 8px;
+    padding: 0px 12px;
     border-radius: 1000px;
     white-space: nowrap;
+    margin: 5px 3px;
   }
 }
 
