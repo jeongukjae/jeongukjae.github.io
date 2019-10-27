@@ -8,8 +8,6 @@ name: Blog
 # Short bio or description
 description: 개발 관련 기록/내용을 정리합니다.
 
-avatar: https://avatars.githubusercontent.com/JeongUkJae
-
 #
 # Flags below are optional
 #
@@ -18,7 +16,7 @@ avatar: https://avatars.githubusercontent.com/JeongUkJae
 footer-links:
   email: jeongukjae@gmail.com
   facebook: JeongUkJae
-  github: JeongUkJae
+  github: jeongukjae
   linkedin: JeongUkJae
   rss: .
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
