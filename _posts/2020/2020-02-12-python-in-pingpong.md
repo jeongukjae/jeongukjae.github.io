@@ -6,7 +6,7 @@ tags:
   - scatterlab
 ---
 
-**[핑퐁팀 블로그](https://blog.pingpong.us/python-in-pingpong/)에 올라간 글입니다. 직접 작성한 글이라 여기에 재 업로드합니다.**
+**[핑퐁팀 블로그](https://blog.pingpong.us/python-in-pingpong/)에 올라간 글입니다. 직접 작성한 글이기 때문에 이 블로그에 아카이브합니다.**
 
 ---
 
