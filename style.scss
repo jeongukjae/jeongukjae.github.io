@@ -303,6 +303,11 @@ footer {
   .disabled {
     color: #333;
   }
+
+  a, span {
+    margin: 0 3px;
+    padding: 0 2px;
+  }
 }
 
 // footnote
