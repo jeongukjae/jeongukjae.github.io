@@ -157,7 +157,7 @@ tags:
 
 ## 5. Discussion
 
-### 5.1.Comparison of Conventional Distillation and Inplace Distillation
+### 5.1. Comparison of Conventional Distillation and Inplace Distillation
 
 * 해봤는데, 음... 어.. 한 수준이다. 잘 나오는 것보다 있고, 아닌 것도 있지만 그저 그런 수준.
 
