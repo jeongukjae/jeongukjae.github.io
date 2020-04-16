@@ -1,0 +1,7 @@
+---
+layout: post
+title: "📃 DEEP COMPRESSION: COMPRESSING DEEP NEURAL NETWORKS WITH PRUNING, TRAINED QUANTIZATION AND HUFFMAN CODING 리뷰"
+tags:
+  - paper
+  - nlp
+---
