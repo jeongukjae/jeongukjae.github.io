@@ -46,7 +46,7 @@ TensorFlow 상에서 FP32를 INT8로 quantization을 해보는 논문이다. 1.5
 * > This relies on the assumption that maintaining small differences between tensor values that are close together is more important than representing the absolute extreme values or the outliers. Ideally, the numerical distribution of values in the mapped INT8 tensor representations should be as close as possible to the distribution of values for FP32 tensors.
 * 그래서 KL Divergence 사용함
 * 아이디어는 여기서 참고했다고 함 [8-bit Inference with TensorRT](http://on-demand.gputechconf.com/gtc/2017/presentation/s7310-8-bit-inference-with-tensorrt.pdf)
-* calibration data로 600 random length와 3003개의 문장을 선정함
+* calibration data로 600 랜덤 샘플링함
 * min, max threshold를 정하는 방법을 세가지 테스트함
   1. symmetric하게. "threshold_min = - threshold_max"
   2. 독립적으로 각각 계산함
