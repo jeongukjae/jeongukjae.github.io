@@ -8,6 +8,9 @@ permalink: /about/
 
 개인적으로 공부한 것을 쌓아놓는 용도로 사용하는 블로그입니다. 공부를 하시는 분들께 도움이 되었으면 좋겠습니다. 혹시나 잘못된 내용이 있다거나 말씀해주실 다른 내용이 있으시다면 블로그 하단의 이메일 아이콘을 클릭하셔서 보내주시면 감사하곘습니다.
 
+* [링크드인](https://www.linkedin.com/in/jeongukjae/)
+* [GitHub](https://www.github.com/jeongukjae/)
+
 ## 포스트 수
 
 총 포스트 수: {{ site.posts | size }}개
