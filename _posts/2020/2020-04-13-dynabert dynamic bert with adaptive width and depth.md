@@ -3,7 +3,6 @@ layout: post
 title: "📃 DynaBERT: Dynamic BERT with Adaptive Width and Depth 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 이 논문에서는 BERT, RoBERTa가 매우 좋은 성능을 보이지만, memory, computing power가 너무 많이 필요하므로 그를 압축해보는 방법을 제안한다. 아직 WIP인 논문이고, [https://arxiv.org/abs/2004.04037](https://arxiv.org/abs/2004.04037)가 링크이다. 화웨이에서 나온 논문이다.

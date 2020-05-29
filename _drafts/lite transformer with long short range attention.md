@@ -3,7 +3,6 @@ layout: post
 title: "📃 Lite Transformer with Long-Short Range Attention 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 ICLR 2020 보면서 제일 재밌었던 논문 몇편도 앞으로 몇일간 리뷰를 올려보도록 하겠다. 이 논문은 한줄로 말하자면 transformer의 연산을 (특히 FFN + Attention을) 간단하게 만들어보는 논문이다. 논문/슬라이드/발표 영상은 [https://iclr.cc/virtual_2020/poster_ByeMPlHKPH.html](https://iclr.cc/virtual_2020/poster_ByeMPlHKPH.html)에서 볼 수 있다.

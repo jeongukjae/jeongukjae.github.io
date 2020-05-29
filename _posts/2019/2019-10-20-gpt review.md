@@ -2,7 +2,6 @@
 layout: post
 title: 📃 GPT 리뷰
 tags:
-  - nlp
   - paper
 ---
 

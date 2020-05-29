@@ -3,7 +3,6 @@ layout: post
 title: 📃 transformers.zip 리뷰
 tags:
   - paper
-  - nlp
 ---
 
 [transformers.zip: Compressing Transformers with Pruning and Quantization](https://web.stanford.edu/class/cs224n/reports/custom/15763707.pdf)이라는 논문인데, url을 보니까 cs224n reports인 듯 싶다.. [https://github.com/robeld/ERNIE](https://github.com/robeld/ERNIE)로 가면 소스코드를 확인할 수 있다.

@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Jekyll로 github pages 인식하기"
-tags:
-  - jekyll
-  - github
 ---
 
 GitHub Pages와 Jekyll을 사용하다보면 로컬 서버에서 사용할 때와 github pages에 배포된 상태를 구분하는 것이 필요가 있어, 그런 방법을 정리해보았다. 나는 보통 블로그 글을 작성하면 로컬 환경에서 jekyll을 돌리면서 보이는 화면을 확인하는 편인데, 그 때, google analytics가 잡히게 되면, 좀.. 나중에 통계를 볼 때 이상한 데이터가 너무 많이 들어오기 때문이다.

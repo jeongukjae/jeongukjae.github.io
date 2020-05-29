@@ -2,7 +2,6 @@
 layout: post
 title: "📃 Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data"
 tags:
-  - nlp
   - paper
 ---
 

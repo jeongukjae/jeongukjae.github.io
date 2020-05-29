@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 4 Backpropagation
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 CS224n 네번째 강의를 듣고 정리한 포스트!! 이번 강의는 다른 강의를 들으면서 많이 보았던 내용이고 많이 다를 것이 없다 생각하고 별 기대없이 들었다.

@@ -2,7 +2,6 @@
 layout: post
 title: "📃 BERT 리뷰"
 tags:
-  - nlp
   - paper
 ---
 

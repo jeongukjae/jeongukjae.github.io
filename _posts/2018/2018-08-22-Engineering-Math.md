@@ -2,8 +2,7 @@
 layout: post
 title: "Engineering Math"
 tags:
-  - engineering math
-  - 대학
+  - math
 ---
 
 18년 1학기에 서울시립대학교에서 수강했던 Engineering Math를 제 필요에 의해 정리해봅니다. 영어 강의이고 제가 다시 참고하기 위한 글입니다. 귀찮은 부분 다 건너 뛰어요.
@@ -101,6 +100,8 @@ $$ \pmatrix {x_1 & x_2 & ...} $$ : row vector (row matrix) or bra vector[^bra-ke
 ##### braket notation
 
 $$ \langle x \| y \rangle = \pmatrix{x_1 & x_2 & ...} \pmatrix {y_1 \\ y_2 \\ ... } $$.
+
+다음에 더 정리해야지
 
 #### Pauli matrix
 

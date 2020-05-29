@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 18 Constituency Parsing and Tree Recursive Neural Networks
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 18강이고 강의 전체가 다 끝나기까지 이 강의를 제외하고 2강정도만 남았다.

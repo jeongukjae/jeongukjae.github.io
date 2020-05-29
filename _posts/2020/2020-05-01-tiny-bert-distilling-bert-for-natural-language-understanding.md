@@ -3,7 +3,6 @@ layout: post
 title: "📃 TinyBERT: Distilling BERT For Natual Language Understanding 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 TinyBERT는 Under Review 상태인 논문이고, 화웨이 Noah's Ark Lab에서 나온 논문이다. 코드는 [GitHub huawei-noah/Pretrained-Language-Model/TinyBERT](https://github.com/huawei-noah/Pretrained-Language-Model/tree/master/TinyBERT)에 있다. arxiv 링크는 [https://arxiv.org/abs/1909.10351](https://arxiv.org/abs/1909.10351)이다.

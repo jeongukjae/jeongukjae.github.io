@@ -3,7 +3,6 @@ layout: post
 title: "📃 Distilling the Knowledge in a Neural Network 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 구글에서 Geoffrey Hinton, Oriol Vinyals, Jeff Dean이 작성한 Distillation 개념을 제안한 논문이다. arvix 링크는 [https://arxiv.org/abs/1503.02531](https://arxiv.org/abs/1503.02531)이고, NIPS 2014 워크샵에 나온 논문이다.

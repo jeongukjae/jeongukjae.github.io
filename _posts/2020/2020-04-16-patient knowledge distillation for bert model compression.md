@@ -3,7 +3,6 @@ layout: post
 title: "📃 Patient Knowledge Distillation for BERT Model Compression 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 EMNLP 2019에 Accept된 마이크로소프트에서 나온 PKD (Patient Knowledge Distillation) 방식의 Model Compression 논문이다. arxiv 링크는 [https://arxiv.org/abs/1908.09355](https://arxiv.org/abs/1908.09355)이고 코드는 [GitHub - intersun/PKD-for-BERT-Model-Compression](https://github.com/intersun/PKD-for-BERT-Model-Compression)에 있다.

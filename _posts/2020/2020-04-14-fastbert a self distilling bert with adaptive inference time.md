@@ -3,7 +3,6 @@ layout: post
 title: "📃 FastBERT: a Self-distilling BERT with Adaptive Inference Time 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 이 논문 역시 BERT가 너무 서빙하기 큰 모델이라서 fine tuning 시에 self distillation을 적용해본 것이다. 2019 Tencent Rhino-Bird Elite Training Program에서 펀딩받아서 작성한 것이다. arxiv 링크는 [https://arxiv.org/abs/2004.02178](https://arxiv.org/abs/2004.02178)이다.

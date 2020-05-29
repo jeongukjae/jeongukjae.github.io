@@ -2,9 +2,7 @@
 title: "📃 Review of \"Attention Is All You Need\""
 layout: post
 tags:
-  - nlp
   - paper
-  - machine learning
 ---
 
 Transformer를 소개하는 논문으로, CS224n강의의 suggested readings 목록에 있어서 읽어본 논문이다. 한국어 리뷰도 엄청 많을 정도로 유명한 논문이다. 해당 논문을 읽고, 간략한 정리를 해보았다. 논문은 [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)에 있다.

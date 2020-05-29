@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 7 Vanishing Gradients, Fancy RNNs
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 CS224n 일곱번째 강의를 듣고 정리한 포스트! 지난 강의는 RNN에 관한 것이었고, 7강은 RNN의 variants에 관한 것이다. (LSTM, GRU, ...) 다음에는 NMT, seq2seq + attention 정도를 배운다.

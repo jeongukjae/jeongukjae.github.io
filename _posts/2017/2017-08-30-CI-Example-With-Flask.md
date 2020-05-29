@@ -2,10 +2,7 @@
 layout: post
 title: Flask로 CI 구성해보기
 tags:
-  - ci
-  - flask
   - python
-  - devops
 ---
 
 간단한 예제를 보기 이전에, 이 예제는 python3를 기준으로 작성되고, Flask를 이용하여 작성되며, Virtualenv를 활용하기 때문에 혹시 읽다가 잘 모르시겠다면 아래의 링크를 참고하시면 될 것 같습니다.
@@ -143,7 +140,7 @@ from .forms import SignInForm
 auth_page = Blueprint('auth_page', __name__)
 
 @auth_page.route('/signin', methods=['GET', 'POST'])
-def signin(): 
+def signin():
     form = SignInForm(request.form)
 
     if form.validate_on_submit():
@@ -167,7 +164,7 @@ def success():
 
 `auth_page`라는 Blueprint를 만들어서, `signin`과 `success`에 라우트를 추가했습니다. `def signin()`에서 나오는 `form.validate_on_submit()`는 email 형식과 이름 형식을 체크합니다. 만약 올바르지 않으면, 다시 signin.html 페이지가 나오고, 올바른 형식이라면 success.html로 넘어가는 형식입니다. `def success()`는 email과 name을 받아서 존재한다면 success.html을 보여주고 아니라면 'bad request'라는 응답을 반환하는 뷰 함수입니다.
 
-`from .forms import SignInForm`에서 import하는 forms는 다음에 나오는 파일입니다. 
+`from .forms import SignInForm`에서 import하는 forms는 다음에 나오는 파일입니다.
 
 * app/auth/forms.py
 
@@ -306,7 +303,7 @@ language: python
 python:
   - "3.6"
 
-install: 
+install:
   - pip install coveralls
 
 script:

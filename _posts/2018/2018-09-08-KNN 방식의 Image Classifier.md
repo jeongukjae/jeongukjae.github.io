@@ -3,9 +3,6 @@ layout: post
 title: "KNN 방식의 Image Classifier"
 tags:
   - cs231n
-  - python
-  - numpy
-  - machine learning
 ---
 
 사실 이전 포스트에서 [한번 작성했던 글](/posts/CS231n-KNN-방식의-Image-Classifier/)인데, 일년이 넘어서 다시 정리하기로 생각했다. (GitHub에도 과제들을 레포지토리로 다시 정리하기로 했다.)

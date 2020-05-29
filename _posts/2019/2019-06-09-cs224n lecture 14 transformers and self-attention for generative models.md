@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 14 Transformers and Self-Attention For Generative Models
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 14강은 강연자를 초대해서 강의를 진행한다. Google AI에서 나온 연사자 두분이라고 한다. NLP 공부하려고 듣는 것이고, 다른 것들 하기에도 약간 벅찬듯 싶어서 NLP 내용을 좀 벗어나는 이미지 처리, 음성 처리 같은 부분은 많이 건너뛰었다 ㅠㅠ

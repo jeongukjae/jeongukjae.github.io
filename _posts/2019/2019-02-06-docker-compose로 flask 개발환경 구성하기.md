@@ -1,11 +1,6 @@
 ---
 layout: post
 title: "docker-compose로 flask 개발환경 구성하기"
-tags:
-  - devops
-  - docker
-  - flask
-  - python
 ---
 
 가끔 개발환경을 구성하다보면, 생각 외로 복잡해지는 경우가 있다. 그럴 때 docker로 옮겨 개발을 하는 편인데, 주로 docker-compose를 이용해 데이터베이스 서버 등등과 백엔드 서버를 같이 띄운다. 하지만 매번 할 때마다 구성이 헷갈려 한번 정리할 필요성을 느껴 정리하게 되었다.

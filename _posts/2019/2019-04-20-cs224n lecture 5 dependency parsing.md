@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 5 Dependency Parsing
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 CS224n 다섯번째 강의를 듣고 정리한 포스트! Assignment 2가 끝났고, Assignment 3가 시작되었다.

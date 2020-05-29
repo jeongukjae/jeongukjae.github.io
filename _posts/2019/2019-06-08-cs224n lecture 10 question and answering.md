@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 10 (Textual) Question Answering
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 드디어 10강을 정리한다. 기본적으로 QA시스템에 관한 설명이다.

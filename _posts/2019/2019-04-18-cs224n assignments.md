@@ -2,10 +2,7 @@
 layout: post
 title: "👨‍💻 CS224n assignments 1 & 2"
 tags:
-  - nlp
   - cs224n
-  - machine learning
-  - python
 ---
 
 cs224n 스터디를 하면서 나오는 과제들도 같이 하기로 헀다. 그래서 1, 2주차 과제를 몰아서 해봤다. 과제를 하면서 내가 다시 봐야할 내용같은 것을 적어놓았다.

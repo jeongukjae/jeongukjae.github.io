@@ -1,10 +1,6 @@
 ---
 layout: post
 title: "VSCode에서 Aliasing된 경로들 intellisense 지원하기"
-tags:
-  - editor
-  - javascript
-  - vue
 ---
 
 나는 반복되고, 읽기 힘든 경로를 손으로 쓰는 것(심지어 에디터에서 자동완성을 지원하더라도)을 매우 싫어하는데, 그 때 자주 쓰는 기능이 webpack에서 지원하는 aliasing이다. (vuejs cli가 내부적으로는 webpack을 사용하므로) 우선 이 방법은 [chrisvfritz/vue-enterprise-boilerplate](https://github.com/chrisvfritz/vue-enterprise-boilerplate)에서 처음 보고 다른 자바스크립트 프로젝트에도 적용해서 쓰는 방식이다.
@@ -59,7 +55,7 @@ for (const alias in aliases) {
 }
 ```
 
-webpack의 aliasing을 위해 `@src`와 같은 폴더를 `src`로 매핑하준다. (코드를 보면 알겠지만, `webpack` 이외에도 `jsconfig` 용 오브젝트도 존재하는데, 그게 나중에 쓰일 것이다.) 이 방식이 좋은 방식이라고 생각하는 이유는, 나는 같은 방식으로 aliasing을 해야할 때, 반복해서 작성하는 것이 싫었는데, 이 방식은 한번 작성해놓고, export를 통해서 여러 곳에서 공유해서 사용을 하여 중복을 줄이고 편하게 관리를 해준다는 점이다. 지금은 webpack, jsconfig 뿐이지만, jest에서도 이 파일을 접근해서 사용을 한다. 그리고 나는, vue cli를 시작할 때 매핑된 경로들을 보여주고 시작하게 설정을 해놓았다. 
+webpack의 aliasing을 위해 `@src`와 같은 폴더를 `src`로 매핑하준다. (코드를 보면 알겠지만, `webpack` 이외에도 `jsconfig` 용 오브젝트도 존재하는데, 그게 나중에 쓰일 것이다.) 이 방식이 좋은 방식이라고 생각하는 이유는, 나는 같은 방식으로 aliasing을 해야할 때, 반복해서 작성하는 것이 싫었는데, 이 방식은 한번 작성해놓고, export를 통해서 여러 곳에서 공유해서 사용을 하여 중복을 줄이고 편하게 관리를 해준다는 점이다. 지금은 webpack, jsconfig 뿐이지만, jest에서도 이 파일을 접근해서 사용을 한다. 그리고 나는, vue cli를 시작할 때 매핑된 경로들을 보여주고 시작하게 설정을 해놓았다.
 
 일단은 다시 본론으로 돌아와 실제로 생성되는 object는 아래와 같을 것이다.
 
@@ -77,7 +73,7 @@ webpack의 aliasing을 위해 `@src`와 같은 폴더를 `src`로 매핑하준�
 
 ## 자 그럼 intellisense는?
 
-자 그럼 intellisense를 지원해보자. 일단은 어떤 ide를 쓰는지 알아야 하는데, 나는 자바도 간단한 것은 gradle 스크립트를 직접 작성하여 vscode에서 돌릴정도로 vscode를 애용하기 때문에 vscode 기준으로 설명한다. (jsconfig를 쓴 시점부터 이미..) 
+자 그럼 intellisense를 지원해보자. 일단은 어떤 ide를 쓰는지 알아야 하는데, 나는 자바도 간단한 것은 gradle 스크립트를 직접 작성하여 vscode에서 돌릴정도로 vscode를 애용하기 때문에 vscode 기준으로 설명한다. (jsconfig를 쓴 시점부터 이미..)
 
 ### vscode의 intellisense 설정
 

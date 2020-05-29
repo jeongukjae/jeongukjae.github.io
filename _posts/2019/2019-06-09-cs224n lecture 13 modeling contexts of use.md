@@ -2,9 +2,7 @@
 layout: post
 title: "📕 CS224n Lecture 13 Modeling contexts of use: Contextual Representations and Pretraining"
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 13강 정리! 11강부터인가? 그때부터 대부분 소개가 되어가고 있어서 좋은 링크 정리 정도만 하고 있는 것 같다.

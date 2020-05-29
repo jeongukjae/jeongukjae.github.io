@@ -3,7 +3,6 @@ layout: post
 title: "📃 Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 이 논문 역시 MHA를 Pruning 하는 논문이다. English-Russian WMT dataset에서 48 encoder heads중 38개를 pruning해도 0.15 BLEU drop만 있었다고 한다. 코드는 [GitHub - lena-voita/the-story-of-heads](https://github.com/lena-voita/the-story-of-heads)에 공개되어 있고, Arxiv 링크는 [https://arxiv.org/abs/1905.09418](https://arxiv.org/abs/1905.09418)이다.

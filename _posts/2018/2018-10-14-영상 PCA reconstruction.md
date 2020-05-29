@@ -2,9 +2,7 @@
 layout: post
 title: "영상 PCA reconstruction"
 tags:
-  - python
-  - machine learning
-  - 대학
+  - math
 ---
 
 서울시립대학교에서 18학년 2학기에 수강하는 기계학습개론 과목을 들으면서, 과제로 영상 PCA reconstruction을 작성해보았다.

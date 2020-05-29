@@ -2,9 +2,7 @@
 layout: post
 title: "📕 CS224n Lecture 17 The Natural Language Decathlon: Multitask Learning as Question Answering"
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 Richard Socher라는 Saleforce의 Chief Scientist가 게스트로 나와 강의를 한다고 한다.

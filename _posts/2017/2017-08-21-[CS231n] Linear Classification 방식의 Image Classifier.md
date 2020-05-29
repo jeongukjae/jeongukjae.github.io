@@ -3,9 +3,6 @@ layout: post
 title: "CS231n Linear Classification 방식의 Image Classifier"
 tags:
   - cs231n
-  - python
-  - numpy
-  - machine learning
 ---
 
 Linear Classification 방식의 Image Classification을 만들어보았다.

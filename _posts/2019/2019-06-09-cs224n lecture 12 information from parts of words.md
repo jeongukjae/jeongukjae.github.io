@@ -2,9 +2,7 @@
 layout: post
 title: "📕 CS224n Lecture 12 Information from parts of words: Subword Models"
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 12강까지는 저저번주에 들었던 것이지만, 이제 정리하려고 하니 제대로 기억이 안나서 다시 들으면서 정리한다.

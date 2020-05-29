@@ -2,13 +2,7 @@
 layout: post
 title: 2019 Cloud Studyjam 중급반(k8s) 1
 tags:
-  - devops
-  - cloud
-  - docker
-  - gcp
-  - kubernetes
   - studyjam
-  - 커뮤니티
 ---
 
 또 스터디잼에 참여하게 되었는데, 이번에는 [클라우드 스터디잼 중급반](https://sites.google.com/view/cloud-studyjam2/home)이다. 주제는 입문반과 똑같이 kubernetes이다. 스터디잼 소개 페이지에 학습 내용은 아래처럼 적혀있다.

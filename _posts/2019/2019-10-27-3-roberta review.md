@@ -2,7 +2,6 @@
 layout: post
 title: 📃 RoBERTa 리뷰
 tags:
-  - nlp
   - paper
 ---
 

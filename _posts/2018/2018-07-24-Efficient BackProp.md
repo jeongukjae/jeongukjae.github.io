@@ -2,7 +2,6 @@
 layout: post
 title: "Efficient BackProp 정리"
 tags:
-  - machine learning
   - paper
 ---
 

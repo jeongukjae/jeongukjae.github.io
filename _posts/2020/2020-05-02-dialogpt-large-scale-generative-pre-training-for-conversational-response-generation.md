@@ -3,7 +3,6 @@ layout: post
 title: "📃 DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 GPT를 대화체에 맞도록 학습시킨 모델이다. 마이크로소프트에서 나온 논문이고, arxiv링크는 [https://arxiv.org/abs/1911.00536](https://arxiv.org/abs/1911.00536)이다. 코드는 [GitHub microsoft/DialoGPT](https://github.com/microsoft/DialoGPT)에서 볼 수 있다.

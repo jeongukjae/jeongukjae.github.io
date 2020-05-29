@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 15 Natural Language Generation
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 LNG에 대한 Neural Approach에 대한 방법을 15강에서 강의한다고 한다. [슬라이드](http://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture15-nlg.pdf)는 여기로.

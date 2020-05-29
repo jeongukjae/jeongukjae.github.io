@@ -1,11 +1,6 @@
 ---
 layout: post
 title: "CircleCI에서 발생하는 yarn 오류"
-tags:
-  - javascript
-  - ci
-  - devops
-  - 에러해결기
 ---
 
 지금 개발중인 프로젝트가 node `10.11.0` 버전을 사용해서 CircleCI의 `circleci/node:10.11.0` 이미지로 빌드는 하는데, 이번주부터 갑자기 `checkout` job이 실패했다고 떴다.
@@ -61,7 +56,7 @@ error https://registry.yarnpkg.com/event-stream/-/event-stream-3.3.6.tgz: Extrac
 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
 ```
 
-그래도 오류가 뜬다. 저런 오류는 처음봐서 일단 `yarn.lock`을 지우고 다시 설치나 해볼까 했더니 
+그래도 오류가 뜬다. 저런 오류는 처음봐서 일단 `yarn.lock`을 지우고 다시 설치나 해볼까 했더니
 
 ```shell
 circleci@some-hash:~/some-project-name$ rm yarn.lock

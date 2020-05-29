@@ -2,11 +2,7 @@
 layout: post
 title: "2019 클라우드 스터디잼 1~3 - kubernetes"
 tags:
-  - cloud
-  - gcp
-  - kubernetes
   - studyjam
-  - 커뮤니티
 ---
 
 GDGKR(Google Developer Group Korea)라는 커뮤니티에 드문드문 나가게 되면서, 해당 커뮤니티 구성원 분들과 [2019 클라우드 스터디잼 입문반](https://sites.google.com/view/cloud-studyjam)[^cloud-studyjam]을 같이 하게될 기회를 얻었다. 그래서 아래는 스터디했던 내용. 스터디잼은 Qwiklab이라는 곳에서 특정 퀘스트를 완료하면 수료하게 된다. 퀘스트는 여러개의 랩(강의 하나로 생각)으로 이루어져있다.

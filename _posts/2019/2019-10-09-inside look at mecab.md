@@ -2,7 +2,6 @@
 layout: post
 title: 🔪 Mecab을 살펴보자
 tags:
-  - nlp
   - paper
 ---
 

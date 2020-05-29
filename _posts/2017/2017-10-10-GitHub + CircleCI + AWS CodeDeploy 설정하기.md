@@ -2,10 +2,7 @@
 layout: post
 title: "GitHub + CircleCI + AWS CodeDeploy 설정하기"
 tags:
-  - ci
   - devops
-  - aws
-  - cloud
 ---
 
  저는 GitHub Developer Plan (Unlimited private repos가 가능한 Plan)을 사용하는 만큼, 소스코드 저장을 할 때 GitHub 레포지토리를 많이 사용을 합니다. 그래서 가끔 간단한 일을 할 때에 GitHub와 CircleCI를 연동하여 빌드/테스트를 진행했었고, 필요하다면 AWS의 CodeDeploy를 이용하여 자동으로 배포를 진행하였습니다. 오늘은 그 방법에 대해서 써보도록 하겠습니다.

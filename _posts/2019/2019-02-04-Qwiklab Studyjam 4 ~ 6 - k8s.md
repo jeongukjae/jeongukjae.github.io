@@ -2,11 +2,7 @@
 layout: post
 title: "2019 클라우드 스터디잼 4~6 - kubernetes"
 tags:
-  - cloud
-  - gcp
-  - kubernetes
   - studyjam
-  - 커뮤니티
 ---
 
 저번의 1~3강에 이어서 그 뒤의 내용 정리

@@ -3,7 +3,6 @@ layout: post
 title: "📃 Efficient 8-Bit Quantization of Transformer Neural Machine Language Translation Model 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 TensorFlow 상에서 FP32를 INT8로 quantization을 해보는 논문이다. 1.5배의 성능 향상을 얻으면서 0.5 BLEU score accuracy만 떨어졌다고 한다. 또한 intel cpu에 최적화를 진행했다. arxiv 링크는 [https://arxiv.org/abs/1906.00532](https://arxiv.org/abs/1906.00532)이고, intel에서 나온 논문이다.

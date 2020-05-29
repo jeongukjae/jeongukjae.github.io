@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 6 Language Models and RNNs
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 CS224n 여섯번째 강의를 듣고 정리한 포스트!

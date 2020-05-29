@@ -3,7 +3,6 @@ layout: post
 title: "📃 Are Sixteen Heads Really Better than One? 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 Multi head attention이 표현력이 좋고 많은 정보를 담을 수 있다지만, 모든 head가 필요한 것은 아니다. 이에 관한 논문이 Are Sixteen Heads Really Better Than One? (Michel et al., 2019)이고, arxiv 링크는 [https://arxiv.org/abs/1905.10650](https://arxiv.org/abs/1905.10650)이다.

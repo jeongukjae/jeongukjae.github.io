@@ -3,9 +3,6 @@ layout: post
 title: "CS231n Nearest Neighbor 방식의 Image Classifier"
 tags:
   - cs231n
-  - python
-  - numpy
-  - machine learning
 ---
 
 강의를 보면서 일단 먼저 나오는 것부터 구현해보았는데, Nearest Neighbor 방식의 Image Classifier입니다.

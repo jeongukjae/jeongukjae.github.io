@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "📃 Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding
- 리뷰"
+title: "📃 Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding 리뷰"
 tags:
   - paper
-  - nlp
 ---
 
 이 논문이 나오기 얼마 전에 마이크로 소프트에서 나온 [MT-DNN (Liu et al., 2019)](https://arxiv.org/abs/1901.11504)에 Knowledge Distillation을 적용한 논문이다. arvix링크는 [https://arxiv.org/abs/1904.09482](https://arxiv.org/abs/1904.09482)이고 코드는 [GitHub - namisan/mt-dnn](https://github.com/namisan/mt-dnn)에서 확인 가능하다. 특이하게 다른 Distillation 방법들과는 다르게 Teacher 모델을 여러개 만들어두고 teacher들을 ensemble하여 student 모델을 학습한다. 즉, 모델 압축을 위해 KD를 사용하는 것이 아니라, 모델 성능을 높이기 위해 Ensemble된 모델들을 KD를 사용하는 것이다.

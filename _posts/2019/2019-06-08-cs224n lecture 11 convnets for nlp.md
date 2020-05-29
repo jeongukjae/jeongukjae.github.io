@@ -2,9 +2,7 @@
 layout: post
 title: 📕 CS224n Lecture 11 ConvNets for NLP
 tags:
-  - nlp
   - cs224n
-  - machine learning
 ---
 
 11강! 마지막 과제인 과제 5도 슬슬 마감으로 보인다. 강의에서도 second half라고 한다! 이제부터 거의 소개에 가깝다고 한다.

@@ -5,8 +5,6 @@ tags:
   - scatterlab
   - tensorflow
   - pytorch
-  - machine learning
-  - aws
 ---
 
 * **[핑퐁팀 블로그](https://blog.pingpong.us/)의 [딥러닝 모델 서비스 A-Z 1편 - 연산 최적화 및 모델 경량화 - 딥러닝 모델 서비스 A-Z 1편](https://blog.pingpong.us/ml-model-optimize/)에 올라간 글입니다. 작성에 일부 참여한 글이기 때문에 저장용으로 이 블로그에 아카이브합니다.**

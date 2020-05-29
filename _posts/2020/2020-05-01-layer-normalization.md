@@ -3,7 +3,6 @@ layout: post
 title: "📃 Layer Normalization 리뷰"
 tags:
   - paper
-  - machine learning
 ---
 
 Layer Normalization은 BERT에 쓰이는 것 때문에 찾아보게 된 논문이다. arxiv 링크는 [https://arxiv.org/abs/1607.06450](https://arxiv.org/abs/1607.06450)이다. training시간을 줄이는 것이 큰 기여인데, 이름에서 알 수 있듯이 neuron의 activity를 normalize하는 것이다. Batch Normalization도 비슷한 역할을 할 수 있지만 Batch Normalization은 min-batch에 dependent한 부분이 존재하고 recurrent network에는 적용하기 어렵다.

@@ -3,7 +3,6 @@ layout: post
 title: 📃 ALBERT 리뷰
 tags:
   - paper
-  - nlp
 ---
 
 최근 회사에서의 업무 때문에 논문을 많이 찾아보게 되었는데, 그리 되어서 어쨌든 ALBERT도 읽었으니 정리. 귀찮은 부분은 건너뛴다. 논문은 [ALBERT: A LITE BERT FOR SELF-SUPERVISED LEARNING OF LANGUAGE REPRESENTATIONS](https://arxiv.org/pdf/1909.11942.pdf)이다. Google Research랑 Toyota Technological Institute at Chicago에서 했다.

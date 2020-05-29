@@ -2,7 +2,6 @@
 layout: post
 title: flask에서 profiling 하기
 tags:
-  - flask
   - python
 ---
 

@@ -1,11 +1,6 @@
 ---
 layout: post
 title: "CircleCI에서 jest 사용할 때 ENOMEM이 뜨는 오류"
-tags:
-  - vue
-  - devops
-  - ci
-  - 에러해결기
 ---
 
 나는 보통 CI 서버를 CircleCI를 자주 이용하는 편인데, 그 이유는 private repo여도 어느정도 무료로 CI 서버를 구동할 수 있기 때문이다. 그래서 외주할 때도 간간히 쓰는데, VueJS/jest를 이용해서 frontend 외주를 하던 도중 CircleCI에서 아래와 같은 오류가 발생했다.
@@ -60,11 +55,11 @@ vue-cli-service test:unit --coverage
 > ```
 >
 > Another alternative to expediting test execution time on Continuous Integration Servers such as Travis-CI is to set the max worker pool to ~4. Specifically on Travis-CI, this can reduce test execution time in half. Note: The Travis CI free plan available for open source projects only includes 2 CPU cores.
-> 
+>
 > ```shell
 > # Using Jest CLI
 > jest --maxWorkers=4
-> 
+>
 > # Using yarn test (e.g. with create-react-app)
 > yarn test --maxWorkers=4
 > ```

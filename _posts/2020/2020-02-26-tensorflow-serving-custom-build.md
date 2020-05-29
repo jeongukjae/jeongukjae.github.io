@@ -3,8 +3,6 @@ layout: post
 title: 성능을 위한 TensorFlow Serving 커스텀 빌드
 tags:
   - tensorflow
-  - devops
-  - docker
 ---
 
 아래는 TensorFlow를 사용하다보면 자주 볼 수 있는 경고 메시지이다. CPU가 AVX2, AVX512F, FMA를 지원하지만 해당 extension들을 사용하도록 빌드되지 않았다는 메시지인데, 이런 메시지는 tensorflow/serving에도 똑같이 적용된다. 그래서 "빨라지면 얼마나 빨라질까?"하고 테스트해보았다.

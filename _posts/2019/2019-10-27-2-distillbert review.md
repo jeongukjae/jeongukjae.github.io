@@ -3,7 +3,6 @@ title: "📃 DistilBert 리뷰"
 layout: post
 tags:
   - paper
-  - nlp
 ---
 
 오늘은 huggingface가 [huggingface/transformers](https://github.com/huggingface/transformers) 레포지토리에 자체적으로 공개한 모델인 DistilBert를 읽고 정리해본다. 다른 정리처럼 한번 읽고 말 부분은 다 제외한다.
