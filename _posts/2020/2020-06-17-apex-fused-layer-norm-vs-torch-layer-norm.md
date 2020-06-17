@@ -109,6 +109,10 @@ void cuWelfordMuSigma2(
 
 계속해서 루프를 돌며 OnlineSum을 해간다. OnlineSum은 Welford's Online Algorithm을 사용한다.
 
+근데 이 알고리즘은 [이렇게 설명](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm)이 되어 있다.
+
+> This algorithm is much less prone to loss of precision due to catastrophic cancellation, but might not be as efficient because of the division operation inside the loop.
+
 ---
 
 그에 비해 Torch는 다르게 계산을 하는데, 우선 LayerNormKernel이라는 이름으로 [아래처럼 구현](https://github.com/pytorch/pytorch/blob/23739654cd6e6b55c86d74608d84d3f6c3ac8cb6/aten/src/ATen/native/cuda/layer_norm_kernel.cu#L257)해놓았다.
@@ -348,5 +352,4 @@ dim 1024 Batch Size 2048, Torch: 0.00050486 Apex: 0.00045190 Imp 11.72
 
 * 원래는 Apex LayerNorm이 더 빠른 것이 맞았다.
 * 하지만 torch 1.4.0에 적용된 ["Add fused layer norm impl on CUDA in PyTorch (#27634)"](https://github.com/pytorch/pytorch/commit/8b87f9a5107e8b3c4f87d5297af698bb55838d81#diff-f12c726e3e8cd2b4768f8984fef27059) 커밋 이후로는 성능이 Torch가 더 좋다.
-* 하지만 mean, variance를 구하는 로직이 다르기 때문에 numerical stability는 살펴봐야 한다.
-  * 지금 나이브한 추측으로는 apex가 AMP를 강하게 지원하려 하기 떄문에 apex버전이 fp16에서 더 numberically stable하지 않을까?
+* 하지만 mean, variance를 구하는 로직이 다른데, apex 버전이 더 precision의 loss가 덜 하다.
