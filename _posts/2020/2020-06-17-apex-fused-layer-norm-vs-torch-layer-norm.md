@@ -344,7 +344,7 @@ dim 1024 Batch Size 2048, Torch: 0.00050486 Apex: 0.00045190 Imp 11.72
 
 ---
 
-되게 정리가 안되지만, 결국은 간단하게 정리해보자면
+엄청 정리안하고 글을 썼지만 간단하게 정리해보자면,
 
 * 원래는 Apex LayerNorm이 더 빠른 것이 맞았다.
 * 하지만 torch 1.4.0에 적용된 ["Add fused layer norm impl on CUDA in PyTorch (#27634)"](https://github.com/pytorch/pytorch/commit/8b87f9a5107e8b3c4f87d5297af698bb55838d81#diff-f12c726e3e8cd2b4768f8984fef27059) 커밋 이후로는 성능이 Torch가 더 좋다.
