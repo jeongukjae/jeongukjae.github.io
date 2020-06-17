@@ -2,7 +2,6 @@
 layout: post
 title: "Engineering Math"
 tags:
-  - math
 ---
 
 18년 1학기에 서울시립대학교에서 수강했던 Engineering Math를 제 필요에 의해 정리해봅니다. 영어 강의이고 제가 다시 참고하기 위한 글입니다. 귀찮은 부분 다 건너 뛰어요.
