@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🐍 List Comprehension in Python
+title: 🐍 List Comprehension이 빠른 이유를 찾아보자
 tags:
   - python
 ---
