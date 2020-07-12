@@ -45,7 +45,7 @@ task?
 * Heterogeneous는 32% ~ 61%까지 다양하지만 전체적으로 많았다.
 * 그래서 Heterogeneous attention이 잠재적으로 구조적인 정보를 잡아낼 수 있다고 판단.
 
-### Relation speicifc heads in BERT
+### Relation specific heads in BERT
 
 Baker et al., 1998 의 내용을 잡아낼 수 있는지 테스트. 조건을 좀 많이 검.
 
