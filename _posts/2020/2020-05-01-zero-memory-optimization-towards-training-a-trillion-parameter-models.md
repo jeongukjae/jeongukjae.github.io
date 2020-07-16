@@ -35,7 +35,7 @@ tags:
   * Model Parallelism과 같이 100B정도까지 학습가능해진다. MegaTron은 20B정도 가능하다.
   * GPT-like 모델에 대해서 1.5B ~ 100B까지 6x 정도 throughput 향상을 가져왔다.
 
-{%include image.html url="/images/2020-05-01-zero/fig1.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-zero/fig1.png" class='noshadow' %}
 
 ## 2 Background
 
@@ -76,7 +76,7 @@ tags:
   * Model Parallelism과 Data parallelism은 Model States를 Training time동안 전부 저장한다. 하지만 계속해서 매 시간마다 필요한 것은 아니다.
 * ZeRO는 그래서 OGP States를 replicating하는 대신 partition한다.
 
-{%include image.html url="/images/2020-05-01-zero/fig2.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-zero/fig2.png" class='noshadow' %}
 
 ## 5 ZeRO: Memory Optimization
 
@@ -104,7 +104,7 @@ tags:
 
 * 모델이 너무 클때 constant-size fused uffer를 사용했다.
 
-{%include image.html url="/images/2020-05-01-zero/fig3.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-zero/fig3.png" class='noshadow' %}
 
 * 결국 $$N_d$$가 계속해서 커지면 8x까지 줄어든다
 
@@ -124,6 +124,6 @@ tags:
 
 이 뒤는 좀 핵심보다 구현 상세사항/실험이라 패스
 
-{%include image.html url="/images/2020-05-01-zero/fig4.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-zero/fig4.png" class='noshadow' %}
 
 위는 제일 인상적인 결과

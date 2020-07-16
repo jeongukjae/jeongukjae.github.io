@@ -30,7 +30,7 @@ Background라 패스
 
 ### 3.1 Transformer Distillation
 
-{%include image.html url="/images/2020-05-01-tiny-bert/fig1.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-tiny-bert/fig1.png" class='noshadow' %}
 
 #### Problem Formulation
 
@@ -71,7 +71,7 @@ Background라 패스
 
 ### 3.1 TinyBERT Learning
 
-{%include image.html url="/images/2020-05-01-tiny-bert/fig2.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-tiny-bert/fig2.png" class='noshadow' %}
 
 * general-distillation과 task specific distillation을 시도해봄
 * general distillation은 fine-tuning하지 않은 원 Bert 모델에 대해서 Prediction Layer Distillation을 제외하고 진행하는 Stage이다.
@@ -83,7 +83,7 @@ Background라 패스
 
 ### 4.2 Experimental Results on GLUE
 
-{%include image.html url="/images/2020-05-01-tiny-bert/fig3.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-tiny-bert/fig3.png" class='noshadow' %}
 
 * 일단 BERT small 보다는 훨씬 잘함
 * 기존 KD보다도 잘함
@@ -91,14 +91,14 @@ Background라 패스
 
 ### 4.3 Effects of Model Size
 
-{%include image.html url="/images/2020-05-01-tiny-bert/fig4.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-tiny-bert/fig4.png" class='noshadow' %}
 
 * 그래도 더 큰 모델이 잘한다는 같다
 * 그래도 4layer가 6layer보다 더 잘할 수 있다는 것은 놀라운 점
 
 ### 4.4 Ablation Studies
 
-{%include image.html url="/images/2020-05-01-tiny-bert/fig5.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-tiny-bert/fig5.png" class='noshadow' %}
 
 왜 4개 태스크에만 했지...?
 
@@ -119,4 +119,4 @@ Background라 패스
 
 squad가 안되어 있길래 찾아보니 Appendix에 있다. 꽤 잘된 것 같은데 왜 안넣어놓았을까??
 
-{%include image.html url="/images/2020-05-01-tiny-bert/fig6.png" class='noshadow' %}
+{% include image.html url="/images/2020-05-01-tiny-bert/fig6.png" class='noshadow' %}

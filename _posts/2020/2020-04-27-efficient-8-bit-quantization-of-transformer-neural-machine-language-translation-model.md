@@ -34,7 +34,7 @@ TensorFlow 상에서 FP32를 INT8로 quantization을 해보는 논문이다. 1.5
 
 ### 4.1. Na ̈ıve Quantization
 
-{%include image.html url="/images/2020-04-27-8-bit-transformer/fig1.png" class='noshadow' width=70 %}
+{% include image.html url="/images/2020-04-27-8-bit-transformer/fig1.png" class='noshadow' width=70 %}
 
 * 위의 그림과 같이 진행할 때 dequantization하는 방법: $$A_{dequantized} = (Max - Min) \cdot (A_{quantized} - zero_{offset})$$
 * NMT 태스크였는데, Stop token 내뱉는데 실패해서 acc가 많이 떨어져버림
@@ -52,11 +52,11 @@ TensorFlow 상에서 FP32를 INT8로 quantization을 해보는 논문이다. 1.5
   3. conjugate로 계산함 ($$Threshold_{Max} = max(\vert Max \vert, \vert Min \vert)$$) 그리고 symmetric하게
 * 근데 독립적으로 계산하는 것이 제일 좋음
 
-{%include image.html url="/images/2020-04-27-8-bit-transformer/fig2.png" class='noshadow' width=50 %}
+{% include image.html url="/images/2020-04-27-8-bit-transformer/fig2.png" class='noshadow' width=50 %}
 
 * 결국 아래처럼 quantization 진행함
 
-{%include image.html url="/images/2020-04-27-8-bit-transformer/fig3.png" class='noshadow' width=50 %}
+{% include image.html url="/images/2020-04-27-8-bit-transformer/fig3.png" class='noshadow' width=50 %}
 
 ## 5. Improving Performance
 
@@ -65,7 +65,7 @@ TensorFlow 상에서 FP32를 INT8로 quantization을 해보는 논문이다. 1.5
 * INT8로 변환하려는 이유:
 * > INT8 MatMuls using VNNI provides a speed-up of 3.7X over FP32 MatMuls using AVX512.
 
-{%include image.html url="/images/2020-04-27-8-bit-transformer/fig4.png" class='noshadow' %}
+{% include image.html url="/images/2020-04-27-8-bit-transformer/fig4.png" class='noshadow' %}
 
 * MKL로 TensorFlow Operation직접 작성함. (아마 Custom Ops인듯?)
 * TensorFlow 1.12는 GEMMLOWP라는 라이브러리를 사용하기 때문에 INT8/VNNI를 지원하지 않는다.
