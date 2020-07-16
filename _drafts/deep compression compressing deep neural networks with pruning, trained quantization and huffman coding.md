@@ -15,7 +15,7 @@ arxiv 링크: [https://arxiv.org/abs/1510.00149](https://arxiv.org/abs/1510.0014
 * CPU, GPU, mobile GPU에서 3x, 4x 정도의 layerwise speedup
 * 3x ~ 7x 정도의 에너지 효율성을 보임
 
-{% include image.html url="/images/2020-05-27-deep-compression/fig1.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-27-deep-compression/fig1.png" class='noshadow' %}
 
 ## 1 INTRODUCTION
 

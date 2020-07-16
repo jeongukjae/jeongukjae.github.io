@@ -32,7 +32,7 @@ Multi head attention이 표현력이 좋고 많은 정보를 담을 수 있다�
 
 * 하나의 Head만 제거하는 테스트
 
-{% include image.html url="/images/2020-05-18-sixteen-heads/fig1.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-18-sixteen-heads/fig1.png" class='noshadow' %}
 
 * > **at test time, most heads are redundant given the rest of the model.**
 
@@ -49,7 +49,7 @@ Multi head attention이 표현력이 좋고 많은 정보를 담을 수 있다�
 * 중요한 head는 다른 태스크에서도 중요할까?
 * 어느정도 중요함, 그런 경향을 보임
 
-{% include image.html url="/images/2020-05-18-sixteen-heads/fig2.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-18-sixteen-heads/fig2.png" class='noshadow' %}
 
 ## 4. Iterative Pruning of Attention Heads
 
@@ -59,7 +59,7 @@ Multi head attention이 표현력이 좋고 많은 정보를 담을 수 있다�
 
 * head mask에 대한 loss로 계산한다.
 
-{% include image.html url="/images/2020-05-18-sixteen-heads/fig3.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-18-sixteen-heads/fig3.png" class='noshadow' %}
 
 * Molchanos et al., 2017 방법을 tayler expansion한 거랑 같다
 * Molchanos et al., 2017에 따라서 importance score를 l2 norm으로 정규화함
@@ -69,11 +69,11 @@ Multi head attention이 표현력이 좋고 많은 정보를 담을 수 있다�
 * 20% ~ 40%정도 pruning이 가능했다.
 * Appendix에 더 있음
 
-{% include image.html url="/images/2020-05-18-sixteen-heads/fig4.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-18-sixteen-heads/fig4.png" class='noshadow' %}
 
 ### 4.3. Effect of Pruning on Efficiency
 
-{% include image.html url="/images/2020-05-18-sixteen-heads/fig5.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-18-sixteen-heads/fig5.png" class='noshadow' %}
 
 * 속도는 얼마나 줄까?? 1080 ti를 가진 머신 두대에서 테스트함
 * 개인적으로는 역시 pruning은 memory footprint를 줄여주는 것이 큰가?? 싶기도 하다
@@ -90,7 +90,7 @@ Multi head attention이 표현력이 좋고 많은 정보를 담을 수 있다�
 * Trained Model에서 수행하는 것보다 Training Model에서 수행하는 것은 어떤가??에 관한 것
 * epoch 끝마다 각 pruning level에 따라 성능 측정해봄
 
-{% include image.html url="/images/2020-05-18-sixteen-heads/fig6.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-18-sixteen-heads/fig6.png" class='noshadow' %}
 
 * early epoch 때는 굉장히 빠르게 성능이 하락하는데, 학습이 진행될 수록 중요한 head만 중요해지고 나머지는 아니게 됨
 

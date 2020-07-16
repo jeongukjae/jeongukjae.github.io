@@ -23,11 +23,11 @@ tags:
 
 ## 3. Knowledge Distillation
 
-{% include image.html class="noshadow" url="/images/2020-04-16-distilled-mt-dnn/fig1.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-distilled-mt-dnn/fig1.png" %}
 
 * Multi Task Learning을 Distillation하는 것은 위 그림을 참고.
 
-{% include image.html class="noshadow" url="/images/2020-04-16-distilled-mt-dnn/fig2.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-distilled-mt-dnn/fig2.png" %}
 
 * 각 Teacher Task는 Algorithm 1을 따라감
 * teacher가 생성해내는 Soft Target: $$Q = \text{avg} ([Q^1, Q^2, ..., Q^K])$$
@@ -58,14 +58,14 @@ tags:
 
 ### 4.2. GLUE Main Results
 
-{% include image.html class="noshadow" url="/images/2020-04-16-distilled-mt-dnn/fig3.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-distilled-mt-dnn/fig3.png" %}
 
 * Teacher가 없는 태스크까지 MT-DNN보다 잘 함
 * 또한 CoLA, RTE의 경우에는 큰 폭으로 향상됨
 
 ### 4.3. Ablation Study
 
-{% include image.html class="noshadow" url="/images/2020-04-16-distilled-mt-dnn/fig4.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-distilled-mt-dnn/fig4.png" %}
 
 * 위 표를 보면 알 수 있듯이 일반 MT-DNN보다 훨씬 잘함
 * RTE 같은 경우는 특히 놀라운 성능

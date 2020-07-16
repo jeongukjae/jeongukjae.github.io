@@ -35,7 +35,7 @@ tags:
 * transformer layer output의 각 position의 값은 $$Q$$와 $$K$$에서 나온 attention weight와 $$V$$의 다른 포지션의 가중합이 되도록한다.
   * 인데 그냥 attention masking할 때 Identity Matrix를 추가해서 masking하는 것으로 이해하면 될 것 같다.
 
-{% include image.html url="/images/2020-07-12-tta/fig1.png" class='noshadow' width=70 %}
+{% include image.html url="/images/2020/07-12-tta/fig1.png" class='noshadow' width=70 %}
 
 * 근데 이거 해도 residual connection 있으면 소용없음
 
@@ -43,7 +43,7 @@ tags:
 
 * K, V 와 Q를 분리해서 넣어준다.
 
-{% include image.html url="/images/2020-07-12-tta/fig2.png" class='noshadow' width=70  %}
+{% include image.html url="/images/2020/07-12-tta/fig2.png" class='noshadow' width=70  %}
 
 ## Experiments
 
@@ -53,9 +53,9 @@ tags:
   * 하지만 Sentence BERT (Reimers and Gurevych, 2019)논문에 기술된 스코어와 많이 차이나는 것을 보면 실제 BERT를 잘 이용한 것과는 차이가 있어 보인다.
   * Transformer를 수정했다고 하더라도 3레이어만 사용했기 떄문에 당연한 것으로 보이기도 한다.
 
-{% include image.html url="/images/2020-07-12-tta/fig3.png" class='noshadow' width=50 %}
+{% include image.html url="/images/2020/07-12-tta/fig3.png" class='noshadow' width=50 %}
 
-{% include image.html url="/images/2020-07-12-tta/fig4.png" class='noshadow' width=50 %}
+{% include image.html url="/images/2020/07-12-tta/fig4.png" class='noshadow' width=50 %}
 
 ---
 

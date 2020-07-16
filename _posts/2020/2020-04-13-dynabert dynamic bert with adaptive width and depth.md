@@ -93,8 +93,8 @@ tags:
 * "Pruning convolutional neural networks for resource efficient inference"와 "Analyzing multi-head self-attention: Specialized heads do the heavy lifting, the rest can be pruned" 에 따라서 importance score를 구함.
 * 그런 다음 아래처럼 재구성함
 
-{% include image.html class="noshadow" url="/images/2020-04-13-dynabert/fig1.png" %}
-{% include image.html class="noshadow" url="/images/2020-04-13-dynabert/fig2.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-13-dynabert/fig1.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-13-dynabert/fig2.png" %}
 
 #### 3.1.3. Training with Adaptive Width
 
@@ -105,21 +105,21 @@ tags:
 * 그렇게 구한다음 각각에 weight를 주어서 더한다.
 * data augmentation이 적용되어 있다.
 
-{% include image.html class="noshadow" url="/images/2020-04-13-dynabert/fig4.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-13-dynabert/fig4.png" %}
 
 ### 3.2. Training DynaBERT with Adaptive Width and Depth
 
 * 그 다음 depth 방향으로 distillation한다.
 * width direction으로 학습한 것의 catastrophic forgetting을 막기 위해 아래처럼 학습한다.
 
-{% include image.html class="noshadow" url="/images/2020-04-13-dynabert/fig5.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-13-dynabert/fig5.png" %}
 
 * depth layer에서는 $$mod(d + 1, \frac 1 {m_d}) = 0$$인 레이어를 drop 했다.
   * ex> 0.75를 depth multiplier로 가져가면 Bert base 기준으로 3,7, 11을 drop한다.
   * 마지막 레이어를 취하기 위함이라고 한다.
 * loss는 wide adpative와 같이 가져가는데 각 loss별 weight가 다르다.
 
-{% include image.html class="noshadow" url="/images/2020-04-13-dynabert/fig6.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-13-dynabert/fig6.png" %}
 
 * 그리고 마지막에 fine-tuning도 할 수 있는데, 이건 predicted label이랑 ground-truth label을 cross entropy로 fine tuning한다.
 
@@ -136,12 +136,12 @@ tags:
   * 그래도 주목할만한 점은 생각보다 그렇게 성능이 떨어지지 않는다는 점
   * ex> CoLA의 경우 BERT base가 51.5를 기록하는데, DynaBERT의 depth 0.75, width **0.25**가 51.6을 기록한다. (단순 acc 비교)
 
-{% include image.html class="noshadow" url="/images/2020-04-13-dynabert/fig7.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-13-dynabert/fig7.png" %}
 
 * 아래는 FLOPs를 비교한 그래프이고, 더 자세한 차이를 볼 수 있다.
   * 상당히 많이 차이나는 FLOPs로 엇비슷한 성능을 낼 수 있다.
 
-{% include image.html class="noshadow" url="/images/2020-04-13-dynabert/fig8.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-13-dynabert/fig8.png" %}
 
 ### 4.3. Ablation Study
 

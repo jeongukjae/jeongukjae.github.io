@@ -58,7 +58,7 @@ tags:
 그에 비해 black은 설정 가능한 옵션이 Python Version과 Line Length뿐일 정도로 적기 때문에 같은 도구를 사용한다면 생김새가 다른 코드가 나올 확률이 매우 적었죠.
 따라서 누구나 최소한의 설정만으로 핑퐁팀의 코드 스타일을 똑같이 만들어낼 수 있었고, 그 결과 black을 도입하게 되었습니다.
 
-{% include image.html url="/images/2020-02-12-python-in-pingpong/f1.png" alt="Auto Formatting is the new black" description="PyCon Cleveland 2019에 나온 발표 자료. black 적용 당시의 핑퐁팀의 마음을 잘 대변해줍니다." %}
+{% include image.html url="/images/2020/02-12-python-in-pingpong/f1.png" alt="Auto Formatting is the new black" description="PyCon Cleveland 2019에 나온 발표 자료. black 적용 당시의 핑퐁팀의 마음을 잘 대변해줍니다." %}
 
 black을 적용한 후, docstring 형식과 같이 black이 잡지 못하는 부분을 잡아내기 위해 flake8도 적용해보기로 하였습니다.
 flake8은 flake8-bugbear, flake8-rst와 같은 수많은 플러그인이 존재하고 적용하기에도 간편하기 때문에 기능 확장성이 매우 뛰어난 도구입니다.
@@ -104,7 +104,7 @@ Pyre는 F8 2019에서 진행된 "Facebook Loves Python and Python Loves Facebook
 타입을 명시하자는 커뮤니티가 Typescript처럼 굉장히 크지 않기도 하고, 아직 코드에 타입을 명확하게 정의하고 있지 않은 라이브러리가 많습니다.
 그래서 핑퐁팀은 [pyright의 strict 옵션](https://github.com/microsoft/pyright/blob/master/docs/configuration.md#master-pyright-config-options)은 사용하지 않고 있고, 일부 사용 가능한 옵션만을 설정하여 사용하는 중입니다.
 
-{% include image.html url="/images/2020-02-12-python-in-pingpong/f3.png" alt="한없이 부러워지는 DefinitelyTyped 😭" description="한없이 부러워지는 DefinitelyTyped 😭" %}
+{% include image.html url="/images/2020/02-12-python-in-pingpong/f3.png" alt="한없이 부러워지는 DefinitelyTyped 😭" description="한없이 부러워지는 DefinitelyTyped 😭" %}
 
 ## 관리는 확실하게, CI와 테스트 코드
 
@@ -195,7 +195,7 @@ tox는 `tox.ini` 파일 하나를 추가하는 것만으로 손쉽게 여러 가
 위의 사항들을 아무리 잘 정해놓아도 새로운 프로젝트를 생성할 때 하나라도 빠뜨린다면.... 🤭
 그래서 핑퐁팀에서는 템플릿을 통해 프로젝트를 생성하도록 하고 있습니다.
 
-{% include image.html url="/images/2020-02-12-python-in-pingpong/f2.png" alt="템플릿 레포지토리는 엄청 편해요 🥳" description="템플릿 레포지토리는 엄청 편해요 🥳" %}
+{% include image.html url="/images/2020/02-12-python-in-pingpong/f2.png" alt="템플릿 레포지토리는 엄청 편해요 🥳" description="템플릿 레포지토리는 엄청 편해요 🥳" %}
 
 GitHub Template Repository를 구성해서 사용할 수도 있고, Cookiecutter를 통해 구성할 수도 있습니다.
 하지만 핑퐁팀에서는 기존에 템플릿 레포지토리들이 존재했기 때문에 GitHub Template Repository를 사용하게 되었습니다.

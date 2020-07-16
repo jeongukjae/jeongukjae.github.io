@@ -32,9 +32,9 @@ task?
 
 ### Bert's self-attention patterns
 
-{% include image.html url="/images/2020-07-06-secrets/fig1.png" class='noshadow' %}
+{% include image.html url="/images/2020/07-06-secrets/fig1.png" class='noshadow' %}
 
-{% include image.html url="/images/2020-07-06-secrets/fig2.png" class='noshadow' %}
+{% include image.html url="/images/2020/07-06-secrets/fig2.png" class='noshadow' %}
 
 * BERT의 Self attention pattern을 뽑으면 위와 같은 패턴들이 있음
     * Vertical: `[CLS]`, `[SEP]`같은 토큰에 Attention이 걸리는 것.
@@ -49,7 +49,7 @@ task?
 
 Baker et al., 1998 의 내용을 잡아낼 수 있는지 테스트. 조건을 좀 많이 검.
 
-{% include image.html url="/images/2020-07-06-secrets/fig3.png" class='noshadow' %}
+{% include image.html url="/images/2020/07-06-secrets/fig3.png" class='noshadow' %}
 
 * 위와 같은 예시를 많이 볼 수 있었고, 이게 어느정도의 증거를 제시해준다고 해석함
 * 조금 더 일반적인 상황에 대한 증명은 future works.
@@ -58,13 +58,13 @@ Baker et al., 1998 의 내용을 잡아낼 수 있는지 테스트. 조건을 �
 
 fine tuning 전 후의 head별 Attention weight를 뽑아서 cosine similarity를 구해봄.
 
-{% include image.html url="/images/2020-07-06-secrets/fig4.png" class='noshadow' %}
+{% include image.html url="/images/2020/07-06-secrets/fig4.png" class='noshadow' %}
 
 QQP를 제외하고는 마지막 2레이어가 많이 바뀌는 것을 볼 수 있다.
 
 ### Attention to linguistic features
 
-{% include image.html url="/images/2020-07-06-secrets/fig5.png" class='noshadow' %}
+{% include image.html url="/images/2020/07-06-secrets/fig5.png" class='noshadow' %}
 
 * CLS는 앞쪽 레이어만 Attention이 많이 들어가더라.
 * 그 뒤부터는 SEP에 Attention 걸리는 것이 지배적이다.
@@ -82,7 +82,7 @@ QQP를 제외하고는 마지막 2레이어가 많이 바뀌는 것을 볼 수 �
 * 역시 잘 되고 오르기도 함
 * 레이어 자체를 드랍해도 잘 됨
 
-{% include image.html url="/images/2020-07-06-secrets/fig6.png" class='noshadow' %}
+{% include image.html url="/images/2020/07-06-secrets/fig6.png" class='noshadow' %}
 
 ## Discussion
 

@@ -50,19 +50,19 @@ GPT를 대화체에 맞도록 학습시킨 모델이다. 마이크로소프트�
 * Beam Search 사용하면 성능이 꽤 올라감
   * 근데 grounding information이 없는데 어떻게 잘되냐? -> 아마 pretraining 동안 얻어내는 information이 많아서 grounding document없어도 괜찮은 듯 하다.
 
-{% include image.html url="/images/2020-05-02-dialogpt/fig1.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-02-dialogpt/fig1.png" class='noshadow' %}
 
 그 외엔 간단하게 읽어보면 좋을 듯
 
 이거 샘플은 되게 신기하다
 
-{% include image.html url="/images/2020-05-02-dialogpt/fig2.png" class='noshadow' width=60 %}
+{% include image.html url="/images/2020/05-02-dialogpt/fig2.png" class='noshadow' width=60 %}
 
-{% include image.html url="/images/2020-05-02-dialogpt/fig3.png" class='noshadow' width=60 %}
+{% include image.html url="/images/2020/05-02-dialogpt/fig3.png" class='noshadow' width=60 %}
 
 아래 결과는 진짜 놀랍다. Human Response에 버금가는 퀄리티를 생성해낸다. 다만 아쉬운 점은 345M, 762M 보여줄 거면 117M도 어느정도인지는 보여주었으면 어땠을까이다. Table 2, 3에서 그렇게 나와서 아래처럼 비교한건가??
 
-{% include image.html url="/images/2020-05-02-dialogpt/fig4.png" class='noshadow'%}
+{% include image.html url="/images/2020/05-02-dialogpt/fig4.png" class='noshadow'%}
 
 ## 6 Limitations and risks
 

@@ -54,7 +54,7 @@ PKD는 두 전략을 취하는데, 1. PKD-Last: learning from last K layers, 2: 
 
 ### 3.2. Patient Teacher for Model Compression
 
-{% include image.html class="noshadow" url="/images/2020-04-16-pkd-bert/fig1.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-pkd-bert/fig1.png" %}
 
 * KD 중 student가 overfitting할 수도 있기 때문에 patient mechanism을 넣어준다.
 * Teacher Model의 중간 레이어들의 `[CLS]` 토큰 representation들을 가져온다.
@@ -79,12 +79,12 @@ PKD는 두 전략을 취하는데, 1. PKD-Last: learning from last K layers, 2: 
 
 ### 4.3. Experimental Results
 
-{% include image.html class="noshadow" url="/images/2020-04-16-pkd-bert/fig2.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-pkd-bert/fig2.png" %}
 
 * 그냥 BERT_small을 Fine tuning한 것보다 훨씬 잘나오는 결과를 볼 수 있다. 하지만, 그래도 MRPC 같은 태스크들은 좀 성능이 떨어진다.
 * 그래도 좋은 점은 QQP, MNLI-m, MNLI-mm, QNLI 같은 태스크는 얼마 떨어지지 않았는데, 이 태스크들의 공통점이 60k 이상의 sample이 있다는 것들이고, training data가 많을 때 잘된다는 것을 어느정도 증명한 셈이다.
 
-{% include image.html class="noshadow" url="/images/2020-04-16-pkd-bert/fig3.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-pkd-bert/fig3.png" %}
 
 * PKD-Last와 PKD-Skip을 비교해보았을 때는 PKD-Skip이 좀 더 나은 결과를 보인다.
   * 아마 PKD-Skip이 조금 더 low-level ~ high-level까지 diverse한 representation과 richer semantics을 잡아낼 수 있어서 그런 것 같다고 한다.
@@ -93,11 +93,11 @@ PKD는 두 전략을 취하는데, 1. PKD-Last: learning from last K layers, 2: 
 
 * Titan RTX GPU에서 batch 128, seq length 128, FP16으로 테스트했을 때 아래와 같은 결과를 보였다고 ㅎ나다.
 
-{% include image.html class="noshadow" url="/images/2020-04-16-pkd-bert/fig4.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-pkd-bert/fig4.png" %}
 
 ### 4.5. Does a Better Teacher Help?
 
-{% include image.html class="noshadow" url="/images/2020-04-16-pkd-bert/fig5.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-16-pkd-bert/fig5.png" %}
 
 * 꼭 그렇지만은 않다.
 * BERT12가 더 잘 가르칠 때도 많다.

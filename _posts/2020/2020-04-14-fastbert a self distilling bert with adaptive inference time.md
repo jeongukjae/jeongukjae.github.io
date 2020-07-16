@@ -34,7 +34,7 @@ tags:
 
 ### 3.1. Model Architecture
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig1.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig1.png" %}
 
 * Backbone + Branch로 구성
   * Backbone은 그냥 BERT
@@ -95,7 +95,7 @@ tags:
 
 ## 4. Experimental results
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig2.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig2.png" %}
 
 ### 4.1. FLOPs analysis
 
@@ -106,7 +106,7 @@ tags:
 
 ### 4.3. Performance comparison
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig3.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig3.png" %}
 
 * Speed - Acc 그래프를 보면 적정한 임계치만 잘 잡으면 웬만한 fine tuning다 괜찮을 듯
 
@@ -114,11 +114,11 @@ tags:
 
 * 아까 가설 검증하는 것인데, 충분히 실험적으로 잘 증명된 것으로 보임
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig4.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig4.png" %}
 
 * 근데 그럼 Student만 쓰는 것으로 Teacher보다 괜찮은 성능 낼 수 있지 않나? 싶은데 아님. 아래를 잘 보자
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig5.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig5.png" %}
 
 ### 4.5. In-depth study
 
@@ -129,7 +129,7 @@ tags:
 
 #### 4.5.1. Layer distribution
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig6.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig6.png" %}
 
 * 위 표를 보면 Book review dataset에서 speed 0.8, 0.5, 0.3을 설정했을 때의 각각 exit layer의 distribution
   * 0.8을 설정할 경우 평균 1.92개의 레이어만 타고도 잘 동작한다.
@@ -137,20 +137,20 @@ tags:
 
 #### 4.5.2. Uncertainty distribution
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig5.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig5.png" %}
 
 * 다시 위 사진을 보면 Uncertainty distribution을 볼 수 있다
   * high-layer가 low-layer보다 decisive(결정적??)이다.
 
 #### 4.5.3. Convergence of self-distillation
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig7.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig7.png" %}
 
 * 위 사진을 보면 acc는 fine-tuning 동안 올라가고 self distillation 동안 많이 떨어지는 것을 볼 수 있다.
 
 ### 4.6. Ablation study
 
-{% include image.html class="noshadow" url="/images/2020-04-14-fastbert/fig8.png" %}
+{% include image.html class="noshadow" url="/images/2020/04-14-fastbert/fig8.png" %}
 
 * 위 사진의 ablation study의 결과이다.
   * 아마 Yelp.P의 FastBERT - speed=0.2의 FLOPS는 오타일듯...

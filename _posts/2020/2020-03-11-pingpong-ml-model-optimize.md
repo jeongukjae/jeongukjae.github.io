@@ -37,7 +37,7 @@ tags:
 
 [Transformer 모델](https://blog.pingpong.us/ml-transformer/)의 출현 이후 SOTA 모델들의 Parameter 수는 기하급수적으로 증가하고 있는데, 반면 우리에게 주어진 **Computing Power** 는 선형적으로 증가하고 있습니다. (그것도 매우 낮은 계수로...)
 
-{% include image.html url="/images/2020-03-11-ml-model-optimize/nlp-model-parameter-size.png" description="https://medium.com/huggingface/distilbert-8cf3380435b5" %}
+{% include image.html url="/images/2020/03-11-ml-model-optimize/nlp-model-parameter-size.png" description="https://medium.com/huggingface/distilbert-8cf3380435b5" %}
 
 효율적인 서비스를 위해, (== *기하급수적인 통장 지출을 막기 위해*) 아래 두 가지 요소를 적용해야 합니다.
 
@@ -106,9 +106,9 @@ tags:
 사용하는 환경에 따라 차이가 있을 수 있으나 [Intel의 자료](https://software.intel.com/en-us/articles/intel-and-facebook-collaborate-to-boost-pytorch-cpu-performance)를 참고하여 살펴보면,
 **PyTorch**에서 MKL-DNN 지원 유무에 따라 매우 큰 차이를 보인다는 것을 확인하실 수 있습니다.
 
-{% include image.html url="/images/2020-03-11-ml-model-optimize/pytorch-mkl-dnn-perf-diff-1.png" description="https://software.intel.com/en-us/articles/intel-and-facebook-collaborate-to-boost-pytorch-cpu-performance" %}
+{% include image.html url="/images/2020/03-11-ml-model-optimize/pytorch-mkl-dnn-perf-diff-1.png" description="https://software.intel.com/en-us/articles/intel-and-facebook-collaborate-to-boost-pytorch-cpu-performance" %}
 
-{% include image.html url="/images/2020-03-11-ml-model-optimize/pytorch-mkl-dnn-perf-diff-2.png" description="https://software.intel.com/en-us/articles/intel-and-facebook-collaborate-to-boost-pytorch-cpu-performance" %}
+{% include image.html url="/images/2020/03-11-ml-model-optimize/pytorch-mkl-dnn-perf-diff-2.png" description="https://software.intel.com/en-us/articles/intel-and-facebook-collaborate-to-boost-pytorch-cpu-performance" %}
 
 #### TensorRT
 
@@ -116,7 +116,7 @@ tags:
 
 아래 왼쪽의 그림과 같은 *CNN* 구조에서 *Convolution*, *Bias* and *ReLU Layer*를 하나로 합쳐서 **CBR Layer**로 만들고, 다시 이를 통합해서 연산을 더 효율적으로 처리하는 구조로 바꿀 수 있습니다.
 
-{% include image.html url="/images/2020-03-11-ml-model-optimize/optimize_graph.png" description="https://devblogs.nvidia.com/deploying-deep-learning-nvidia-tensorrt/" %}
+{% include image.html url="/images/2020/03-11-ml-model-optimize/optimize_graph.png" description="https://devblogs.nvidia.com/deploying-deep-learning-nvidia-tensorrt/" %}
 
 그 외에도, 관련 키워드를 추가적으로 찾아보시고 참고하시면 도움이 될 것입니다.
 
@@ -193,7 +193,7 @@ Inferentia 칩을 사용할 수 있도록 설계된 **Tensorflow** 혹은 **PyTo
 
 아래 그림을 참고하시면 이해에 도움이 될 것입니다.
 
-{% include image.html url="/images/2020-03-11-ml-model-optimize/pruning-quantization-distillation.png" description="https://blog.rasa.com/compressing-bert-for-faster-prediction-2/" %}
+{% include image.html url="/images/2020/03-11-ml-model-optimize/pruning-quantization-distillation.png" description="https://blog.rasa.com/compressing-bert-for-faster-prediction-2/" %}
 
 **Pruning**과 **Quantization**은 아래를 참고하시면 도움이 될 것 입니다.
 

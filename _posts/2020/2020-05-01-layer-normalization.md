@@ -15,7 +15,7 @@ AdamW를 찾아보면, weight decay식을 볼 수 있는데 그 역할과 비슷
 
 ## 3 Layer Normalization
 
-{% include image.html url="/images/2020-05-01-layer-norm/fig1.png" class='noshadow' %}
+{% include image.html url="/images/2020/05-01-layer-norm/fig1.png" class='noshadow' %}
 
 * layer 별로 mean, vairance를 구한 뒤 beta, gamma라는 learnable variable과 함께 recentering, rescaling해준다.
 
