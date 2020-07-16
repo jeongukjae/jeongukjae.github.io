@@ -5,7 +5,7 @@ title: "CircleCI에서 발생하는 yarn 오류"
 
 지금 개발중인 프로젝트가 node `10.11.0` 버전을 사용해서 CircleCI의 `circleci/node:10.11.0` 이미지로 빌드는 하는데, 이번주부터 갑자기 `checkout` job이 실패했다고 떴다.
 
-{% include image.html url="/images/2018-11-30-yarn/error.png" alt="yarn 오류" description="슬랙으로 자꾸 넘어오는 동일한 오류" %}
+{% include image.html url="/images/2018/11-30-yarn/error.png" alt="yarn 오류" description="슬랙으로 자꾸 넘어오는 동일한 오류" %}
 
 ## 뭐가 문제야?
 
@@ -77,12 +77,12 @@ Done in 18.63s.
 
 왜 이런 오류가 뜰까 하고 [yarn github repo](https://github.com/yarnpkg/yarn)에서 이슈를 찾아봤다. 다른 사람들도 이런 오류를 많이 겪는 것 같았고, 보통 yarn 커맨드에 옵션을 붙여서 사용하거나, `~/.npmrc`를 지워보거나, `yarn.lock`을 지워보고 해결했다고 한다. 나의 경우에는 자세한 오류의 원인이 필요없어서 `yarn.lock` 지우고 그냥 regenerating 했다. 그리고 비교적 최근까지도 이슈에 코멘트가 달리고 있길래 (심지어 해결책은 달랐다) 내 상황이랑 해결한 방법 정도만 남겨놓고 왔다. [이 이슈 (#6312)](https://github.com/yarnpkg/yarn/issues/6312)가 내가 참고한 이슈.
 
-{% include image.html url="/images/2018-11-30-yarn/github.png" alt="issue 댓글" description="그냥 다들 자기 상황을 알리고 있길래..." %}
+{% include image.html url="/images/2018/11-30-yarn/github.png" alt="issue 댓글" description="그냥 다들 자기 상황을 알리고 있길래..." %}
 
 yarn을 쓰기 시작하고나서 yarn오류를 꽤나 자주 겪는데, 그 오류는 십중팔구 `yarn.lock`을 regernating하면 해결이 되었다. 왜 그런지는 잘 모르겠지만..
 
 ## 그래서 성공했어?
 
-{% include image.html url="/images/2018-11-30-yarn/s.png" alt="성공" description="결국 성공했다" %}
+{% include image.html url="/images/2018/11-30-yarn/s.png" alt="성공" description="결국 성공했다" %}
 
 그냥 `.circleci/config.yml`에 사용한 커맨드 다 추가했고, 레포지토리에도 `yarn.lock` 파일 재생성해서 넣어줬다.

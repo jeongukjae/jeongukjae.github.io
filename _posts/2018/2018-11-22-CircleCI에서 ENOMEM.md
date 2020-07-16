@@ -86,6 +86,6 @@ CircleCI는 `2CPU/4096MB`의 리소스를 제공하기 때문에 나는 아래�
 
 그 뒤로는 잘 돌아간다.
 
-{% include image.html url="/images/2018-11-22-enomem/s.png" alt="workflow가 성공했다!" description="workflow가 성공했다!" %}
+{% include image.html url="/images/2018/11-22-enomem/s.png" alt="workflow가 성공했다!" description="workflow가 성공했다!" %}
 
 이 오류는 이슈/문서에 적힌바에 의하면 Docker 컨테이너나 CI 서버에서 나타나는 오류라고 한다. (~~어차피 요즘 CI 서버들 docker에서 많이 돌리니까 그게 그거 아닌가...? 라고 생각하는데 그냥 넘어가자.~~) 일단은 자세한 문제 원인을 살펴보고 싶지만, 시간이 남으면서 이 포스트를 다시 볼 때 다시 하기로.

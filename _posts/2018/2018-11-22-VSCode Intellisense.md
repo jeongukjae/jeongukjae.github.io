@@ -161,7 +161,7 @@ fs.writeFile(
 
 자 그래서 결과를 살펴보면 아래처럼 잘 뜬다.
 
-{% include image.html url="/images/2018-11-22-jsconfig/working.png" alt="intellisense가 잘 동작한다!" description="intellisense가 잘 동작한다!" %}
+{% include image.html url="/images/2018/11-22-jsconfig/working.png" alt="intellisense가 잘 동작한다!" description="intellisense가 잘 동작한다!" %}
 
 ---
 
