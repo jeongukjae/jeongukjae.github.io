@@ -58,7 +58,7 @@ OpenAI팀이 연구한 것에 따르면, 이렇게 사용하는 것은 generaliz
 
 ### 3.3. Task-specific input transformations
 
-{% include image.html url="/images/2019-10-20-gpt/fig1.png" description="Transformer 아키텍쳐와 fine-tuning 시의 input transformation" %}
+{% include image.html url="/images/2019/10-20-gpt/fig1.png" description="Transformer 아키텍쳐와 fine-tuning 시의 input transformation" %}
 
 text classification같은 특정 태스크들의 경우에는 위 그림처럼 바로 fine-tuning할 수 있다. 하지만 QA나 textual entailment 같은 경우는 ordered sentence pair, triplet of document, question, and answer 같은 structured input이 들어오게 되는데 이것은 contiguous한 text에서 학습한 pretraining 모델과 불일치가 생기게 된다. 그래서 이럴 때 pre-trained 모델을 잘 쓸 수 있도록 ordered sequence로 바꾸어 주었다고 한다. 이런 걸 traversal style approach라 적어놓았는데, 뭔지는 살펴봐야겠다.
 

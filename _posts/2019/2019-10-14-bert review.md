@@ -50,7 +50,7 @@ supervised learning으로부터 효과적인 transfer를 보여주는 것들이 
 
 여튼 BERT 모델까지 왔다..
 
-{% include image.html url="/images/2019-10-14-bert/fig1.png" description="BERT의 전체적인 그림" %}
+{% include image.html url="/images/2019/10-14-bert/fig1.png" description="BERT의 전체적인 그림" %}
 
 2가지 스텝이 있는데, pre-training과 fine-tuning이다. pre training에서 unlabeled data으로 학습하고 fine tuning에서 pre-training에서 학습한 모델 parameter로 초기화한 다음에 labeled data로 다시 학습한다.
 

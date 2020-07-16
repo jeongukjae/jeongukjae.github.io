@@ -58,7 +58,7 @@ GitHub Pages와 Jekyll을 사용하다보면 로컬 서버에서 사용할 때�
 
 그래서 로컬과 gh-pages 환경을 구분할 방법이 없을까 하다가 [Repository metadata on GitHub Pages](https://help.github.com/articles/repository-metadata-on-github-pages/)라는 문서를 찾게 되었다. 해당 문서는 GitHub Pages에 호스팅된 Jekyll 사이트에서 일반적인 레포지토리 정보들(프로젝트명, 설명 등등)을 받아올 수 있는 방법을 설명해준다. 해당 문서에서 `site.github` 네임스페이스를 사용한다고 설명을 하니, `site.github` 네임스페이스가 존재하는지 확인만 하면 간단히 구분이 가능하지 않을까 싶어서 시도해보았다.
 
-{% include image.html url="/images/2019-02-17-jekyll/github.png" alt="site.github을 이용하자!" description="site.github을 이용하자!" class='noshadow' %}
+{% include image.html url="/images/2019/02-17-jekyll/github.png" alt="site.github을 이용하자!" description="site.github을 이용하자!" class='noshadow' %}
 
 즉, 아래처럼 코드를 수정해보고 잘 돌아가는지 확인해본후 배포해보았다.
 
@@ -83,11 +83,11 @@ GitHub Pages와 Jekyll을 사용하다보면 로컬 서버에서 사용할 때�
 ```
 {% endraw %}
 
-{% include image.html url="/images/2019-02-17-jekyll/commit.png" alt="이 부분만 고치면 로컬에서는 analytics가 뜨지 않는다." description="이 부분만 고치면 로컬에서는 analytics가 뜨지 않는다." class='noshadow' %}
+{% include image.html url="/images/2019/02-17-jekyll/commit.png" alt="이 부분만 고치면 로컬에서는 analytics가 뜨지 않는다." description="이 부분만 고치면 로컬에서는 analytics가 뜨지 않는다." class='noshadow' %}
 
 결과는 예상했던 대로 잘 돌아간다.
 
-{% include image.html url="/images/2019-02-17-jekyll/blog.png" alt="gh-pages에서는 성공적으로 트래킹이 된다." description="gh-pages에서는 성공적으로 트래킹이 된다." class='noshadow' %}
+{% include image.html url="/images/2019/02-17-jekyll/blog.png" alt="gh-pages에서는 성공적으로 트래킹이 된다." description="gh-pages에서는 성공적으로 트래킹이 된다." class='noshadow' %}
 
 ---
 

@@ -56,7 +56,7 @@ http://arxiv.org/abs/1602.02830.
 * WMT English - German translation task로 했다.
 * 압축 정도 - 성능을 비교하기 위해서 BLEU score와 압축 비율을 비교했다고 한다.
 
-{% include image.html url="/images/2019-10-27-transformers-zip/fig1.png" description="성능 비교" %}
+{% include image.html url="/images/2019/10-27-transformers-zip/fig1.png" description="성능 비교" %}
 
 ### Quantitative Analysis
 
@@ -64,7 +64,7 @@ pruning이 생각보다 안좋았다고. quantization보다 안좋았고, Gale e
 
 ### Qualitative Analysis
 
-{% include image.html url="/images/2019-10-27-transformers-zip/fig2.png" description="attention 비교" %}
+{% include image.html url="/images/2019/10-27-transformers-zip/fig2.png" description="attention 비교" %}
 
 생각보다 4-bit까지 압축한게 엄청 성능이 좋았다고. 맨 위에서부터 원래 모델 - 8bit model - 4bit model - binarized model이다. 부록에서도 다르게 비교헀는데, 원래 모델과 8bit model, 4bit model은 거의 구분이 불가능했다고 한다.
 

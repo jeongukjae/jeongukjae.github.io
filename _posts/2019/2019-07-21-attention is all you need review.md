@@ -19,7 +19,7 @@ Recurrent Model은 순서가 중요하다는 특성상 병렬화하기가 어렵
 
 ### 3.1 Encoder and Decoder Stack
 
-{% include image.html url="/images/2019-07-21-transformer/1.png" description="Transformer architecture" %}
+{% include image.html url="/images/2019/07-21-transformer/1.png" description="Transformer architecture" %}
 
 우선 Encoder-decoder structure를 가지고 있다. 하지만 stacked self-attention을 사용하고, point-wise feed forward network를 사용한다.
 
@@ -35,7 +35,7 @@ Encoder의 두개의 sublayer의 결과값에 multi-head attention을 수행하�
 
 attention function은 query와 set of key value pairs를 output으로 mapping하는 function로 생각할 수 있다. 물론 여기서 key, value, query, output은 전부 vector이다.
 
-{% include image.html url="/images/2019-07-21-transformer/2.png" description="Scaled Dot Product Attention && Multi Head Attention" %}
+{% include image.html url="/images/2019/07-21-transformer/2.png" description="Scaled Dot Product Attention && Multi Head Attention" %}
 
 #### 3.2.1 Scaled Dot-Product Attention
 
@@ -89,7 +89,7 @@ $$pos$$는 position이고, $$i$$는 dimension이다. sin, cos을 통해 relative
 
 ## 4. Why Self-Attention
 
-{% include image.html url="/images/2019-07-21-transformer/3.png" description="Self Attention, Recurrent, Convolutional, Self-Attention(restricted)를 비교" %}
+{% include image.html url="/images/2019/07-21-transformer/3.png" description="Self Attention, Recurrent, Convolutional, Self-Attention(restricted)를 비교" %}
 
 여기서는 self-attention layer와 recurrent, convolution layer와 비교를 한다.
 
@@ -128,15 +128,15 @@ $$warmup_steps = 4000$$으로 사용했다. $$warmup_steps$$동안 learning rate
 
 ## 6. Results
 
-{% include image.html url="/images/2019-07-21-transformer/4.png" %}
+{% include image.html url="/images/2019/07-21-transformer/4.png" %}
 
 위에서 보이다싶이 MT에서도 SOTA 찍으면서 잘했고,
 
-{% include image.html url="/images/2019-07-21-transformer/5.png" %}
+{% include image.html url="/images/2019/07-21-transformer/5.png" %}
 
 English Constituency Parsing에서도 잘했다. (WSJ = Wall Street Journal) 그래서 Model Variation을 보면,
 
-{% include image.html url="/images/2019-07-21-transformer/6.png" %}
+{% include image.html url="/images/2019/07-21-transformer/6.png" %}
 
 (A)에서는 attention heads와 attention key, value dimension을 다르게 하면서 테스트를 해보았고, (B)에서는 $$d_k$$만 줄였는데 이게 model quality를 안좋게만 했다고 한다. (C)랑 (D)에서는 dropout은 overfitting방지에 매우 좋고, 큰 모델이 그냥 잘하더라는... 결과이다. (E)에서는 sin함수 대신 learned positional embedding을 사용했는데, 그냥 거의 비슷하다고 한다.
 

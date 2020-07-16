@@ -15,7 +15,7 @@ tags:
 
 ## 1. Introduction
 
-{% include image.html url="/images/2019-10-27-distilbert/fig1.png" description="최근 pretraining 모델의 파라미터 수" %}
+{% include image.html url="/images/2019/10-27-distilbert/fig1.png" description="최근 pretraining 모델의 파라미터 수" %}
 
 이렇게 큰 모델들이 많이 나오고 있는데, Schwartz et al. [2019], Strubell et al. [2019]에서 언급한 것처럼 해당 모델을 연산하기 위한 컴퓨팅 파워가 급격히 증가하고 있다. 그리고 NLP 특성 상 on-device나 real-time에서 활용할 가치가 많을텐데 이런 추세가 활용할 수 있는 길을 막는 것 같다고 한다.
 
@@ -31,7 +31,7 @@ final training loss는 distillation loss $$L_{ce}$$와 BERT에서 사용한 $$L_
 
 student layer의 구조는 BERT랑 똑같은데 token type embedding이랑 pooler layer는 없어졌고, transformer block을 두배로 줄였다. 그리고 initialization은 teacher의 레이어 두개당 하나를 취했다.
 
-{% include image.html url="/images/2019-10-27-distilbert/fig2.png" description="DistilBert의 성능 비교표" %}
+{% include image.html url="/images/2019/10-27-distilbert/fig2.png" description="DistilBert의 성능 비교표" %}
 
 ---
 

@@ -48,7 +48,7 @@ practical 관점에서 보면 Natural Language는 vocab size V가 엄청 큰데,
 
 ALBERT에서는 layer의 모든 파라미터를 공유한다. 즉, BERT가 transformer block 1~12까지 거쳤으면 ALBERT에서는 transformer block 1을 12번 거친다.
 
-{% include image.html url="/images/2019-10-27-albert/fig1.png" description="모든 레이어를 공유하게 만든 결과" %}
+{% include image.html url="/images/2019/10-27-albert/fig1.png" description="모든 레이어를 공유하게 만든 결과" %}
 
 그 결과 각 레이어의 input, output embedding의 L2 distance랑 cosine similarity가 이렇게 부드러워졌다고. 난 이게 무슨 의미인지 잘 몰랐는데, ML 엔지니어분께 여쭈어 보니까 정답이라고 할 수는 없지만, "한 레이어에서 수행하는 역할이 적어지고 그에 따라 더 모델을 안정적으로 학습하기 쉽다는 의미가 될 수 있다. 또 BERT는 한 레이어에서 input, output을 확확 바꾸니 레이어를 많이 쌓는다는게 정말 좋기만 한 것인가?인데, ALBERT는 정말 안정적인 결과를 기대할 수 있다는 의미로도 보인다."라고 답해주셨다.
 
@@ -60,23 +60,23 @@ SOP에서 NSP에다가 하나를 더 얹었는데, 연속된 문장이지만 순
 
 ### MODEL SETUP
 
-{% include image.html url="/images/2019-10-27-albert/fig2.png" description="ALBERT, BERT 세팅" %}
+{% include image.html url="/images/2019/10-27-albert/fig2.png" description="ALBERT, BERT 세팅" %}
 
 ## 4 EXPERIMENTAL RESULTS
 
 ### OVERALL COMPARISON BETWEEN BERT AND ALBERT
 
-{% include image.html url="/images/2019-10-27-albert/fig3.png" description="전체적인 비교" %}
+{% include image.html url="/images/2019/10-27-albert/fig3.png" description="전체적인 비교" %}
 
 ### CROSS-LAYER PARAMETER SHARING
 
-{% include image.html url="/images/2019-10-27-albert/fig4.png" description="cross layer parameter sharing" %}
+{% include image.html url="/images/2019/10-27-albert/fig4.png" description="cross layer parameter sharing" %}
 
 전체 sharing하는 것이 성능하락이 있긴 있다.
 
 ### SENTENCE ORDER PREDICTION (SOP)
 
-{% include image.html url="/images/2019-10-27-albert/fig5.png" description="SOP" %}
+{% include image.html url="/images/2019/10-27-albert/fig5.png" description="SOP" %}
 
 None이 XLNet, RoBERTa 스타일이다.
 

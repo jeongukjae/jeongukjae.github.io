@@ -71,7 +71,7 @@ $$ Q = C \times ( D + D \times log_2 V ) $$
 
 뭐 이렇게 말하는 것보다 쉽게 말하면 CBOW는 현재 단어를 주위 단어(context)를 기반으로 예측하고, Skip-Gram은 현재 단어로 주위 단어(context)를 예측한다.
 
-{% include image.html url="/images/2019-04-06-word2vec/cbow-skip-gram.png" description="cbow와 skip-gram 모델 그림" %}
+{% include image.html url="/images/2019/04-06-word2vec/cbow-skip-gram.png" description="cbow와 skip-gram 모델 그림" %}
 
 ---
 
