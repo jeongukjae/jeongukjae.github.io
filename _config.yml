@@ -1,11 +1,12 @@
-name: Blog
-description: 개발 관련 기록/내용을 정리합니다.
+name: Jeong Ukjae
+description: Engineering blog
 
 footer-links:
   email: jeongukjae@gmail.com
   facebook: JeongUkJae
   github: jeongukjae
   linkedin: JeongUkJae
+  twitter: jeongukjae
   rss: .
   stackoverflow:
 
