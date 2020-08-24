@@ -37,7 +37,7 @@ This post is a note for Part I (Introduction), and Part II (Programming Paradigm
 
 ### 3. Paradigm Overview
 
-* three paradaigms included: **Structured Programming**, **Object-Orient Programming**, and **Functional Programming**.
+* three paradaigms: **Structured Programming**, **Object-Orient Programming**, and **Functional Programming**.
 * Note: Each of the paradigms ***removes*** capabilities from the programmer. None of them adds new capabilities.
 
 ### 4. Structured Programming
@@ -65,3 +65,6 @@ This post is a note for Part I (Introduction), and Part II (Programming Paradigm
   * One of the most common compromises in regard to immutability is to segregate the application into mutable and immutable components.
   * Architects would be wise to push as much processing as possible into the immutable components.
 * **Event Sourcing**
+  * Event sourcing is a strategy wherein we store the transactions, but not the state. (In bank applications, imagine that storing transactions instead of balance.)
+  * Then, nothing ever gets deleted or updated from such a data store. As a consequence, our applications are not CRUD; they are just CR.
+  * If we have enough storage and process power, we can make our applications entirely immutable and functional.
