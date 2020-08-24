@@ -5,7 +5,7 @@ tags:
   - book
 ---
 
-This post is a note for Part I (Introduction), and Part II (Programming Paradigms) in *Clean Architecture: A Craftsman's Guide to Software Structure and Design* by Robert C. Matrin.
+This post is a note for Part I (Introduction), and Part II (Programming Paradigms) in [*Clean Architecture: A Craftsman's Guide to Software Structure and Design* by Robert C. Matrin](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164).
 
 ## Introduction
 
