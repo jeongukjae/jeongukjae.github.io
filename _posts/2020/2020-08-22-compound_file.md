@@ -11,10 +11,10 @@ tags:
 
 ## Compound File Overview
 
-* A compound file is a structure to store heirarchy of **storage objects** and **stream objects**.
+* A compound file is a structure to store a hierarchy of **storage objects** and **stream objects**.
   * A storage object is similar with a file system directory.
   * A stream object is similar with a traditional notion of a file. A stream contains user-defined data.
-* The hierarchy of compound file is tree structure.
+* The hierarchy of compound file is a tree structure.
   * A stream object should be a leaf node.
   * A storage object can contain streams and/or storages.
   * Each object has a name, but root (storage) object has no name because names are used to identify child objects.
@@ -31,3 +31,15 @@ tags:
 이 정도만 알고, [GitHub - jeongukjae/compoundfilereader](https://github.com/jeongukjae/compoundfilereader)에 포크떠서 사용가능하도록 정리했고, 프로젝트를 그냥 CMake로 변경한 것이다. hwp 파일에 테스트해보니까 적당히 잘 된다.
 
 원래 좀 많이 정리하려고 했는데, 패스..
+
+---
+
+추가
+
+구현완료!! [GitHub - jeongukjae/CFB](https://github.com/jeongukjae/CFB)
+
+구현하면서 조금 더 정리가 된 것
+
+* DIFAT -> FAT -> DirectoryEntry -> Stream의 순서로 접근함
+* 각각의 DirectoryEntry는 left, right sibling, child ID를 통해 tree 형태로 접근가능 (Root에서 시작)
+* Sector는 MiniSector와 일반 Sector로 구분되고 이 둘은 단순 크기 차이
