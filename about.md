@@ -1,9 +1,8 @@
 ---
 layout: page
+title: 정욱재, Ukjae Jeong
 permalink: /about/
 ---
-
-# 정욱재, Ukjae Jeong
 
 현재 스캐터랩의 핑퐁팀에서 머신러닝 소프트웨어 엔지니어로 재직중입니다. 아래는 간략한 제 소개입니다.
 
