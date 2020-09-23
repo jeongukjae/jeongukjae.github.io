@@ -7,7 +7,7 @@ tags:
 
 최근 [lovit/namuwikitext](https://github.com/lovit/namuwikitext)를 보면서 데이터를 크게 만지지 않고 할 수 있는 것이 무엇이 있을까 싶었다. 고민해보다 [kakao/khaiii](https://github.com/kakao/khaiii)의 위키 페이지 중 [띄어쓰기 오류에 강건한 모델을 위한 실험](https://github.com/kakao/khaiii/wiki/띄어쓰기-오류에-강건한-모델을-위한-실험)을 보면서 띄어쓰기 모델을 만들 수 있겠다 싶어 만들어보았다.
 
-먼저 결과를 정리해보자면, 다른 오픈소스 라이브러리들과 다르게 띄어쓰기 추가/삭제 두가지에 대한 수정이 가능한 모델이 나왔고, 학습 데이터와 비슷한 도메인에서는 0.95 이상의 Accuracy로 수정이 가능했다. 또한 MBP 2020년형에서 128 batch size, 128 sequence length 설정에서 0.1ms/sentence 내의 속도로 띄어쓰기 정제가 가능했다. 이 포스트에서 설명하는 코드의 레포지토리는 [jeongukjae/korean-spacing-model](https://github.com/jeongukjae/korean-spacing-model)이고 라이브 데모는 [https://jeongukjae.github.io/korean-spacing-model/](https://jeongukjae.github.io/korean-spacing-model/)에서 볼 수 있다.
+먼저 결과를 정리해보자면, 다른 오픈소스 라이브러리들과 다르게 띄어쓰기 추가/삭제 두가지에 대한 수정이 가능한 모델이 나왔고, 학습 데이터와 비슷한 도메인에서는 0.95 이상의 Accuracy로 수정이 가능했다. 또한 MBP 2020년형에서 128 batch size, 128 sequence length 설정에서 0.1ms/sentence 내의 속도로 띄어쓰기 정제가 가능했다. 모델 사이즈는 그래프를 포함하여 1.5MB 정도의 사이즈로 만들었다. 이 포스트에서 설명하는 코드의 레포지토리는 [jeongukjae/korean-spacing-model](https://github.com/jeongukjae/korean-spacing-model)이고 라이브 데모는 [https://jeongukjae.github.io/korean-spacing-model/](https://jeongukjae.github.io/korean-spacing-model/)에서 볼 수 있다.
 
 ## 먼저 사용가능한 오픈소스 띄어쓰기 모델 찾기
 
