@@ -15,7 +15,7 @@ khaiii를 보고 만들 생각하긴 했지만, 실제로는 POS 태깅을 위�
 
 * Python으로 작성된 [lovit/soyspacing](https://github.com/lovit/soyspacing)이 가장 쉽게 사용가능한 라이브러리였고, 휴리스틱 기반의 알고리즘을 사용한다. 붙여써야 하는 띄어쓰기를 띄어쓰는 경우는 잘 없다는 전제 하에 개발하였다고 한다. 즉, 이 문자 다음에 띄어쓰기를 해야하는지 말아야 하는지에 대해 binary classification문제로 생각하였다고 한다. classification은 학습 코퍼스에 대한 빈도를 세어 해결한다. 빈도만을 세는 만큼 학습속도가 빠르지만, 모델 파일이 크고 추론 시에도 하이퍼파라미터를 수정해가면서 사용해야 한다.
 * 또 [haven-jeon/KoSpacing](https://github.com/haven-jeon/KoSpacing)이 있었고 R, Python로 작성된 라이브러리이며, CNN - BatchNorm - FFN - GRU - FFN의 구조였다. 충분히 무거운 모델이라고 판단했다.
-* 그 외에는 [pingpong-ai/chatspace](https://github.com/pingpong-ai/chatspace)가 있다. 이 라이브러리는 딥러닝 모델을 사용하였으며, 대화체 데이터로 학습했다. 하지만 CNN - BatchNorm - FFN - BiLSTM - LayerNorm - FFN 구조이고 KoSpacing의 구조 중 GRU에서 LSTM으로 바뀐 모델이다. 띄어쓰기 수정 특성 상 전처리에 많이 사용할 라이브러리임에도 꽤 속도가 느렸다. (~~사랑해요 핑퐁팀~~)
+* 그 외에는 [pingpong-ai/chatspace](https://github.com/pingpong-ai/chatspace)가 있다. 이 라이브러리는 딥러닝 모델을 사용하였으며, 대화체 데이터로 학습했다. 하지만 CNN - BatchNorm - FFN - BiLSTM - LayerNorm - FFN 구조이고 KoSpacing의 구조 중 GRU에서 LSTM으로 바뀐 모델이다. (~~사랑해요 핑퐁팀~~)
 * 또 [warnikchow/raws [Real-time Automatic Word Segmentation]](https://github.com/warnikchow/raws)라는 라이브러리는 CNN, LSTM Feature를 Concat하여서 분류하는 모델이다. 이 모델도 문자 뒤의 띄어쓰기를 분류하는 모델이다.
 
 ## 접근법
