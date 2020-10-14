@@ -46,7 +46,7 @@ This post is a note for Part I (Introduction), and Part II (Programming Paradigm
 * Structured Programming allows modules to be recursively decomposed into provable units, so we can decompose a large-scale problem into high-level functions. And each of those functions can be decomposed into lower-level functions.
 * > "Testing shows the presence, not the absence, of bugs" by Dijkstra.
 
-### 5. Object-Oridented Programming
+### 5. Object-Oriented Programming
 
 * Three magic words for Object-Oriented: *encapsulation*, *inheritance*, and *polymorphism*
 * Encapsulation makes data to be hidden and required function to be shown.
