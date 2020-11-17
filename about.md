@@ -44,6 +44,7 @@ Facebook Messenger를 통한 빠른 도시 이슈 리포트 시스템을 개발�
 * [pytorch/pytorch](https://github.com/pytorch/pytorch)
   * PyTorch를 사용하며 불편했던 사항(주로 type issue, feature request)을 기여하였습니다.
   * [작성한 Issue/PR](https://github.com/pytorch/pytorch/issues?q=author%3Ajeongukjae)
+  * [PTD2 2020에서도 Contributor로 소개되었다! - 블로그 포스트](https://jeongukjae.github.io/posts/ptd2-2020/)
 * [jeongukjae/lightgbm-serving](https://github.com/jeongukjae/lightgbm-serving)
   * LightGBM을 multi-model 서버로 간단하게 열 수 있는 C++ http 서버입니다.
 * [jeongukjae/korean-spacing-model](https://github.com/jeongukjae/korean-spacing-model) - [데모](https://jeongukjae.github.io/korean-spacing-model/)
