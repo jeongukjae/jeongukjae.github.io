@@ -14,9 +14,9 @@ permalink: /about/
 
 ## Experiments
 
-### ScatterLab; Seoul, Korea — 2019.03 - present
+### ScatterLab; Seoul, Korea — 2019.03 - 2020.11
 
-- **Machine learning software engineer — 2019.12 - present**
+- **Machine learning software engineer — 2019.12 - 2020.11**
 - **Developer — 2019.03 - 2019.12**
 
 머신러닝 모델 서빙, BERT pretrain, BERT distillation, 내부 머신러닝 모델 라이브러리(TensorFlow 2.0 & PyTorch 1.4+) 구현, 내부 텍스트 처리 라이브러리 구현등의 업무를 하고 있습니다. 그 외에는 [팀 내 스타일 가이드 확립](https://blog.pingpong.us/python-in-pingpong/), [팀 블로그](https://blog.pingpong.us/) 개발, AWS 인프라 관련 개발, 랜딩 페이지 개발 등의 업무를 진행한 바 있습니다.
