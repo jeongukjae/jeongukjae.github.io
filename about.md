@@ -4,7 +4,7 @@ title: 정욱재, Ukjae Jeong
 permalink: /about/
 ---
 
-현재 스캐터랩의 핑퐁팀에서 머신러닝 소프트웨어 엔지니어로 재직중입니다. 아래는 간략한 제 소개입니다.
+현재 당근마켓에서 머신러닝팀 엔지니어로 재직중입니다. 아래는 간략한 제 소개입니다.
 
 ## Contacts
 
@@ -14,12 +14,14 @@ permalink: /about/
 
 ## Experiments
 
+### Machine Learning Engineer, 당근마켓; Seoul, Korea - 2020.12 - Present
+
 ### ScatterLab; Seoul, Korea — 2019.03 - 2020.11
 
 - **Machine learning software engineer — 2019.12 - 2020.11**
 - **Developer — 2019.03 - 2019.12**
 
-머신러닝 모델 서빙, BERT pretrain, BERT distillation, 내부 머신러닝 모델 라이브러리(TensorFlow 2.0 & PyTorch 1.4+) 구현, 내부 텍스트 처리 라이브러리 구현등의 업무를 하고 있습니다. 그 외에는 [팀 내 스타일 가이드 확립](https://blog.pingpong.us/python-in-pingpong/), [팀 블로그](https://blog.pingpong.us/) 개발, AWS 인프라 관련 개발, 랜딩 페이지 개발 등의 업무를 진행한 바 있습니다.
+머신러닝 모델 서빙, BERT pretrain, BERT distillation ([관련 포스트](https://blog.pingpong.us/ml-model-optimize-2/)), 내부 머신러닝 모델 라이브러리(TensorFlow 2.0 & PyTorch 1.4+) 구현 ([관련 포스트](https://blog.pingpong.us/torch-to-tf-tf-to-torch/)), 내부 텍스트 처리 라이브러리 구현등의 업무를 하고 있습니다. 그 외에는 [팀 내 스타일 가이드 확립](https://blog.pingpong.us/python-in-pingpong/), [팀 블로그](https://blog.pingpong.us/) 개발, AWS 인프라 관련 개발, 랜딩 페이지 개발 등의 업무를 진행한 바 있습니다.
 
 ### Software Developer, 스마트 창작터’s R&D project; YongIn, Korea - 2015
 
@@ -45,9 +47,9 @@ Facebook Messenger를 통한 빠른 도시 이슈 리포트 시스템을 개발�
   * PyTorch를 사용하며 불편했던 사항(주로 type issue, feature request)을 기여하였습니다.
   * [작성한 Issue/PR](https://github.com/pytorch/pytorch/issues?q=author%3Ajeongukjae)
   * [PTD2 2020에서도 Contributor로 소개되었다! - 블로그 포스트](https://jeongukjae.github.io/posts/ptd2-2020/)
-* [jeongukjae/lightgbm-serving](https://github.com/jeongukjae/lightgbm-serving)
-  * LightGBM을 multi-model 서버로 간단하게 열 수 있는 C++ http 서버입니다.
 * [jeongukjae/korean-spacing-model](https://github.com/jeongukjae/korean-spacing-model) - [데모](https://jeongukjae.github.io/korean-spacing-model/)
   * 나무위키 데이터셋을 이용하여 한국어 띄어쓰기 모델을 만들어 본 프로젝트입니다.
+* [jeongukjae/lightgbm-serving](https://github.com/jeongukjae/lightgbm-serving)
+  * LightGBM을 multi-model 서버로 간단하게 열 수 있는 C++ http 서버입니다.
 * [scatterlab/faiss-serving](https://github.com/jeongukjae/lightgbm-serving)
   * 위 서버와 같은 형태이며, faiss를 http로 간단하게 서빙하기 위한 프로젝트입니다.
