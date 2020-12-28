@@ -5,7 +5,7 @@ tags:
   - paper
 ---
 
-[Building Machine Learning Pipelines](https://www.amazon.com/Building-Machine-Learning-Pipelines-Automating/dp/1492053198/ref=sr_1_1)를 최근 읽고 있는데, 해당 책에서 말하는 논문이었고, 읽어보면 좋을 것 같아 읽어보았다.
+[Building Machine Learning Pipelines](https://www.amazon.com/Building-Machine-Learning-Pipelines-Automating/dp/1492053198/ref=sr_1_1)를 최근 읽고 있는데, 해당 책에서 말하는 논문이었고, 읽어보면 좋을 것 같아 읽어보았다. 논문 링크는 [여기](https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html)이다.
 
 핵심적으로 이 논문에서 말하고자 하는 바는 ***머신러닝 시스템의 기술 부채는 굉장히 관리하기 어렵고, 힘든데 그 이유는 기존의 코드 관리와 함께 데이터 관리가 같이 들어가기 때문***이라고 한다. 다방면에서 머신러닝 시스템의 기술 부채를 말해주는 논문이라 최신의 내용이 아닐지라도 좋은 논문이라 생각한다.
 
