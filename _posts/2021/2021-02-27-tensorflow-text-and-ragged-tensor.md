@@ -448,4 +448,6 @@ tf.saved_model.save(model, 'nsmc-model/0', call)
 
 ---
 
+* NSMC 분류 GitHub 링크: <https://github.com/jeongukjae/nsmc-tf-text>
+
 발표 끝나고 후기/링크 등등 추가할게요.
