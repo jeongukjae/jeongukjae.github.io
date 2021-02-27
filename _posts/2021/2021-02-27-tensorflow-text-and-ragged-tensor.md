@@ -1,13 +1,13 @@
 ---
 layout: post
-title: TensorFlow-Text와 RaggedTensor
+title: 편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor
 tags:
     - tensorflow
     - nlp
     - conference
 ---
 
-이 블로그 포스트는 TensorFlow Everywhere Korea 에서 발표할 "편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor"의 블로그 포스트 버전입니다.
+이 블로그 포스트는 TensorFlow Everywhere Korea([festa](https://festa.io/events/1395), [fb](https://www.facebook.com/groups/TensorFlowKR/permalink/1412985029042551/)) 에서 발표한 "편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor"의 블로그 포스트 버전입니다.
 
 ***이 포스트는 TensorFlow 2.4.1을 기준으로 작성되었습니다.***
 
@@ -449,5 +449,11 @@ tf.saved_model.save(model, 'nsmc-model/0', call)
 ---
 
 * NSMC 분류 GitHub 링크: <https://github.com/jeongukjae/nsmc-tf-text>
+* 발표자료: [링크](/pdfs/tfekr_tftext.pdf)
 
-발표 끝나고 후기/링크 등등 추가할게요.
+---
+
+## 후기
+
+발표했던 행사 중에 제일 큰 규모인데, 준비하는 것과 발표하는 과정도 재밌어서 다행이었다.
+Gather town에서 행사를 진행했는데, 오거나이저분들이 많은 행사 이벤트(?)도 준비해주셔서 즐거웠다!
