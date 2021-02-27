@@ -7,17 +7,15 @@ tags:
     - conference
 ---
 
-이 블로그 포스트는 TensorFlow Everywhere Korea([festa](https://festa.io/events/1395), [fb](https://www.facebook.com/groups/TensorFlowKR/permalink/1412985029042551/)) 에서 발표한 "편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor"의 블로그 포스트 버전입니다.
+TensorFlow Everywhere Korea([festa](https://festa.io/events/1395), [fb](https://www.facebook.com/groups/TensorFlowKR/permalink/1412985029042551/)) 에서 발표한 "편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor"를 준비하면서 작성한 포스트입니다.
 
 ***이 포스트는 TensorFlow 2.4.1을 기준으로 작성되었습니다.***
-
-안녕하세요, 간단하게 제 소개를 먼저 하고 진행하겠습니다. 저는 정욱재이고, 당근마켓에서 주로 NLP 도메인으로 머신러닝 엔지니어링을 하고 있습니다.
 
 먼저 이 발표를 하는 이유를 설명드리자면, 저는 PyTorch를 굉장히 많이 사용했었어요.
 PyTorch 행사에서 Contributor로 이름이 올라갈 정도로 기여도 일정기간 했었고요.
 굉장히 좋은 프로젝트라고 생각하고, 연구 분야에서는 PyTorch만한 유연성을 가져가기 힘들다고 생각하긴 하지만, 프레임워크 단에서 많은 부족함을 느꼈어요.
 그리고 TensorFlow를 깊게 사용하기 시작했는데, 생각보다 대형모델이 아닌 이상 정말 빠른 실험 이터레이션을 가져갈 수 있었고, 짧으면서도 명확한 코드를 많이 가져갈 수 있었어요.
-그래서 그런 면을 NLP 쪽으로, TensorFlow의 String 연산과 관련지어 설명드리려 합니다.
+그래서 그런 면을 NLP 쪽으로, TensorFlow의 String 연산, TensorFlow Text와 관련지어 설명드리려 합니다.
 
 ## 목차
 
