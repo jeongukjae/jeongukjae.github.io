@@ -35,6 +35,7 @@ Facebook Messenger를 통한 빠른 도시 이슈 리포트 시스템을 개발�
 
 ## Other Experiences
 
+* [TensorFlow Everywhere Korea에서 "편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor"를 주제로 발표](https://jeongukjae.github.io/posts/tensorflow-text-and-ragged-tensor/) 한 적이 있습니다.
 * [F8 2019 meetup in Seoul; Seoul, Korea(2019.05)에서 발표](https://speakerdeck.com/jeongukjae/f8-2019-meetup-seoul-hongseunghwan-jeongugjae-balpyojaryo)한 적이 있습니다.
 * 제이펍 베타리더로 출간되기 전의 책들을 베타리딩한 경험이 있습니다. [단단한 머신러닝](https://jpub.tistory.com/1014), [러스트 프로그래밍 공식 가이드](https://jpub.tistory.com/980), [리액트 인 액션](https://jpub.tistory.com/893), [인스파이어드](https://jpub.tistory.com/885) 등의 책을 베타리딩했습니다. 최신의 내용은 아니지만 [별도의 포스트](https://jeongukjae.github.io/posts/jpub-베타리더를-되돌아보며/)로 작성해놓았습니다.
 * Google I/O Extended 2019 Seoul와 같은 여러 행사에서 자원봉사를 한 경험이 있습니다.

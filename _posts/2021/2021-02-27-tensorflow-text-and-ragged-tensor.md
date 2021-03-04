@@ -9,6 +9,10 @@ tags:
 
 TensorFlow Everywhere Korea([festa](https://festa.io/events/1395), [fb](https://www.facebook.com/groups/TensorFlowKR/permalink/1412985029042551/)) 에서 발표한 "편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor"를 준비하면서 작성한 포스트입니다.
 
+* 발표자료: [링크](/pdfs/tfekr_tftext.pdf)
+* 발표영상: [페북 게시글 링크](https://www.facebook.com/100002683652633/videos/3258341000931990/)
+* 발표에서 사용한 코드의 GitHub 링크: <https://github.com/jeongukjae/nsmc-tf-text>
+
 ***이 포스트는 TensorFlow 2.4.1을 기준으로 작성되었습니다.***
 
 먼저 이 발표를 하는 이유를 설명드리자면, 저는 PyTorch를 굉장히 많이 사용했었어요.
@@ -443,12 +447,6 @@ tf.saved_model.save(model, 'nsmc-model/0', call)
 * 간편한 데이터 처리가 가능해지고,
 * TensorFlow Graph안에 전처리, Tokenizer 코드를 통합 가능해지고,
 * 그에 따라 서빙까지 자연스레 이어지는 코드가 만들어집니다.
-
----
-
-* NSMC 분류 GitHub 링크: <https://github.com/jeongukjae/nsmc-tf-text>
-* 발표자료: [링크](/pdfs/tfekr_tftext.pdf)
-* 발표영상: [페북 게시글 링크](https://www.facebook.com/100002683652633/videos/3258341000931990/)
 
 ---
 
