@@ -5,6 +5,7 @@ tags:
   - scatterlab
   - tensorflow
   - pytorch
+featured: true
 ---
 
 ***[핑퐁팀 블로그](https://blog.pingpong.us/)의 [하나의 조직에서 TensorFlow와 PyTorch 동시 활용하기](https://blog.pingpong.us/torch-to-tf-tf-to-torch/)에 올라간 글입니다. 제가 작성한 글이기 때문에 이 블로그에 아카이브합니다.***

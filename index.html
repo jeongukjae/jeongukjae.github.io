@@ -2,6 +2,38 @@
 layout: default
 ---
 
+{% if paginator.page == 1 %}
+
+<h1 class='index-divide'>Featured Post</h1>
+
+<div class='featured-posts'>
+{% for post in site.posts %}
+  {% if post.featured %}
+      <div class='featured-post'>
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+        {% if post.tags.size > 0 %}
+        <div class='tag_post'>
+          Tags:
+          {% assign tags = post.tags | sort %}
+          {% for tag in tags %}
+            <a class='tag_link uppercase' href='/tags/#{{tag}}'>{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class='date'>
+          {{ post.date | date: "%B %e, %Y" }}
+        </div>
+      </div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<h1 class='index-divide'>Post List</h1>
+
+{% endif %}
+
 <div class="posts">
   <!-- for post in site.posts -->
   {% for post in paginator.posts %}
