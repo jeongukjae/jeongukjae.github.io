@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% include analytics.html %}
+
     <title>
       {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}
     </title>
@@ -57,7 +59,5 @@
         </footer>
       </div>
     </div>
-
-    {% include analytics.html %}
   </body>
 </html>
