@@ -5,7 +5,6 @@ tags:
   - scatterlab
   - tensorflow
   - pytorch
-featured: true
 ---
 
 ***[핑퐁팀 블로그](https://blog.pingpong.us/)의 [딥러닝 모델 서비스 A-Z 2편 - Knowledge Distillation - 난 선생이고 넌 학생이야](https://blog.pingpong.us/ml-model-optimize-2/)에 올라간 글입니다. 제가 작성한 글이기 때문에 이 블로그에 아카이브합니다.***
