@@ -3,6 +3,7 @@ layout: post
 title: "CS231n Python Numpy Tutorial"
 tags:
   - cs231n
+  - python
 ---
 
 [Justin Johnson](http://cs.stanford.edu/people/jcjohns/)에 의해 작성된 튜토리얼을 공부용으로 번역 + 정리하였어요.

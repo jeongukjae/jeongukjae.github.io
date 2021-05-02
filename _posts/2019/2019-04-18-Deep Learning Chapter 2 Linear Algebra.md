@@ -2,7 +2,7 @@
 layout: post
 title: "📗 Deep Learning Chapter 2 Linear Algebra"
 tags:
-  - book
+  - note
 ---
 
 Ian Goodfellow의 [Deep Learning](http://www.deeplearningbook.org) 책을 보기 시작했다. 해당 책에 대해 추천을 많이 받았고, 마침 출판사 이벤트로 참가해서 번역본도 운 좋게 집에 있었기 때문에 중요한 부분만 골라서 정리해본다!

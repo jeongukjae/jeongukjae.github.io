@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 🍃 Mongo DB Sharding
+tags:
+  - note
 ---
 
 데이터베이스를 사용하면서 언제까지나 인스턴스 하나만을 사용할 수는 없다. 데이터베이스에 많은 부하가 몰린다면, 다른 대책이 필요하다. 두 가지 방법이 존재하는데, Vertical Scaling과 Horizontal Scaling이다. Vertical Scaling은 하나의 머신에 더 많은 RAM과 더 많은 코어 등을 추가하는 방법이다. Horizontal Scaling은 여러 대의 머신을 구성하는 방법이다.

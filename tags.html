@@ -7,15 +7,13 @@ permalink: /tags/
 {% assign all_tags = site.posts | map: 'tags' | compact | uniq | sort %}
 
 <div class="all_tags">
-  <h1>TAGS</h1>
+  <h1>Archive</h1>
   {% for tag in all_tags %}
-  <a href="#{{ tag }}" class="uppercase">#{{ tag }}</a>
+  <a href="#{{ tag }}" class="tag uppercase">#{{ tag }}</a>
   {% endfor %}
 </div>
 
 <div class="posts">
-  <h1>Posts with tags</h1>
-
   {% for tag in all_tags %} {% assign count = 0 %}
   <h2 id="{{ tag }}" class="uppercase">#{{ tag }}</h2>
   <ul>
@@ -31,27 +29,14 @@ permalink: /tags/
     <em>{{ count }} posts</em>
   </p>
   {% endfor %}
-
-  <hr>
-
-  <h1>Post List</h1>
-
-  <ul>
-    {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> at
-      <em>{{ post.date | date: "%b %d, %Y" }}</em>
-    </li>
-    {% endfor %}
-  </ul>
 </div>
 
-<h2>포스트 수</h2>
+<h2>포스트 갯수</h2>
 
-<p>총 포스트 수: {{ site.posts | size }}개</p>
+<p>총 포스트 갯수: {{ site.posts | size }}</p>
 
 <p>
 <ul>{% assign number_of_posts = 0 %}
 {% for post in site.posts %}{% assign currnet_year = post.date | date: "%Y" %}{% assign previous_year = post.previous.date | date: "%Y" %}{% assign number_of_posts = number_of_posts | plus: 1 %}{% if currnet_year != previous_year %}
-<li>{{ currnet_year }}년 : {{ number_of_posts }}개의 포스트</li>{% assign number_of_posts = 0 %}{% endif %}{% endfor %}
+<li>{{ currnet_year }}년 : {{ number_of_posts }} posts</li>{% assign number_of_posts = 0 %}{% endif %}{% endfor %}
 </ul></p>

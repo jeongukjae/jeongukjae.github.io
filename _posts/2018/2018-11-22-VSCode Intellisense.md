@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "VSCode에서 Aliasing된 경로들 intellisense 지원하기"
+tags:
+  - web
 ---
 
 나는 반복되고, 읽기 힘든 경로를 손으로 쓰는 것(심지어 에디터에서 자동완성을 지원하더라도)을 매우 싫어하는데, 그 때 자주 쓰는 기능이 webpack에서 지원하는 aliasing이다. (vuejs cli가 내부적으로는 webpack을 사용하므로) 우선 이 방법은 [chrisvfritz/vue-enterprise-boilerplate](https://github.com/chrisvfritz/vue-enterprise-boilerplate)에서 처음 보고 다른 자바스크립트 프로젝트에도 적용해서 쓰는 방식이다.

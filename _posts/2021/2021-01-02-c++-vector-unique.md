@@ -2,7 +2,7 @@
 layout: post
 title: C++ std::unique 동작
 tags:
-  - c++
+  - note
 ---
 
 leetcode를 풀다가 중복제거에 사용할 수 있는 STL 함수가 없을까 찾아보았는데, [`std::unique`](https://en.cppreference.com/w/cpp/algorithm/unique)가 있었다. 근데 동작이 잘 이해가 안가서 찾아보았다.

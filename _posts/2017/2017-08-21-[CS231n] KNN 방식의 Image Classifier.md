@@ -3,6 +3,7 @@ layout: post
 title: "CS231n KNN 방식의 Image Classifier"
 tags:
   - cs231n
+  - python
 ---
 
 이제 Assignment 목록에 있던거 구현하기.

@@ -296,18 +296,18 @@ h1.index-divide {
   }
 }
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
-.posts > .post .tag_post {
-  margin-bottom: 10px;
+.posts {
+  > .post {
+    padding-bottom: 2em;
+    border-bottom: 1px solid $lightGray;
+    &:last-child {
+      padding-bottom: 1em;
+      border-bottom: none;
+    }
+    .tag_post {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 blockquote {
@@ -396,6 +396,8 @@ figure {
 // tag
 .all_tags {
   line-height: 2em;
+  text-align: center;
+  margin-bottom: 64px;
 
   a {
     display: inline-block;
