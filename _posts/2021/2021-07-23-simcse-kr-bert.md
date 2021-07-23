@@ -8,7 +8,7 @@ tags:
     - nlp
 ---
 
-얼마전에 GitHub explore reposistories 탭에서 SimCSE라는 레포지토리를 발견해서 논문을 간단하게 보았다. Contrastive Learning 할 때 다른 dropout한 자신을 positive pair로 배치 내부의 다른 인스턴스를 negative pair로 사용하는 방법인데, "이게 정말 될까?" 싶어 한국어로 시도해봤다.
+얼마전에 GitHub explore reposistories 탭에서 SimCSE라는 레포지토리를 발견해서 논문을 간단하게 보았다. Contrastive Learning 할 때 다른 dropout을 적용한 자신을 positive pair로, 배치 내부의 다른 인스턴스를 negative pair로 사용하는 방법인데, "이게 정말 될까?" 싶어 한국어로 시도해봤다.
 
 ## _
 
