@@ -38,17 +38,15 @@ Facebook Messenger를 통한 빠른 도시 이슈 리포트 시스템을 개발�
 * [jeongukjae/tfds-korean](https://github.com/jeongukjae/tfds-korean) - [카탈로그](https://jeongukjae.github.io/tfds-korean/)
   * 한국어 데이터셋을 TensorFlow Datasets 라이브러리를 이용해 받아올 수 있도록 구성한 라이브러리입니다.
 * [jeongukjae/mecab-bind](https://github.com/jeongukjae/mecab-bind)
-  * mecab을 복잡하게 구성해서 사용하지 않고, tensorflow custom ops binding과 pybind로 python binding을 해놓은 프로젝트입니다.
+  * MeCab 프로젝트를 tensorflow custom ops와 python(pybind11)에 binding 해놓은 프로젝트입니다.
 * [pytorch/pytorch](https://github.com/pytorch/pytorch)
   * PyTorch를 사용하며 불편했던 사항(주로 type issue, feature request)을 기여하였습니다.
   * [작성한 Issue/PR](https://github.com/pytorch/pytorch/issues?q=author%3Ajeongukjae)
   * [PTD2 2020에서도 Contributor로 소개되었다! - 블로그 포스트](https://jeongukjae.github.io/posts/ptd2-2020/)
-* [jeongukjae/KR-BERT-SimCSE](https://github.com/jeongukjae/KR-BERT-SimCSE)
+* [jeongukjae/KR-BERT-SimCSE](https://github.com/jeongukjae/KR-BERT-SimCSE) - [결과 테이블](https://github.com/jeongukjae/KR-BERT-SimCSE#results)
   * SimCSE라는 unsupervised로 sentence embedding을 추출하는 방법을 KR-BERT를 사용하여 KorSTS 데이터셋에 대해 성능을 측정해본 프로젝트입니다.
-  * [결과 테이블](https://github.com/jeongukjae/KR-BERT-SimCSE#results)
-* [jeongukjae/tta](https://github.com/jeongukjae/tta)
+* [jeongukjae/tta](https://github.com/jeongukjae/tta) - [결과 테이블](https://github.com/jeongukjae/tta#unsupervised-korsts)
   * T-TA라는 unsupervised로 sentence embedding을 효율적으로 뽑기 위한 방법을 한국어로 확인해본 레포지토리입니다.
-  * [결과 테이블](https://github.com/jeongukjae/tta#unsupervised-korsts)
 * [jeongukjae/korean-spacing-model](https://github.com/jeongukjae/korean-spacing-model) - [데모](https://jeongukjae.github.io/korean-spacing-model/)
   * 나무위키 데이터셋을 이용하여 한국어 띄어쓰기 모델을 만들어 본 프로젝트입니다.
 * [jeongukjae/lightgbm-serving](https://github.com/jeongukjae/lightgbm-serving)
