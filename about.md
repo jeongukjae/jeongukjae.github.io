@@ -12,7 +12,7 @@ permalink: /about/
 * [GitHub](https://www.github.com/jeongukjae/)
 * [Email](mailto:jeongukjae@gmail.com)
 
-## Experiments
+## Experiences
 
 ### Machine Learning Engineer, 당근마켓; Seoul, Korea - 2020.12 - Present
 
