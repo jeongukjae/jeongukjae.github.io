@@ -18,7 +18,7 @@ permalink: /about/
 
 ### Machine learning software engineer, ScatterLab; Seoul, Korea — 2019.03 - 2020.11
 
-머신러닝 모델 서빙, BERT pretrain, BERT distillation ([관련 포스트](https://jeongukjae.github.io/posts/pingpong-ml-model-optimize-2/)), 내부 머신러닝 모델 라이브러리(TensorFlow 2.0 & PyTorch 1.4+) 구현 ([관련 포스트](https://jeongukjae.github.io/posts/pingpong-torch-to-tf-tf-to-torch/)), 내부 텍스트 처리 라이브러리 구현등의 업무를 하고 있습니다. 그 외에는 [팀 내 스타일 가이드 확립](https://jeongukjae.github.io/posts/python-in-pingpong/), [팀 블로그](https://blog.pingpong.us/) 개발, AWS 인프라 관련 개발, 랜딩 페이지 개발 등의 업무를 진행한 바 있습니다.
+머신러닝 모델 서빙, BERT pretrain, BERT distillation ([관련 포스트](https://jeongukjae.github.io/posts/pingpong-ml-model-optimize-2/)), 내부 머신러닝 모델 라이브러리(TensorFlow 2.0 & PyTorch 1.4+) 구현 ([관련 포스트](https://jeongukjae.github.io/posts/pingpong-torch-to-tf-tf-to-torch/)), 내부 텍스트 처리 라이브러리 구현등의 업무를 진행했습니다. 그 외에는 [팀 내 스타일 가이드 확립](https://jeongukjae.github.io/posts/python-in-pingpong/), [팀 블로그](https://blog.pingpong.us/) 개발, AWS 인프라 관련 개발, 랜딩 페이지 개발 등의 업무를 진행한 바 있습니다.
 
 ## Honors and Awards
 
