@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "Smaller LaBSE & TF Hub"
+title: "(LaBSE + Load what you need) & TF Hub"
 tags:
   - tensorflow
+  - nlp
+  - paper
 ---
 
 얼마전에, [Geotrend-research/smaller-transformers](https://github.com/Geotrend-research/smaller-transformers)라는 레포지토리를 우연히 보게 되어서 최근에 관심이 가는 LaBSE(Language-agnostic BERT Sentence Embedding)에 적용해보았다.
@@ -18,7 +20,9 @@ tags:
 
 ## 방법
 
-원 구현에서 사용하는 위키 덤프 데이터를 가져와서, tokenize한 후에 빈도 기준으로 상위 토큰들만 유지했다. 원 구현에서 살짝 수정했는데, 이건 알고리즘은 유지하면서 `tf.data.Dataset` 사용만 하도록 수정했다. 그리고 사용할 언어에 대해서 상위 토큰만 합쳐서 모델을 export만 하면 된다. 그냥 이런 식(<https://github.com/jeongukjae/smaller-labse/blob/104e4ff7f49a6c8490b3d55a4d32584fe356dcfb/make_smaller_labse.py#L86>)으로 뚝딱 하면 된다. m-USE에서 사용하는 것과 최대한 비슷하게 15개 언어에 대해 추출했고, `smaller_LaBSE_15lang`이란 이름으로 tfhub에 올려놓았다.
+간단히 사용한 논문 방법론을 설명해보자면, 특정 unlabeled 데이터(논문은 위키 덤프 데이터를 사용)에 대해, tokenize한 후에 빈도 기준으로 상위 토큰들을 언어별로 추출한다. 그리고 사용할 언어에 대해서 상위 토큰만 합쳐서 vocab table을 구성한 후 모델을 export만 하면 된다.
+
+나는 원 구현에서 살짝 수정했는데, 알고리즘은 유지하면서 `tf.data.Dataset` 사용만 하도록 수정했다. vocab table 수정은 그냥 이런 식(<https://github.com/jeongukjae/smaller-labse/blob/104e4ff7f49a6c8490b3d55a4d32584fe356dcfb/make_smaller_labse.py#L86>)으로 뚝딱 하면 된다. m-USE에서 사용하는 것과 최대한 비슷하게 15개 언어에 대해 추출했고, `smaller_LaBSE_15lang`이란 이름으로 tfhub에 올려놓았다.
 
 ### 평가
 
@@ -29,6 +33,36 @@ facebook research에서 나온 LASER 모델 낼 때 같이 배포해준 tatoeba 
 사실 올릴 생각은 별로 없었는데, (학습도 안했고, 워낙 간단한 코드로 만든 모델이라) [tensorflow forum show&tell에 글](https://discuss.tensorflow.org/t/reducing-the-parameter-size-of-labse-language-agnostic-bert-sentence-embedding-for-practical-usage/4418?u=jeongukjae) 올려봤다가 올려보면 좋을 것 같다고 해서 올려봤다. 개인적으로도 한번 해보는셈 치고 올려봤는데, 생각보다 편하게 올릴 수 있었다. GCS에 올려놓고 링크 주면 TFHub에서 긁어다가 배포하는 것 같고(일관성 유지를 위해서 이렇게 한 것 같음), [tensorflow/tfhub.dev](https://github.com/tensorflow/tfhub.dev)는 assets 내부 파일들 거의 스태틱 사이트처럼 쓰는 느낌이다. (정확히 말하자면 쿼리 스트링에 따라 compressed, uncompressed로 잘 반환해야해서 스태틱 사이트는 아니다)
 
 나중에 개인적으로 사용할 모델 있으면 좀 더 올려놔야겠다. 올리면서 다른 PR이나 TF Forum 글 훑어보았는데, 많이 활성화시키고 싶은 것 같다. 생태계가 잘 구성하기 위해 잘 만들어 놓은게 많은데, 대형 모델이 huggingface에 많아서 그런가? 싶기도 하고.
+
+```python
+import tensorflow as tf
+import tensorflow_text  # noqa
+import tensorflow_hub as hub
+
+# Loading models from tfhub.dev
+encoder = hub.KerasLayer("https://tfhub.dev/jeongukjae/smaller_LaBSE_15lang/1")
+preprocessor = hub.KerasLayer("https://tfhub.dev/jeongukjae/smaller_LaBSE_15lang_preprocess/1")
+
+# Constructing model to encode texts into high-dimensional vectors
+sentences = tf.keras.layers.Input(shape=(), dtype=tf.string, name="sentences")
+encoder_inputs = preprocessor(sentences)
+sentence_representation = encoder(encoder_inputs)["pooled_output"]
+normalized_sentence_representation = tf.nn.l2_normalize(sentence_representation, axis=-1)  # for cosine similarity
+model = tf.keras.Model(sentences, normalized_sentence_representation)
+model.summary()
+
+# Encoding multilingual sentences.
+english_sentences = tf.constant(["dog", "Puppies are nice.", "I enjoy taking long walks along the beach with my dog."])
+italian_sentences = tf.constant(["cane", "I cuccioli sono carini.", "Mi piace fare lunghe passeggiate lungo la spiaggia con il mio cane."])
+
+english_embeds = model(english_sentences)
+italian_embeds = model(italian_sentences)
+
+# English-Italian similarity
+print(tf.tensordot(english_embeds, italian_embeds, axes=[[1], [1]]))
+```
+
+암튼 지금은 위처럼 바로 사용이 가능하다.
 
 ## 참고자료
 
