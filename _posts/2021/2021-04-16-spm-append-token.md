@@ -1,6 +1,8 @@
 ---
 layout: post
 title: SentencePiece 새로운 토큰 추가하기
+tags:
+    - python
 ---
 
 SentencePiece 기존 모델을 유지하면서 사용할 일이 있어서 해봤다.
