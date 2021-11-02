@@ -51,5 +51,3 @@ Facebook Messenger를 통한 빠른 도시 이슈 리포트 시스템을 개발�
   * 나무위키 데이터셋을 이용하여 한국어 띄어쓰기 모델을 만들어 본 프로젝트입니다.
 * [jeongukjae/lightgbm-serving](https://github.com/jeongukjae/lightgbm-serving)
   * LightGBM을 multi-model 서버로 간단하게 열 수 있는 C++ http 서버입니다.
-* [scatterlab/faiss-serving](https://github.com/jeongukjae/lightgbm-serving)
-  * 위 서버와 같은 형태이며, faiss를 http로 간단하게 서빙하기 위한 프로젝트입니다.
