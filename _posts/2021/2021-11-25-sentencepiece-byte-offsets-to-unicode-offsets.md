@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SplitterWithOffsets - split_with_offsets를 UTF8 단위로 변경하기"
+title: SplitterWithOffsets - split_with_offsets를 UTF8 단위로 변경하기
 tags:
   - python
 ---
