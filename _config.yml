@@ -44,3 +44,4 @@ exclude:
   - .gitignore
   - .DS_Store
   - serve.sh
+  - .devcontainer
