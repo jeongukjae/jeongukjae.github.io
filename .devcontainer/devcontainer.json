@@ -1,0 +1,8 @@
+{
+    "name": "Jekyll builder",
+    "workspaceFolder": "/workspace",
+
+    "build": {
+        "dockerfile": "Dockerfile"
+    }
+}
