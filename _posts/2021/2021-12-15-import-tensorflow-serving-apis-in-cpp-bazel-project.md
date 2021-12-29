@@ -6,7 +6,7 @@ tags:
   - tensorflow
 ---
 
-TensorFlow and TensorFlow Serving are built using [Bazel](https://bazel.build) and to develop gRPC clients for TensorFlow Serving requires to import the TensorFlow project. That work is a little bit hard except for Python since [the prebuilt package](https://pypi.org/project/tensorflow-serving-api/) only exists for Python. We don't know what protobuf files we should import until looking into the protobuf files in the TF and TF-Serving.
+TensorFlow and TensorFlow Serving are built using [Bazel](https://bazel.build) and developing gRPC clients for TensorFlow Serving requires to import the TensorFlow project. That work is a little bit hard except for Python since [the prebuilt package](https://pypi.org/project/tensorflow-serving-api/) only exists for Python. We don't know what protobuf files we should import until looking into the protobuf files in the TF and TF-Serving.
 
 In this blog post, I will write about integrating TF-Serving's gRPC interfaces for C++ in the Bazel project with sample client codes. All codes here are in GitHub (<https://github.com/jeongukjae/chips/tree/main/tf-serving-cpp-client-example>).
 
