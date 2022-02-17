@@ -93,7 +93,6 @@ message Bar {
     Msg msg_field = 1;
     optional Msg optional_msg_field = 2;
 }
-
 ```
 
 그리고 파이썬 스크립트로 돌려보았다.
