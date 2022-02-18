@@ -1,3 +1,3 @@
-FROM mcr.microsoft.com/vscode/devcontainers/universal:1-linux
+FROM ruby:3-buster
 
-RUN sudo gem install jekyll-sitemap jekyll-feed jekyll-paginate
+RUN gem install jekyll-sitemap jekyll-feed jekyll-paginate webrick
