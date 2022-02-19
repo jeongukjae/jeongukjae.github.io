@@ -15,7 +15,7 @@ build:macos --action_env=CC
 ...
 
 # for linux-specific configurations
-build:macos --action_env=CXX
+build:linux --action_env=CXX
 ...
 
 ```
