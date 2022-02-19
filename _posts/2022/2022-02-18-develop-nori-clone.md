@@ -3,6 +3,7 @@ layout: post
 title: nori-clone 개발 노트
 tags:
   - nlp
+featured: true
 ---
 
 문득 생각이 들어서 [jeongukjae/nori-clone](https://github.com/jeongukjae/nori-clone)을 만들었다.
