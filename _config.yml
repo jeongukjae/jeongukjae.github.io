@@ -16,7 +16,7 @@ google_analytics: G-4SYRM2S5T9
 
 url: https://jeongukjae.github.io
 baseurl: ""
-paginate: 10
+paginate: 15
 
 permalink: /posts/:title/
 version: v1.2.0
