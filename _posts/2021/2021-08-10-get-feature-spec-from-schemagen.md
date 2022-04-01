@@ -4,6 +4,7 @@ title: "SchemaGen의 결과물로부터 FeatureSpec을 얻는 방법"
 tags:
     - python
     - tensorflow
+    - tfx
 ---
 
 TFX를 사용하면서 가끔 빠르게 실험해보고 싶은 것이 생길경우 간단한 스크립트 성으로 코드를 작성하는데, 그때 유용한 팁정도이다.
