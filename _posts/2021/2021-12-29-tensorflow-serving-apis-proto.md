@@ -4,6 +4,7 @@ title: "Writing gRPC client for TensorFlow Serving in other languages (golang)"
 tags:
   - bazel
   - tensorflow
+  - golang
 ---
 
 With TensorFlow-Serving, we can use the well-optimized server for machine learning models in production. However, it is a little bit hard to develop gRPC clients for other languages except for python and C++. So I want to let you know how I implemented the gRPC client in other languages for TensorFlow Serving. In this post, I will use golang and TensorFlow-Serving 2.7.

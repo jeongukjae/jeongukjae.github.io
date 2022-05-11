@@ -45,3 +45,7 @@ Fluent Bit은 그 중에서도 특히 성능과 low resource consumption을 염�
 * Fluentd vs Fluent Bit: <https://docs.fluentbit.io/manual/about/fluentd-and-fluent-bit>
 * Key Concepts: <https://docs.fluentbit.io/manual/concepts/key-concepts>
 * **Data Pipeline: <https://docs.fluentbit.io/manual/concepts/data-pipeline>**
+
+---
+
+이런 부분들을 공부하며 ElasticSearch, S3(로컬 테스트를 위해 Minio 활용)과 연동한 예시를 <https://github.com/jeongukjae/fluentbit-demo>에서 남겨두었다.
