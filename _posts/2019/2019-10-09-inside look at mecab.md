@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🔪 Mecab을 살펴보자
+title: Mecab을 살펴보자
 tags:
   - paper
 ---
