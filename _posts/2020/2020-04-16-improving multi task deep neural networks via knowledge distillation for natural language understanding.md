@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding 리뷰"
+title: "Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding 리뷰"
 tags:
   - paper
 ---

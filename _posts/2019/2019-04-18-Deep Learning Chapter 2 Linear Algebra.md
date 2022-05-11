@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📗 Deep Learning Chapter 2 Linear Algebra"
+title: "Deep Learning Chapter 2 Linear Algebra"
 tags:
   - note
 ---

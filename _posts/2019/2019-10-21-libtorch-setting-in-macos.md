@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🔥 PyTorch C++ FrontEnd 개발환경 맥에서 세팅
+title: PyTorch C++ FrontEnd 개발환경 맥에서 세팅
 tags:
   - pytorch
 ---

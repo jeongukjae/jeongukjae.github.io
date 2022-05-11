@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🚀 Apex's FusedLayerNorm vs Torch's LayerNorm"
+title: "Apex's FusedLayerNorm vs Torch's LayerNorm"
 tags:
   - pytorch
 ---

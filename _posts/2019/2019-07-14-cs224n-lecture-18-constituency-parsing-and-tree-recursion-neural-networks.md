@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 18 Constituency Parsing and Tree Recursive Neural Networks
+title: CS224n Lecture 18 Constituency Parsing and Tree Recursive Neural Networks
 tags:
   - cs224n
 ---

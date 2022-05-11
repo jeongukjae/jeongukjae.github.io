@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 On Layer Normalization in the Transformer Architecture 리뷰"
+title: "On Layer Normalization in the Transformer Architecture 리뷰"
 tags:
   - paper
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 10 (Textual) Question Answering
+title: CS224n Lecture 10 (Textual) Question Answering
 tags:
   - cs224n
 ---

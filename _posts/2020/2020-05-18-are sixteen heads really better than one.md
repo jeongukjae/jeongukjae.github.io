@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Are Sixteen Heads Really Better than One? 리뷰"
+title: "Are Sixteen Heads Really Better than One? 리뷰"
 tags:
   - paper
 ---

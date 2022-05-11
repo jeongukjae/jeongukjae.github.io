@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 BERT 리뷰"
+title: "BERT 리뷰"
 tags:
   - paper
 ---

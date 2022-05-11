@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📃 transformers.zip 리뷰
+title: transformers.zip 리뷰
 tags:
   - paper
 ---

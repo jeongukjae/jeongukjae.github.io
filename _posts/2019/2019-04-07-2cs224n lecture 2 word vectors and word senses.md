@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 2 Word Vectors and Word Senses
+title: CS224n Lecture 2 Word Vectors and Word Senses
 tags:
   - cs224n
 ---

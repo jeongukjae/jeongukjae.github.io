@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📕 CS224n Lecture 12 Information from parts of words: Subword Models"
+title: "CS224n Lecture 12 Information from parts of words: Subword Models"
 tags:
   - cs224n
 ---

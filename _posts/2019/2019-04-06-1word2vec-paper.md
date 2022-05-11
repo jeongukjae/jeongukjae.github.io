@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📃 Word2Vec 논문 정리해보기
+title: Word2Vec 논문 정리해보기
 tags:
   - paper
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🍃 Mongo DB Sharding
+title: Mongo DB Sharding
 tags:
   - note
 ---

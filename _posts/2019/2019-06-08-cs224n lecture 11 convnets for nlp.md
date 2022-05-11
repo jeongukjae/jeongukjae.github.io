@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 11 ConvNets for NLP
+title: CS224n Lecture 11 ConvNets for NLP
 tags:
   - cs224n
 ---

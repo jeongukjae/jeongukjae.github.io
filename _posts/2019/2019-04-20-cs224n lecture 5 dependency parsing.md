@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 5 Dependency Parsing
+title: CS224n Lecture 5 Dependency Parsing
 tags:
   - cs224n
 ---

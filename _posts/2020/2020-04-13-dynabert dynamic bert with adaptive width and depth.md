@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 DynaBERT: Dynamic BERT with Adaptive Width and Depth 리뷰"
+title: "DynaBERT: Dynamic BERT with Adaptive Width and Depth 리뷰"
 tags:
   - paper
 ---

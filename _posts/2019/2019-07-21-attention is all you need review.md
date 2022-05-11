@@ -1,5 +1,5 @@
 ---
-title: "📃 Review of \"Attention Is All You Need\""
+title: "Review of \"Attention Is All You Need\""
 layout: post
 tags:
   - paper

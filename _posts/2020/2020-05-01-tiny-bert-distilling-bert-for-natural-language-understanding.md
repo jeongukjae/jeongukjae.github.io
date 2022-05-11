@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 TinyBERT: Distilling BERT For Natual Language Understanding 리뷰"
+title: "TinyBERT: Distilling BERT For Natual Language Understanding 리뷰"
 tags:
   - paper
 ---

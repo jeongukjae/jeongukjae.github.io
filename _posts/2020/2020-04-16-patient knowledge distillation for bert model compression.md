@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Patient Knowledge Distillation for BERT Model Compression 리뷰"
+title: "Patient Knowledge Distillation for BERT Model Compression 리뷰"
 tags:
   - paper
 ---

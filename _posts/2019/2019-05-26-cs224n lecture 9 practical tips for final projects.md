@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 9 Practical Tips for Final Projects
+title: CS224n Lecture 9 Practical Tips for Final Projects
 tags:
   - cs224n
 ---

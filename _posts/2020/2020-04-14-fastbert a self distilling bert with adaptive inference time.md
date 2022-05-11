@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 FastBERT: a Self-distilling BERT with Adaptive Inference Time 리뷰"
+title: "FastBERT: a Self-distilling BERT with Adaptive Inference Time 리뷰"
 tags:
   - paper
 ---

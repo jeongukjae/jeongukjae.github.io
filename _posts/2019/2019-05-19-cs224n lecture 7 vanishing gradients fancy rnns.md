@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 7 Vanishing Gradients, Fancy RNNs
+title: CS224n Lecture 7 Vanishing Gradients, Fancy RNNs
 tags:
   - cs224n
 ---

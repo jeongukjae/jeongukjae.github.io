@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 15 Natural Language Generation
+title: CS224n Lecture 15 Natural Language Generation
 tags:
   - cs224n
 ---

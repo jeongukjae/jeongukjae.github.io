@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📃 ALBERT 리뷰
+title: ALBERT 리뷰
 tags:
   - paper
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 6 Language Models and RNNs
+title: CS224n Lecture 6 Language Models and RNNs
 tags:
   - cs224n
 ---

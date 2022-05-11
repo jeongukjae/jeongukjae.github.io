@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📃 RoBERTa 리뷰
+title: RoBERTa 리뷰
 tags:
   - paper
 ---

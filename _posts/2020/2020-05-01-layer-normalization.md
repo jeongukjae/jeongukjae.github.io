@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Layer Normalization 리뷰"
+title: "Layer Normalization 리뷰"
 tags:
   - paper
 ---

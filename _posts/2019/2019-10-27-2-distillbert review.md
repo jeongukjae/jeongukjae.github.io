@@ -1,5 +1,5 @@
 ---
-title: "📃 DistilBert 리뷰"
+title: "DistilBert 리뷰"
 layout: post
 tags:
   - paper

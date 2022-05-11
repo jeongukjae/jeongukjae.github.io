@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "👨‍💻 CS224n assignments 1 & 2"
+title: "CS224n assignments 1 & 2"
 tags:
   - cs224n
 ---

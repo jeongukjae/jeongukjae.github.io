@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 3 Neural Network
+title: CS224n Lecture 3 Neural Network
 tags:
   - cs224n
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📃 Negative Sampling 논문 정리해보기
+title: Negative Sampling 논문 정리해보기
 tags:
   - paper
 ---

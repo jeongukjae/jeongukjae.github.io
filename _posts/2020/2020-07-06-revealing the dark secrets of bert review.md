@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Revealing the Dark Secrets of BERT 리뷰"
+title: "Revealing the Dark Secrets of BERT 리뷰"
 tags:
   - paper
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation 리뷰"
+title: "DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation 리뷰"
 tags:
   - paper
 ---

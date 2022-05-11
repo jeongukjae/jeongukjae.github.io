@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Distilling the Knowledge in a Neural Network 리뷰"
+title: "Distilling the Knowledge in a Neural Network 리뷰"
 tags:
   - paper
 ---

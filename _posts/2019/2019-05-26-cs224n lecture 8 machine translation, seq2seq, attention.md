@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 8 Machine translation, Seq2seq, Attention
+title: CS224n Lecture 8 Machine translation, Seq2seq, Attention
 tags:
   - cs224n
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📕 CS224n Lecture 17 The Natural Language Decathlon: Multitask Learning as Question Answering"
+title: "CS224n Lecture 17 The Natural Language Decathlon: Multitask Learning as Question Answering"
 tags:
   - cs224n
 ---

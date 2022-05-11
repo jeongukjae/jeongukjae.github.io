@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned 리뷰"
+title: "Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned 리뷰"
 tags:
   - paper
 ---

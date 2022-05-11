@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data"
+title: "Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data"
 tags:
   - paper
 ---

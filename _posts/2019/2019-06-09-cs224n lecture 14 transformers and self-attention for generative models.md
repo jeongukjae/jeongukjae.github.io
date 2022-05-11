@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 14 Transformers and Self-Attention For Generative Models
+title: CS224n Lecture 14 Transformers and Self-Attention For Generative Models
 tags:
   - cs224n
 ---

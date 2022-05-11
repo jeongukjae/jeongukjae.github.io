@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 ZeRO: Memory Optimization Towards Training A Trillion Parameter Models 리뷰"
+title: "ZeRO: Memory Optimization Towards Training A Trillion Parameter Models 리뷰"
 tags:
   - paper
 ---

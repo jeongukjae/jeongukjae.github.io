@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "📃 Efficient 8-Bit Quantization of Transformer Neural Machine Language Translation Model 리뷰"
+title: "Efficient 8-Bit Quantization of Transformer Neural Machine Language Translation Model 리뷰"
 tags:
   - paper
 ---

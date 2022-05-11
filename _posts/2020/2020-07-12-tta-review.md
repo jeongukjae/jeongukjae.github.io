@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📃 Fast and Accurate Deep Bidirectional Language Representation for Unsupervised Learning 리뷰
+title: Fast and Accurate Deep Bidirectional Language Representation for Unsupervised Learning 리뷰
 tags:
   - paper
 ---

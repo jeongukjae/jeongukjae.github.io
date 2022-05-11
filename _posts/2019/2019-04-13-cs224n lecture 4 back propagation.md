@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 📕 CS224n Lecture 4 Backpropagation
+title: CS224n Lecture 4 Backpropagation
 tags:
   - cs224n
 ---
