@@ -24,7 +24,7 @@ tags:
 
 {% include image.html width=80 url="/images/2022/05-15-crop/dino.jpeg" alt="dino self attention<br/>https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training/" description="dino self attention<br/>https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training/" class="noshadow" %}
 
-그래서 어떤 모델을 가져올지 고민하다가 self supervised 방식으로 학습한 DINO 모델이 떠올랐고 성능이 중요한 것은 아니니 제일 작은 DINO 모델(vit-small-16patch)를 가져와서 진행했다. 여기서 생각한 가정은 "DINO가 잡는 부분이 사람들이 주목하고 싶은 부분과 비슷할 것이다!"라는 것.
+그래서 어떤 모델을 가져올지 고민하다가 [self supervised 방식으로 학습한 DINO 모델](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training/)이 떠올랐고 성능이 중요한 것은 아니니 제일 작은 DINO 모델(vit-small-16patch)를 가져와서 진행했다. 여기서 생각한 가정은 "DINO가 잡는 부분이 사람들이 주목하고 싶은 부분과 비슷할 것이다!"라는 것.
 
 ## 진행
 
@@ -57,11 +57,10 @@ Unsplashed를 켜서 보이는 사진 적당히 5개 정도 가져와서 샘플�
 
 오브젝트가 길게 위치하는 이미지 혹은 여러 오브젝트가 등장하는 이미지는 어텐션이 여러 곳에 분포해서 이상하게 잘릴 것 같다.
 예를 들어 트위터 블로그 포스트의 예시는 그렇게 잘 잡히지는 않는다.
+아래 이미지인데, 얼굴쪽으로 잘 잘린 것 같지만, 잘 보면 농구대 네트쪽이 높은 attention 값을 가지고 있다.
 
 ![sample](/images/2022/05-15-crop/output.png)
 
-얼굴쪽으로 잘 잘린 것 같지만, 잘 보면 농구대 네트쪽이 높은 attention 값을 가지고 있다.
-
 --
 
-GitHub Repo: <https://github.com/jeongukjae/image-cropping-using-attention>
+코드는 GitHub Repository에 있다. <https://github.com/jeongukjae/image-cropping-using-attention>
