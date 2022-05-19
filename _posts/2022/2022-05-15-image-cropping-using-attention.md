@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DINO의 Self attention을 활용한 이미지 크롭
+title: Smart image cropping using self-attention
 tags:
     - note
     - pytorch
