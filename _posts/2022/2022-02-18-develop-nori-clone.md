@@ -132,7 +132,7 @@ NSMC 텍스트나 nori 내에 존재하는 테스트 케이스, 이것저것 한
 - 사용자 사전에 다양한 품사 태그 지원
 - 아직 추가해놓지 않은 동의어 사전 기능 추가
 - MeCab 사전에 존재하는 메타 정보 지원
-- 비지도 신조어 탐색 (이 블로그 글을 쓰는 것이 늦어지면서 완료할 때에 이미 해보았다 - <https://jeongukjae.github.io/posts/pos-tagger-branching-entropy/>)
+- 비지도 신조어 탐색 (이 블로그 글을 쓰는 것이 늦어지면서 완료할 때에 이미 해보았다 - <https://blog.ukjae.io/posts/pos-tagger-branching-entropy/>)
 - 이러한 형태소 분석기를 모아서 의존성이 아예 존재하지 않는 한국어 텍스트 처리 라이브러리
 - 동의어 사전을 사용해 Data augmentation - 추후에 TensorFlow에도 Custom ops로 연결해 쉽게 data augmentation을 할 수 있도록 하고 싶다.
 

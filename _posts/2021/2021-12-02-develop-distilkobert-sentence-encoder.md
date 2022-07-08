@@ -31,7 +31,7 @@ tags:
 1. DistilKoBERT로 2번 모델 Knowledge Distillation
 1. 3번 모델을 KorSTS + KLUE STS로 regression 추가 학습
 
-이전에 해보았던 SimCSE 방법론([블로그 글](https://jeongukjae.github.io/posts/simcse-kr-bert/))을 그대로 활용했고, sentence bert에서 진행하는 것처럼 regression 태스크 추가로 학습했다. 근데 KLUE RoBERTa large를 실제 서비스할 때나 분석할 때 그대로 쓰는 것은 힘들 것 같아서, DistilKoBERT(3 layer - 768 hidden size 크기라 CPU에서도 충분히 추론 가능) 모델에 Knowledge Distillation을 수행했다.
+이전에 해보았던 SimCSE 방법론([블로그 글](https://blog.ukjae.io/posts/simcse-kr-bert/))을 그대로 활용했고, sentence bert에서 진행하는 것처럼 regression 태스크 추가로 학습했다. 근데 KLUE RoBERTa large를 실제 서비스할 때나 분석할 때 그대로 쓰는 것은 힘들 것 같아서, DistilKoBERT(3 layer - 768 hidden size 크기라 CPU에서도 충분히 추론 가능) 모델에 Knowledge Distillation을 수행했다.
 
 아직 귀찮아서 깃헙에 코드 업로드는 안해놓았는데, 공개하면 여기 블로그 글을 업데이트 해두어야겠다.
 

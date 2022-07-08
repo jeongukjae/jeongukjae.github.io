@@ -5,7 +5,7 @@ tags:
     - tensorflow
 ---
 
-얼마전 [tensorflow/community/pull/346](https://github.com/tensorflow/community/pull/346)을 보면서 놀란 점이 있다. 바로 `tf.nn.sparse_softmax_cross_entropy_with_logits`, `tf.nn.softmax_cross_entropy_with_logits` 연산이 non-deterministic하다는 것인데, 수식상으로 생각해볼때 저 Ops들이 그렇다는 것을 알기 힘들었다. 매우 자주 사용하는 Op들이고, [이전에 코드를 살펴보았을 때](https://jeongukjae.github.io/posts/tf-sparse-categorical-cross-entropy/)도 log softmax 이후 정상적으로 crossentropy를 연산하는 것으로 보였기 때문이다.
+얼마전 [tensorflow/community/pull/346](https://github.com/tensorflow/community/pull/346)을 보면서 놀란 점이 있다. 바로 `tf.nn.sparse_softmax_cross_entropy_with_logits`, `tf.nn.softmax_cross_entropy_with_logits` 연산이 non-deterministic하다는 것인데, 수식상으로 생각해볼때 저 Ops들이 그렇다는 것을 알기 힘들었다. 매우 자주 사용하는 Op들이고, [이전에 코드를 살펴보았을 때](https://blog.ukjae.io/posts/tf-sparse-categorical-cross-entropy/)도 log softmax 이후 정상적으로 crossentropy를 연산하는 것으로 보였기 때문이다.
 
 ***일단 먼저 말하자면 정확한 원인을 찾지는 못했다.*** 나중에 다시 살펴보기 편하게 한번 정리만..
 
@@ -30,7 +30,7 @@ Accepted된 상태이고, 해당 주제에 관심이 있던 차라 자세히 읽
 * Sparse Xent Op 코드 위치는 [여기](https://github.com/tensorflow/tensorflow/blob/dec8e0b11f4f87693b67e125e67dfbc68d26c205/tensorflow/core/kernels/sparse_xent_op.h#L172)이다.
 * 지금 tensorflow의 xent 코드를 보면 알 수 있지만, numerical stability를 위해 max 값을 미리 처리해주는데, 이게 일반적인 log softmax에 비해 [한번 더 스캔](https://github.com/tensorflow/tensorflow/blob/dec8e0b11f4f87693b67e125e67dfbc68d26c205/tensorflow/core/kernels/sparse_xent_op.h#L213)을 하기 때문에 느리지만 numerically stable하다고 한다. 여기서 이 로직을 Streaming logsumexp로 바꾸어 줄 수 있는데, ([관련 블로그 포스트](http://www.nowozin.net/sebastian/blog/streaming-log-sum-exp-computation.html))에서는 두배정도 빠를 수 있다고 한다. 진짜로 그럴지는 모르겠지만 시간나면 한번쯤 구현해봐도 좋아보인다.
 
-    생각해보면 예전에 [Apex의 FusedLayerNorm 코드 뜯어보면서](https://jeongukjae.github.io/posts/apex-fused-layer-norm-vs-torch-layer-norm/) 봤던 Welford's online algorithm (Variance 계산용 알고리즘)봤던 느낌이다.
+    생각해보면 예전에 [Apex의 FusedLayerNorm 코드 뜯어보면서](https://blog.ukjae.io/posts/apex-fused-layer-norm-vs-torch-layer-norm/) 봤던 Welford's online algorithm (Variance 계산용 알고리즘)봤던 느낌이다.
 
 궁금해서 [위의 노트북](https://colab.research.google.com/drive/1syj32Jl7dS6mBa-GhNrq_LLIxvfumIOz)을 2.4.1 버전으로 돌려봤는데 아래와 같은 결과를 얻었고, 아직 non-deterministic하다는 것을 확인할 수 있었다.
 
