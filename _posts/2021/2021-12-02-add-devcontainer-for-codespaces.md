@@ -15,7 +15,7 @@ GitHub codespaces에서 dev container를 세팅해보았다. Codespaces를 별�
 
 ## 설정해보기
 
-종합하면 [이 커밋 하나](https://github.com/jeongukjae/jeongukjae.github.io/commit/030970e02686336c6725f13b1fed8e97ca243058)로 설명이 되긴한다. 그래도 파일 단위로 살펴보자
+종합하면 [이 커밋 하나](https://github.com/jeongukjae/blog/commit/030970e02686336c6725f13b1fed8e97ca243058)로 설명이 되긴한다. 그래도 파일 단위로 살펴보자
 
 ### `.devcontainer/devcontainer.json`
 

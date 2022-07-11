@@ -14,7 +14,7 @@ tags:
 
 ### 모델 변환 및 준비
 
-개인적으로 TensorFlow 기반으로 학습하는게 고성능 데이터 루프, 미리 구성해둔 tfds-korean 라이브러리([GitHub](https://github.com/jeongukjae/tfds-korean), [Dataset List](https://jeongukjae.github.io/tfds-korean/), [블로그 포스트](https://jeongukjae.github.io/posts/tfds-korean-start/)), TPU를 활용할 수 있어서 편하다. 그래서 이번에도 Colab으로 간단하게 학습해보았다.
+개인적으로 TensorFlow 기반으로 학습하는게 고성능 데이터 루프, 미리 구성해둔 tfds-korean 라이브러리([GitHub](https://github.com/jeongukjae/tfds-korean), [Dataset List](https://jeongukjae.github.io/tfds-korean/), [블로그 포스트](https://blog.ukjae.io/posts/tfds-korean-start/)), TPU를 활용할 수 있어서 편하다. 그래서 이번에도 Colab으로 간단하게 학습해보았다.
 
 모델 변환은 기존에 작성하던 [`jeongukjae/huggingface-to-tfhub`](https://github.com/jeongukjae/huggingface-to-tfhub) 레포지토리에서 약간 수정한 뒤 DistilKoBERT와 KLUE RoBERTa 모델을 전부 추출해두었다. 데이터는 labeled data만 활용했고, KorNLI, KorSTS, KLUE STS만 활용했다.
 
