@@ -40,3 +40,14 @@ permalink: /tags/
 {% for post in site.posts %}{% assign currnet_year = post.date | date: "%Y" %}{% assign previous_year = post.previous.date | date: "%Y" %}{% assign number_of_posts = number_of_posts | plus: 1 %}{% if currnet_year != previous_year %}
 <li>{{ currnet_year }}년 : {{ number_of_posts }} posts</li>{% assign number_of_posts = 0 %}{% endif %}{% endfor %}
 </ul></p>
+
+<h2>Post List</h2>
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> at
+    <em>{{ post.date | date: "%b %d, %Y" }}</em>
+  </li>
+  {% endfor %}
+</ul>

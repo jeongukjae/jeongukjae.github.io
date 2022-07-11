@@ -45,3 +45,4 @@ exclude:
   - .DS_Store
   - serve.sh
   - .devcontainer
+  - check-images.py

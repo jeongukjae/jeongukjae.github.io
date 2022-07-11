@@ -60,13 +60,13 @@ $ source env/bin/activate
 
 파일 구조에 대해 설명을 드리자면, `app` 폴더는 웹 페이지의 소스코드입니다. 3페이지로 이루어져 있으며, 밑의 3 페이지입니다.
 
-![index.html 화면]({{ site.url }}/images/2017/08-30-ci-example-with-flask/index.png)
+![index.html 화면](/images/2017/08-30-ci-example-with-flask/index.png)
 index.html 화면
 
-![auth/signin.html 화면]({{ site.url }}/images/2017/08-30-ci-example-with-flask/auth.signin.png)
+![auth/signin.html 화면](/images/2017/08-30-ci-example-with-flask/auth.signin.png)
 signin.html 화면
 
-![auth/sucess.html 화면]({{ site.url }}/images/2017/08-30-ci-example-with-flask/auth.success.png)
+![auth/sucess.html 화면](/images/2017/08-30-ci-example-with-flask/auth.success.png)
 success.html 화면
 
 index.html은 signin.html로 넘어가는 링크 하나가 있습니다. signin.html은 이메일과 이름을 입력하는 입력칸 두개가 있고요, success.html은 signin.html에서 입력한 이메일과 이름을 **validating** 후 보여주는 화면이 있습니다.
@@ -289,7 +289,7 @@ recursive-include app/static *
 
 [travis-ci.org](http://travis-ci.org)[^TrvisCI]에서 GitHub 계정을 이용하여 가입하신 후, repository를 이름 왼쪽의 스위치 버튼을 켜시면 해당 레포지토리에 대해 travis-ci 설정이 됩니다.
 
-![Travis CI]({{ site.url }}/images/2017/08-30-ci-example-with-flask/travis-ci.png)
+![Travis CI](/images/2017/08-30-ci-example-with-flask/travis-ci.png)
 
 저는 이 레포지토리를 Travis CI에 추가하기 위해 이 레포지토리에 해당하는 스위치 버튼을 켰습니다.
 
@@ -325,7 +325,7 @@ script 부분에 대해서는 [coveralls-clients/coveralls-python](https://githu
 
 [coveralls 웹 페이지](https://coveralls.io/)[^coveralls]로 가서 GitHub 계정으로 가입한다면 다음과 같은 화면을 볼 수 있습니다.
 
-![coveralls 화면]({{ site.url }}/images/2017/08-30-ci-example-with-flask/coveralls.png)
+![coveralls 화면](/images/2017/08-30-ci-example-with-flask/coveralls.png)
 
 coveralls도 똑같이 repo들을 스위치 방식으로 키고 끄는데, 이 중 원하는 repo를 키고 난 후 Token을 받습니다. 그리고 해당 Token을 Travis CI에 설정해주어야 합니다.
 
@@ -333,7 +333,7 @@ coveralls도 똑같이 repo들을 스위치 방식으로 키고 끄는데, 이 �
 
 ### Travis CI에 설정
 
-![travis ci 환경변수]({{ site.url }}/images/2017/08-30-ci-example-with-flask/travis-ci-env.png)
+![travis ci 환경변수](/images/2017/08-30-ci-example-with-flask/travis-ci-env.png)
 
 그렇게 받은 토큰을 travis ci 환경변수에 설정합니다.
 
@@ -347,11 +347,11 @@ coveralls도 똑같이 repo들을 스위치 방식으로 키고 끄는데, 이 �
 
 위처럼 다른 오픈소스 프로젝트에 상단에 있는 것과 같이 뱃지를 달아봅시다.
 
-![Coveralls Badge]({{ site.url }}/images/2017/08-30-ci-example-with-flask/coveralls.badge.png)
+![Coveralls Badge](/images/2017/08-30-ci-example-with-flask/coveralls.badge.png)
 
 Coveralls에서는 레포지토리 세팅에서 Badge 옆에 Embed라는 버튼이 존재합니다. 해당 버튼을 누르면 마크다운 문법으로 바로 뱃지를 보여줍니다.
 
-![TravisCI Badge]({{ site.url }}/images/2017/08-30-ci-example-with-flask/travis-ci.badge.png)
+![TravisCI Badge](/images/2017/08-30-ci-example-with-flask/travis-ci.badge.png)
 
 Travis CI에서는 바로 보이는 Badge를 클릭하면 Markdown으로 표기 가능하도록 변환해줍니다.
 

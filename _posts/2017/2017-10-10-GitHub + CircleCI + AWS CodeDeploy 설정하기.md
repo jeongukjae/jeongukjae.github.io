@@ -15,7 +15,7 @@ tags:
 
  GitHub에서는 `appspec` 파일을 포함한 하나의 새로운 레포지토리를 준비하면 됩니다.
 
-![]({{ site.url }}/images/2017/10-10-github-aws-codedeploy/github-new-repository.png)
+![](/images/2017/10-10-github-aws-codedeploy/github-new-repository.png)
 
 `appspec` 파일이란 무엇일까요?
 
@@ -88,11 +88,11 @@ GitHub 내에서 그 외에 필요한 설정은 circleci와 관련된 설정 정
 
 CI 서버를 따로 구축하지 않아도 되도록 [GitHub Marketplace](https://github.com/marketplace)에서 다양한 Continuous integration을 지원합니다. 그 중 하나인 CircleCI입니다.
 
-![]({{ site.url }}/images/2017/10-10-github-aws-codedeploy/github-marketplace.png)
+![](/images/2017/10-10-github-aws-codedeploy/github-marketplace.png)
 
 CircleCI는 private repo든, public repo든 container 1개를 지원합니다. 여러 개의 컨테이너가 필요한 작업이 저는 많이 없기 때문에 Free Plan을 이용해서 했습니다. (데이터 베이스가 필요한 경우가 물론 있지만, 그런 경우는 따로 테스트 데이터 베이스를 외부로 빼서 씁니다.)
 
-![]({{ site.url }}/images/2017/10-10-github-aws-codedeploy/circleci-plans.png)
+![](/images/2017/10-10-github-aws-codedeploy/circleci-plans.png)
 
 CircleCI Setup을 하고 나면, 여러가지 project들을 Setup할 수 있도록 나오는데, 필요한 레포지토리를 Setup project 버튼을 눌러줍니다.
 
@@ -102,7 +102,7 @@ CircleCI Setup을 하고 나면, 여러가지 project들을 Setup할 수 있도�
 
 circleci 설정 파일은 사용하시는 언어에 따라서 미리 어느정도 가이드가 작성되어 있기 때문에 그 가이드를 참고하시면 될 것 같습니다.
 
-![]({{ site.url }}/images/2017/10-10-github-aws-codedeploy/circleci-python-tutorial.png)
+![](/images/2017/10-10-github-aws-codedeploy/circleci-python-tutorial.png)
 
 * [CircleCI Language Guide: Python](https://circleci.com/docs/2.0/language-python/)
 * [CircleCI Language Guide: Ruby](https://circleci.com/docs/2.0/language-ruby/)
@@ -342,7 +342,7 @@ CodeDeploy 설정은 나머지 부분은 적당히 원하는 배포방식에 맞
 
 배포 만들기를 눌러준 후 다음과 같이 설정해줍니다.
 
-![]({{ site.url }}/images/2017/10-10-github-aws-codedeploy/code-deploy.png)
+![](/images/2017/10-10-github-aws-codedeploy/code-deploy.png)
 
 리포지토리 유형을 GitHub로 설정하시고, GitHub 계정을 연결하신 후 리포지토리 이름(UserName/RepoName 형식)으로 작성하시고, 커밋 ID(SHA1)을 입력해주시면 됩니다. 기타 롤백등 나머지 옵션은 필요하신 대로 하시면 됩니다.
 
@@ -352,7 +352,7 @@ CodeDeploy 설정은 나머지 부분은 적당히 원하는 배포방식에 맞
 
 CircleCI의 Project Settings에는 Permissions 섹션에 AWS Permissions 란이 존재합니다. 해당 AWS Permissions에 IAM User를 발급하고 받은 Access Key를 입력해줍니다.
 
-![]({{ site.url }}/images/2017/10-10-github-aws-codedeploy/aws-permission.png)
+![](/images/2017/10-10-github-aws-codedeploy/aws-permission.png)
 
 그리고 앞서 작성한 `.circleci/config.yml` 중 deploy 부분의 command 란의 옵션을 수정해줍니다. (`--application-name application-name --deployment-group-name deployment-group-name --region aws-region --github-location repository=username/reponame,commitId=$CIRCLE_SHA1` 부분)
 
