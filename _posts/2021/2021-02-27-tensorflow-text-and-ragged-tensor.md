@@ -5,7 +5,6 @@ tags:
     - tensorflow
     - nlp
     - conference
-featured: true
 ---
 
 TensorFlow Everywhere Korea([festa](https://festa.io/events/1395), [fb](https://www.facebook.com/groups/TensorFlowKR/permalink/1412985029042551/)) 에서 발표한 "편리한 NLP를 위한 TensorFlow-Text와 RaggedTensor"를 준비하면서 작성한 포스트입니다.
