@@ -47,9 +47,7 @@ AI/ML 위주로 들었는데, 아래 세션들이 특히 기억에 남네요.
 * ...
 
 AWS 서비스들을 모르진 않는다고 생각하는데, 새로운 시선을 많이 배우고 기존에 가진 선입견을 많이 깨고 가는 시간이었습니다.
-특히 기존에 SageMaker는 가진 기능이나 성능에 비해 비싼 느낌이 많이 들었는데, Inference를 위해 Endpoint를 만들었을 때
-Shadow testing, Inferentia 칩 활용, Feature store와 연계 등을 하는 것을 보고 정말 기능이 많이 발전했고,
-실제로도 많은 이득을 가져다 줄 수 있겠다라는 생각을 했습니다.
+특히 기존에 SageMaker는 가진 기능이나 성능에 비해 비싼 느낌이 많이 들었는데, Inference를 위해 Endpoint를 만들었을 때 Shadow testing, Inferentia 칩 활용, Feature store와 연계 등을 하는 것을 보고 정말 기능이 많이 발전했고, 실제로도 많은 이득을 가져다 줄 수 있겠다라는 생각을 했습니다.
 
 ## 엑스포
 
