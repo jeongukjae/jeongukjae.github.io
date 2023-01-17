@@ -122,7 +122,7 @@ index 251174a5..6837ce5f 100644
 You can see the `build_file` options in the deps.
 They are copied from `third_party` directory in tensorflow-io.
 You also have to patch `org_tensorflow_io` since tensorflow-io loads TensorFlow from installed Python package (maybe pip package), but TensorFlow Serving loads TensorFlow from source code.
-So delete the lines those are related to `@local_config_tf`, and add deps using `@org_tensorflow` instead.
+So delete the lines related to `@local_config_tf`, and add deps using `@org_tensorflow` instead.
 
 ```diff
 diff --git a/tensorflow_io/core/filesystems/BUILD b/tensorflow_io/core/filesystems/BUILD
